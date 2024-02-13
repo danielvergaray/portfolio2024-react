@@ -1,16 +1,24 @@
-import React from 'react';
-import Home from './components/pages/Home';
-import { Route, Routes } from "react-router-dom";
-import './App.scss';
+import React from "react";
+import Home from "./components/pages/Home";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import "./App.scss";
+import ParticlesBackground from "./components/particles/ParticlesBackground";
 
 function App() {
-  
-
   return (
     <>
-      <Home/>
+      <ParticlesBackground />
+      <BrowserRouter>
+        {" "}
+        
+        <>
+          <Routes>
+            <Route index element={<Home />} />
+          </Routes>
+        </>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
