@@ -42,10 +42,10 @@ const Home = () => {
             </article>
 
             <article className="home-info__bio">
-              <div>
+              <div className="home-info__bio-imagen">
                 <img src= {info.imagenBio} alt="" />
               </div>
-              <div>
+              <div className="home-info__bio-biografia">
                 <h2>Quien soy?</h2>
                 <p> {info.bio} </p>
               </div>

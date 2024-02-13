@@ -20,5 +20,26 @@
             
         }
     }
+
+    .home-info__bio{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        color: white;
+
+        .home-info__bio-imagen{
+            grid-column: 1;
+            text-align: center;
+            margin: auto;
+            img{
+                width: 50%;
+                height: 50%;
+                margin: auto;
+            }
+        }
+        .home-info__bio-biografia{
+            grid-column: 2;
+            margin: auto;
+        }
+    }
     
 }
