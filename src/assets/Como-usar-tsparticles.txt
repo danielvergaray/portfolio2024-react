@@ -1,0 +1,51 @@
+Pasos:
+
+1.- instalar
+npm install tsparticles@^2.12.0
+npm i react-tsparticles
+
+2-Quitar el React.strictMode (borrarlo) del main.jsx
+
+3- Crear un archivo js donde irá el Json (particles-config.js)
+ 3.1- dentro de ese archivo se crea una variable llamada
+const particlesConfig = {
+Aqui va a ir el json que es las particles de fondo
+}
+
+4-las particles de fondo se obtienen haciendo click en exportar
+en alguna de estas webs:
+
+https://particles.js.org/
+https://vincentgarreau.com/particles.js/
+
+5- Crear un componente (ParticlesBackground.jsx)
+asi debe quedar el componente:
+
+import React, { useCallback } from "react";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
+import particlesConfig from "./config/particles-config";
+
+const ParticlesBackground = () => {
+  const particlesInit = useCallback((engine) => {
+    loadFull(engine);
+  }, []);
+
+  return (
+    <div style={{ zIndex: "1000" }}>
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        options={particlesConfig}
+      />
+    </div>
+  );
+};
+
+export default ParticlesBackground;
+
+PAGINAS DE INTERES:
+
+https://www.npmjs.com/package/tsparticles
+https://particles.js.org/docs/index.html#md:npm
+

@@ -19,6 +19,8 @@ const PersonalContextProvider = ({children}) => {
     }
  */
 
+    
+
 
   return <PersonalContext.Provider value ={info} >{children} </PersonalContext.Provider>
 };
