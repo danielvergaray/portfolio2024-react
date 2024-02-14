@@ -1,78 +1,108 @@
-@import '/src/sass/reutilizables/colors';
+@import "/src/sass/reutilizables/colors";
 
 .home-info {
+  .home-info__hero {
+    display: grid;
+    grid-template-columns: 30% 70%;
 
-    .home-info__hero{
-        display: grid;
-        grid-template-columns: 30% 70%;
-        
+    .home-info__hero-title {
+      grid-column: 1;
+      color: white;
+      padding-top: 75vh;
+      text-align: right;
 
-        .home-info__hero-title{
-            grid-column: 1;
-            color: white;
-            padding-top: 75vh;
-            text-align: right;
-           
-            h1{
-                font-size: 3.5rem;
-            }
-            button{
-                padding: 10px;
-                border: none;
-                background-color: yellow;
-                font-size: 1.5rem;
-                border-color: yellow;
-                margin-top: 10px;
-            }
-        }
-
-        .home-info__hero-image{
-            grid-column: 2;
-            height: 100vh;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-           
-        }
+      h1 {
+        font-size: 3.5rem;
+      }
+      button {
+        padding: 10px;
+        border: none;
+        background-color: yellow;
+        font-size: 1.5rem;
+        border-color: yellow;
+        margin-top: 10px;
+      }
     }
 
-    .home-info__bio{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        color: white;
-        background-color: $Principal-GrisClaro;
-        padding: 50px 100px;
-        .home-info__bio-imagen{
-            grid-column: 1;
-            text-align: center;
-            margin: auto;
-            
-            img{
-                width: 70%;
-                margin: auto;
-                
-            }
-        }
-        .home-info__bio-biografia{
-            grid-column: 2;
-            margin: auto;
-            color: $Texto-negro;
-
-            h2{
-                font-size: 2rem;
-                padding-bottom: 20px;
-            }
-
-            p{
-                font-size: 1.25rem;
-                
-            }
-        }
+    .home-info__hero-image {
+      grid-column: 2;
+      height: 100vh;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
     }
-    
+  }
+
+  .home-info__bio {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: white;
+    background-color: $Principal-GrisClaro;
+    padding: 50px 100px;
+    .home-info__bio-imagen {
+      grid-column: 1;
+      text-align: center;
+      margin: auto;
+
+      img {
+        width: 70%;
+        margin: auto;
+      }
+    }
+    .home-info__bio-biografia {
+      grid-column: 2;
+      margin: auto;
+      color: $Texto-negro;
+
+      h2 {
+        font-size: 2rem;
+        padding-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.25rem;
+      }
+    }
+  }
 }
-.portfolio{
-    padding: 50px;
-    background-color: $Secundario-Blanco;
-    text-align: center;
+.portfolio {
+  padding: 50px;
+  background-color: $Secundario-Blanco;
+  text-align: center;
+  
+
+  .portfolio-proyectos_barraMenu{
+    display: flex;
+    height: fit-content;
+    justify-content: space-evenly;
+    padding-top: 50px;
+    width: 50%;
+    margin: auto;
+    li{
+        list-style: none;
+        cursor: pointer;
+    }
+}
+  .portfolio-proyectos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    
+
+    .portfolio-proyectos_recuadro {
+        height: 300px;
+        width: 300px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 50px 10px;
+        margin-bottom: 25px;
+        border: solid 1px black;
+        .oculto {
+          display: none;
+        }
+      }
+  }
+  
 }
