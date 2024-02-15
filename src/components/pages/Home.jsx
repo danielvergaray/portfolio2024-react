@@ -10,7 +10,7 @@ const Home = () => {
     infoHero: [
       {
         imagenHero: imagenHero,
-        title: "Hola, soy daniel",
+        title: "Hola, soy Daniel",
         text: "Programador Jr",
         imagenBio: imagenBio,
         bio: "Mi nombre es Daniel, soy ingeniero civil de profesión. Esta hermosa carrera me ha llevado a conocer distintos aspectos de la vida como el hecho de que el ser humano es capaz de muchas cosas siempre que lo crea posible, capaz de adaptarse a cualquier situación y reinventarse las veces que sean necesarias. Es este último tópico me llevo a darme cuenta que quería darle un rumbo a mi vida. Es por eso que desde el año 2022 encontré lo que me apasiona. Comencé a entrar al mundo de la programación porque jamás es tarde para volver a empezar.",
@@ -18,13 +18,7 @@ const Home = () => {
       },
     ],
 
-    infoProyecto1: [
-      {
-        image: imagenHero,
-        title: "Hola, soy Daniel",
-        description: "Programador Jr.",
-      },
-    ],
+   
   };
 
   return (

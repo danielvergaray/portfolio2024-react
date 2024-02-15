@@ -9,7 +9,7 @@ const ParticlesBackground = () => {
   }, []);
 
   return (
-    <div style={{ zIndex: "1000" }}>
+    <div style={{ zIndex: "-1" }}>
       <Particles
         id="tsparticles"
         init={particlesInit}

@@ -15,11 +15,11 @@
         font-size: 3.5rem;
       }
       button {
-        padding: 10px;
+        padding: 20px;
         border: none;
-        background-color: yellow;
+        background-color: $Enfasis-celeste;
         font-size: 1.5rem;
-        border-color: yellow;
+
         margin-top: 10px;
       }
     }
@@ -36,8 +36,8 @@
   .home-info__bio {
     display: grid;
     grid-template-columns: 50% 50%;
-    color: white;
-    background-color: $Principal-GrisClaro;
+
+    background-color: $Secundario-Blanco;
     padding: 50px 100px;
     .home-info__bio-imagen {
       grid-column: 1;
@@ -52,8 +52,7 @@
     .home-info__bio-biografia {
       grid-column: 2;
       margin: auto;
-      color: $Texto-negro;
-
+      color: black;
       h2 {
         font-size: 2rem;
         padding-bottom: 20px;
@@ -67,42 +66,65 @@
 }
 .portfolio {
   padding: 50px;
-  background-color: $Secundario-Blanco;
+  background-color: $Principal-Negro;
   text-align: center;
-  
+  color: white;
 
-  .portfolio-proyectos_barraMenu{
+  .portfolio-proyectos_barraMenu {
     display: flex;
     height: fit-content;
     justify-content: space-evenly;
     padding-top: 50px;
     width: 50%;
     margin: auto;
-    li{
-        list-style: none;
-        cursor: pointer;
+
+    .categoriaSinSeleccionar {
+      text-decoration: none;
+      cursor: pointer;
+      color: white;
     }
-}
-  .portfolio-proyectos{
+    .portfolio-categoriaSeleccionada {
+      color: $Enfasis-celeste;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  }
+  .portfolio-proyectos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
-    
-
+    width: 70vw;
+    margin: auto;
     .portfolio-proyectos_recuadro {
-        height: 300px;
-        width: 300px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin: 50px 10px;
-        margin-bottom: 25px;
-        border: solid 1px black;
-        .oculto {
-          display: none;
+      height: 300px;
+      width: 300px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 50px 10px;
+      margin-bottom: 25px;
+      border: solid 1px black;
+      cursor: pointer;
+      
+      
+      .portfolio-proyectos_recuadro-info {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        color: $Texto-negro;
+        &:hover {
+          background-image: linear-gradient(to right, rgba(86, 138, 218, 0.8), rgba(86, 138, 218, 0.8));
+        }
+        
+        h3 {
+          padding: 20px 0;
+          
         }
       }
+      .oculto {
+        display: none;
+      }
+    }
   }
-  
 }

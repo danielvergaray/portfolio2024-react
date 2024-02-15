@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
 
 const PortfolioList = ({ infoProyectos, infoMenu }) => {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("TODOS");
+  const [infoVisible, setInfoVisible] = useState({});
 
   const handleClick = (categoria) => {
     setCategoriaSeleccionada(categoria);
@@ -12,27 +15,55 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
     categoriaSeleccionada === "TODOS"
       ? infoProyectos
       : infoProyectos.filter(
-          (proyecto) => proyecto.category.toLowerCase() === categoriaSeleccionada.toLowerCase()
+          (proyecto) =>
+            proyecto.category.toLowerCase() ===
+            categoriaSeleccionada.toLowerCase()
         );
+
+  const mostrarInfo = (index) => {
+    setInfoVisible({ ...infoVisible, [index]: true });
+  };
+  const ocultarInfo = (index) => {
+    setInfoVisible({ ...infoVisible, [index]: false });
+  };
 
   return (
     <>
       <article className="portfolio-proyectos_barraMenu">
         {infoMenu.map((opcionMenu, index) => (
-          <li key={index} onClick={() => handleClick(opcionMenu.titulo)}>
+          <NavLink
+            className={
+              categoriaSeleccionada === opcionMenu.titulo
+                ? "portfolio-categoriaSeleccionada"
+                : "categoriaSinSeleccionar"
+            }
+            to="#"
+            key={index}
+            onClick={() => handleClick(opcionMenu.titulo)}
+          >
             {opcionMenu.titulo}
-          </li>
+          </NavLink>
         ))}
       </article>
       <section className="portfolio-proyectos">
         {proyectosFiltrados.map((proyecto, index) => (
           <div
+            onMouseEnter={() => mostrarInfo(index)}
+            onMouseLeave={() => ocultarInfo(index)}
             key={index}
             style={{ backgroundImage: `url(${proyecto.imagenRecuadro})` }}
             className="portfolio-proyectos_recuadro"
           >
-            <h3 className="oculto">{proyecto.titulo}</h3>
-            <p className="oculto">{proyecto.descripcionBreve}</p>
+            {infoVisible[index] && (
+              <div className="portfolio-proyectos_recuadro-info">
+                <div>
+                  <FaSearch />
+                </div>
+
+                <h3>{proyecto.titulo}</h3>
+                <p>{proyecto.descripcionBreve}</p>
+              </div>
+            )}
           </div>
         ))}
       </section>
