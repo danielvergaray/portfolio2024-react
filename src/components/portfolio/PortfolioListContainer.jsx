@@ -98,7 +98,7 @@ const PortfolioListContainer = () => {
       descripcionBreve:
         "Este proyecto realizado para un emprendimiento de snacks. Fue llevado a cabo usando Html5 y Css3, ademas se implementaron estategias SEO, Bootstrap y Sass, se realizaron versiones desktop y mobile.",
       imagen: "",
-      category: "desarrollo",
+      category: "desarrollo web",
       linkWeb: "https://danielvergaray.github.io/pagina-web-mrSnack/",
       linkRepositorio: "https://github.com/danielvergaray/pagina-web-mrSnack",
     },
