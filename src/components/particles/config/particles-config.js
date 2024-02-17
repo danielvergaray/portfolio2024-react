@@ -3,7 +3,7 @@ const particlesConfig =
   "autoPlay": true,
   "background": {
     "color": {
-      "value": "#000"
+      "value": "#000000"
     },
     "image": "",
     "position": "",
@@ -182,7 +182,7 @@ const particlesConfig =
       }
     },
     "color": {
-      "value": "#FF0000",
+      "value": "#fff",
       "animation": {
         "h": {
           "count": 0,
@@ -219,15 +219,48 @@ const particlesConfig =
       "options": {},
       "type": []
     },
-    "groups": {},
+    "groups": {
+      "z5000": {
+        "number": {
+          "value": 70
+        },
+        "zIndex": {
+          "value": 50
+        }
+      },
+      "z7500": {
+        "number": {
+          "value": 30
+        },
+        "zIndex": {
+          "value": 75
+        }
+      },
+      "z2500": {
+        "number": {
+          "value": 50
+        },
+        "zIndex": {
+          "value": 25
+        }
+      },
+      "z1000": {
+        "number": {
+          "value": 40
+        },
+        "zIndex": {
+          "value": 10
+        }
+      }
+    },
     "move": {
       "angle": {
         "offset": 0,
-        "value": 90
+        "value": 10
       },
       "attract": {
         "distance": 200,
-        "enable": true,
+        "enable": false,
         "rotate": {
           "x": 3000,
           "y": 3000
@@ -241,7 +274,7 @@ const particlesConfig =
       },
       "decay": 0,
       "distance": {},
-      "direction": "none",
+      "direction": "right",
       "drift": 0,
       "enable": true,
       "gravity": {
@@ -251,41 +284,32 @@ const particlesConfig =
         "maxSpeed": 50
       },
       "path": {
-        "clamp": false,
+        "clamp": true,
         "delay": {
           "value": 0
         },
-        "enable": true,
-        "options": {
-          "sides": 6,
-          "turnSteps": 30,
-          "angle": 30
-        },
-        "generator": "polygonPathGenerator"
+        "enable": false,
+        "options": {}
       },
       "outModes": {
-        "default": "destroy",
-        "bottom": "destroy",
-        "left": "destroy",
-        "right": "destroy",
-        "top": "destroy"
+        "default": "out",
+        "bottom": "out",
+        "left": "out",
+        "right": "out",
+        "top": "out"
       },
       "random": false,
       "size": false,
-      "speed": -1,
+      "speed": 5,
       "spin": {
         "acceleration": 0,
         "enable": false
       },
       "straight": false,
       "trail": {
-        "enable": true,
-        "length": 20,
-        "fill": {
-          "color": {
-            "value": "#000"
-          }
-        }
+        "enable": false,
+        "length": 10,
+        "fill": {}
       },
       "vibrate": false,
       "warp": false
@@ -300,7 +324,7 @@ const particlesConfig =
         "mode": "delete",
         "value": 0
       },
-      "value": 500
+      "value": 200
     },
     "opacity": {
       "value": 1,
@@ -335,7 +359,7 @@ const particlesConfig =
       "type": "circle"
     },
     "size": {
-      "value": 2,
+      "value": 3,
       "animation": {
         "count": 0,
         "enable": false,
@@ -352,8 +376,8 @@ const particlesConfig =
       "width": 0
     },
     "zIndex": {
-      "value": 0,
-      "opacityRate": 1,
+      "value": 5,
+      "opacityRate": 0.5,
       "sizeRate": 1,
       "velocityRate": 1
     },
@@ -505,7 +529,7 @@ const particlesConfig =
     },
     "rate": {
       "quantity": 1,
-      "delay": 0.25
+      "delay": 7
     },
     "shape": {
       "options": {},
@@ -521,11 +545,46 @@ const particlesConfig =
       "height": 0,
       "width": 0
     },
-    "direction": "none",
-    "particles": {},
+    "particles": {
+      "shape": {
+        "type": "images",
+        "options": {
+          "images": {
+            "src": "https://particles.js.org/images/cyan_amongus.png",
+            "width": 500,
+            "height": 634
+          }
+        }
+      },
+      "size": {
+        "value": 40
+      },
+      "move": {
+        "speed": 10,
+        "outModes": {
+          "default": "none",
+          "right": "destroy"
+        },
+        "straight": true
+      },
+      "zIndex": {
+        "value": 0
+      },
+      "rotate": {
+        "value": {
+          "min": 0,
+          "max": 360
+        },
+        "animation": {
+          "enable": true,
+          "speed": 10,
+          "sync": true
+        }
+      }
+    },
     "position": {
-      "x": 50,
-      "y": 50
+      "x": -5,
+      "y": 55
     }
   },
   "motion": {

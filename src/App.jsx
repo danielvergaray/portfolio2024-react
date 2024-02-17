@@ -5,6 +5,7 @@ import "./App.scss";
 import ParticlesBackground from "./components/particles/ParticlesBackground";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavBarListContainer from "./components/navbar/NavBarListContainer";
+import FooterListContainer from "./components/footer/FooterListContainer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route index element={<Home />} />
           </Routes>
         </>
+      <FooterListContainer/>
       </BrowserRouter>
     </>
   );

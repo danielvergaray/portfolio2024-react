@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
+import PopUpList from "../popUpInfoProyectos/PopUpList";
 
-const PortfolioList = ({ infoProyectos, infoMenu }) => {
+const PortfolioList = ({
+  infoProyectos,
+  infoMenu,
+}) => {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("TODOS");
   const [infoVisible, setInfoVisible] = useState({});
+  const [proyectoSeleccionado, setProyectoSeleccionado] = useState(null);
 
   const handleClick = (categoria) => {
     setCategoriaSeleccionada(categoria);
@@ -23,12 +28,26 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
   const mostrarInfo = (index) => {
     setInfoVisible({ ...infoVisible, [index]: true });
   };
-  const ocultarInfo = (index) => {
-    setInfoVisible({ ...infoVisible, [index]: false });
+
+  const ocultarInfo = () => {
+    setInfoVisible({});
+  };
+
+  const abrirPopUp = (index) => {
+    setProyectoSeleccionado(index);
+  };
+
+  const cerrarPopUp = () => {
+    setProyectoSeleccionado(null);
   };
 
   return (
     <>
+    {proyectoSeleccionado !== null && (
+        <PopUpList cerrarPopUp= {cerrarPopUp} 
+        proyectosFiltrados = {proyectosFiltrados}
+        proyectoSeleccionado = {proyectoSeleccionado} />
+      )}
       <article className="portfolio-proyectos_barraMenu">
         {infoMenu.map((opcionMenu, index) => (
           <NavLink
@@ -46,10 +65,12 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
         ))}
       </article>
       <section className="portfolio-proyectos">
+      
         {proyectosFiltrados.map((proyecto, index) => (
           <div
             onMouseEnter={() => mostrarInfo(index)}
-            onMouseLeave={() => ocultarInfo(index)}
+            onMouseLeave={() => ocultarInfo()}
+            onClick={() => abrirPopUp(index)}
             key={index}
             style={{ backgroundImage: `url(${proyecto.imagenRecuadro})` }}
             className="portfolio-proyectos_recuadro"
@@ -67,6 +88,7 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
           </div>
         ))}
       </section>
+      
     </>
   );
 };

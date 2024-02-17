@@ -1,0 +1,72 @@
+.footer-section {
+  color: white;
+  text-align: center;
+  padding: 50px;
+  h2 {
+    padding-bottom: 50px;
+  }
+  .footer-botones {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: auto;
+    padding-bottom: 50px;
+
+    button {
+      padding: 20px;
+      border: 1px solid white;
+      background-color: black;
+      color: white;
+      border-radius: 40px;
+      width: 90%;
+      text-align: center;
+
+      &:hover {
+        background-color: $Enfasis-celeste;
+      }
+    }
+  }
+  .footer-barraInferior {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+
+    .footer-barraInferior_info {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      width: 80%;
+      margin: auto;
+      padding-top: 30px;
+      
+
+      .barraInferior_informacion {
+        text-align: left;
+        margin: auto;
+        h5 {
+          font-size: 14px;
+          margin: 0;
+        }
+        p {
+          font-size: 10px;
+          width: fit-content;
+          margin: 0;
+          padding-top: 5px;
+        }
+      }
+
+      .footer-barraInferior_info-icono {
+        width: 100%;
+        display: flex;
+        justify-content: right;
+        padding-right: 50px;
+
+        svg {
+          font-size: 40px;
+          border-radius: 50%;
+          border: 1px solid white;
+          padding: 8px;
+          color: white;
+        }
+      }
+    }
+  }
+}
