@@ -6,20 +6,34 @@ import ParticlesBackground from "./components/particles/ParticlesBackground";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavBarListContainer from "./components/navbar/NavBarListContainer";
 import FooterListContainer from "./components/footer/FooterListContainer";
-
+import { useRef } from 'react';
 function App() {
+  const sectionRefs = {
+    section1: useRef(null),
+    section2: useRef(null),
+    section3: useRef(null),
+  };
+  const scrollToSection = (sectionId) => {
+    const ref = sectionRefs[sectionId];
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
   return (
     <>
       <ParticlesBackground />
 
-      <NavBarListContainer />
       <BrowserRouter>
+        <NavBarListContainer scrollToSection={scrollToSection} />
         <>
           <Routes>
-            <Route index element={<Home />} />
+            <Route index element={<Home sectionRefs={sectionRefs} />} />
           </Routes>
         </>
-      <FooterListContainer/>
+        <FooterListContainer />
       </BrowserRouter>
     </>
   );
