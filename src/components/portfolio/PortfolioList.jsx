@@ -42,7 +42,7 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
   };
 
 
-console.log(proyectoSeleccionado)
+
   return (
     <>
       {proyectoSeleccionado !== null ? (

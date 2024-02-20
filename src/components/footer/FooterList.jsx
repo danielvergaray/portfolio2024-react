@@ -1,9 +1,11 @@
 import React from "react";
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 
 const FooterList = ({ infoBotones, barraInferior }) => {
+  const sectionRef4 = useRef(null);
   return (
-    <section className="footer-section">
+    <section id="sectionRef4" ref={sectionRef4} className="footer-section">
       <h2>HABLEMOS ACERCA DEL PRÓXIMO PROYECTO JUNTOS.</h2>
       <div className="footer-botones">
         {infoBotones.map((boton, index) => (

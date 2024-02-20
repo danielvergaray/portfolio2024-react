@@ -1,36 +1,44 @@
-import React from 'react'
-import NavBarList from './NavBarList'
+import React from "react";
+import NavBarList from "./NavBarList";
+import { useRef } from "react";
 
 const NavBarListContainer = () => {
-
-const opcionesNavBar= [
+  const sectionRef1 = useRef(null);
+  const sectionRef2 = useRef(null);
+  const sectionRef3 = useRef(null);
+  const sectionRef4 = useRef(null);
+  const opcionesNavBar = [
     {
-        titulo: "ABOUT", 
-        ref: "sectionRef1",
+      titulo: "ABOUT",
+      ref: "1",
     },
     {
-        titulo: "PORTFOLIO", 
-        ref: "sectionRef2",
+      titulo: "ESTUDIOS",
+      ref: "2",
     },
     {
-        titulo: "CLIENTES",
-        ref: "sectionRef3", 
+      titulo: "PORTFOLIO",
+      ref: "2",
     },
     {
-        titulo: "ESTUDIOS", 
-        ref: "sectionRef2",
+      titulo: "CLIENTES",
+      ref: "3",
     },
+
     {
-        titulo: "CONTACTO",
-        ref: "sectionRef4", 
+      titulo: "CONTACTO",
+      ref: "4",
     },
+  ];
 
-]
+  /* const sectionRefs = {
+    sectionRef1: useRef(null),
+    sectionRef2: useRef(null),
+    sectionRef3: useRef(null),
+    sectionRef4: useRef(null),
+  }; */
 
+  return <NavBarList menu={opcionesNavBar} /* sectionRefs={sectionRefs} */ />;
+};
 
-  return (
-    <NavBarList menu = {opcionesNavBar} />
-  )
-}
-
-export default NavBarListContainer
+export default NavBarListContainer;

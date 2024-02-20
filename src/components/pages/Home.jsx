@@ -1,12 +1,26 @@
 import React from "react";
-import { useContext } from "react";
-import PersonalContext from "../context/personalInfo/PersonalContext";
+import { useRef } from "react";
 import imagenHero from "../../assets/imagenes/fotoHero.jpeg";
 import imagenBio from "../../assets/imagenes/fotoBio.jpeg";
 import PortfolioListContainer from "../portfolio/PortfolioListContainer";
 import ClientesListContainer from "../seccionClientes/ClientesListContainer";
 
 const Home = () => {
+
+  const sectionRef1 = useRef(null);
+  const sectionRef2 = useRef(null);
+  const sectionRef3 = useRef(null);
+  
+
+  const scrollFunction = (ref) => {
+    console.log(ref)
+      ref.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+   
+  }
+
   const info = {
     infoHero: [
       {
@@ -36,7 +50,7 @@ const Home = () => {
               ></div>
             </article>
 
-            <article className="home-info__bio">
+            <article id="sectionRef1" ref={sectionRef1} className="home-info__bio">
               <div className="home-info__bio-imagen">
                 <img src={info.imagenBio} alt="" />
               </div>
@@ -50,12 +64,12 @@ const Home = () => {
         ))}
       </section>
 
-      <section className="portfolio">
+      <section id="sectionRef2" ref={sectionRef2}  className="portfolio">
         <h2>PORTFOLIO</h2>
         <PortfolioListContainer />
       </section>
 
-      <section className="seccionClientes">
+      <section id="sectionRef3" ref={sectionRef3} className="seccionClientes">
         <h2>CLIENTES</h2>
         <ClientesListContainer />
       </section>
