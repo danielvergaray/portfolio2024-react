@@ -7,8 +7,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import NavBarListContainer from "./components/navbar/NavBarListContainer";
 import FooterListContainer from "./components/footer/FooterListContainer";
 import { useRef } from "react";
-import GeneralContextProvider from "./components/context/GeneralContextProvider";
-
+/* import GeneralContextProvider from "./components/context/GeneralContextProvider";
+ */
 function App() {
   /* const sectionRefs = {
     section1: useRef(null),
@@ -28,7 +28,7 @@ function App() {
     <>
       <ParticlesBackground />
 
-      <GeneralContextProvider>
+      {/* <GeneralContextProvider> */}
         <BrowserRouter>
           <NavBarListContainer />
           <>
@@ -38,7 +38,7 @@ function App() {
           </>
           <FooterListContainer />
         </BrowserRouter>
-      </GeneralContextProvider>
+      {/* </GeneralContextProvider> */}
     </>
   );
 }
