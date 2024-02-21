@@ -2,77 +2,26 @@ import React, { useState } from "react";
 import PortfolioList from "./PortfolioList";
 import ImagenAdivina from "../../assets/imagenes/proyectos/adivinaElNumero.jpeg";
 import ImagenMrSnackEcommerce from "../../assets/imagenes/proyectos/ecommerce.jpeg";
-import ImagenCarruselMrSnackWeb2 from '../../assets/imagenes/proyectos/MR-SNACK_02.png'
-import ImagenCarruselMrSnackWeb3 from '../../assets/imagenes/proyectos/MR-SNACK_03.png'
+import ImagenCarruselMrSnackWeb2 from "../../assets/imagenes/proyectos/MR-SNACK_02.png";
+import ImagenCarruselMrSnackWeb3 from "../../assets/imagenes/proyectos/MR-SNACK_03.png";
 import ImagenPigGame from "../../assets/imagenes/proyectos/pigGame.jpg";
 import ImagenMrSnackWeb from "../../assets/imagenes/proyectos/MR-SNACK_01.png";
 import ImagenGameStage from "../../assets/imagenes/proyectos/react-gameStage.jpeg";
 import ImagenViajesWp from "../../assets/imagenes/proyectos/wp-blog.jpeg";
 import ImagenCentroMedicoWp from "../../assets/imagenes/proyectos/centroMedicoWp.jpeg";
 
-
-
 const PortfolioListContainer = () => {
   const [abrirInfo, setAbrirInfo] = useState(false);
-  const cursos = [
-    {
-      title: "Desarrollo web",
-      institute: "CoderHouse",
-      description:
-        "08 semanas en donde se desarrollaron temas como Html5, Css3, Sass, Bootstrap, entre otros",
-      iconoVerMasHtml: "iconoVerMasDesarrollo",
-    },
-    {
-      title: "JavaScript",
-      institute: "CoderHouse",
-      description: "08 semanas en donde se desarrollaron lógica de JavaScript",
-      iconoVerMasHtml: "iconoVerMasJs",
-    },
-    {
-      title: "React",
-      institute: "CoderHouse",
-      description: "08 semanas desarrollando aplicaciones en React",
-      iconoVerMasHtml: "iconoVerMasReact",
-    },
-    {
-      title: "Wordpress",
-      institute: "CoderHouse",
-      description: "05 semanas desarrollando un Eccommerce",
-      iconoVerMasHtml: "iconoVerMasWp",
-    },
-  ];
 
-  const idiomas = [
-    {
-      title: "Español",
-      institute: "Nivel: Nativo",
-      description: "",
-      iconoVerMasHtml: "iconoVerMasEsp",
-    },
-    {
-      title: "Inglés",
-      institute: "Nivel: Avanzado",
-      description: "Más de 10 años de estudios y prácticas en el idioma",
-      iconoVerMasHtml: "iconoVerMasIng",
-    },
-    {
-      title: "Francés",
-      institute: "Nivel: Básico",
-      description: "Comprensión lectora, capacidad de comunicacón básica",
-      iconoVerMasHtml: "iconoVerMasFr",
-    },
-  ];
-
-
-  const TituloRepositorio= "Ver repositorio";
-  const TituloWeb= "Visitar página web";
+  const TituloRepositorio = "Ver repositorio";
+  const TituloWeb = "Visitar página web";
 
   const proyectos = [
     {
-      id:"1",
+      id: "1",
       titulo: "Adivina el Número",
       imagenRecuadro: ImagenAdivina,
-      imagenesCarusel : [
+      imagenesCarusel: [
         {
           imagenCarrusel: ImagenAdivina,
         },
@@ -96,10 +45,10 @@ const PortfolioListContainer = () => {
         "https://github.com/danielvergaray/AdivinaElNumero_juego",
     },
     {
-      id:"2",
+      id: "2",
       titulo: "Ecommerce Mr. Snack",
       imagenRecuadro: ImagenMrSnackEcommerce,
-      imagenesCarusel : [
+      imagenesCarusel: [
         {
           imagenCarrusel: ImagenMrSnackEcommerce,
         },
@@ -124,10 +73,10 @@ const PortfolioListContainer = () => {
         "https://github.com/danielvergaray/entregaFinal_ecommerce",
     },
     {
-      id:"3",
+      id: "3",
       titulo: "Juego: Pig Game",
       imagenRecuadro: ImagenPigGame,
-      imagenesCarusel : [
+      imagenesCarusel: [
         {
           imagenCarrusel: ImagenPigGame,
         },
@@ -150,10 +99,10 @@ const PortfolioListContainer = () => {
       linkRepositorio: "https://github.com/danielvergaray/pig-game",
     },
     {
-      id:"4",
+      id: "4",
       titulo: "Web Mr. Snack",
       imagenRecuadro: ImagenMrSnackWeb,
-      imagenesCarusel : [
+      imagenesCarusel: [
         {
           imagenCarrusel: ImagenMrSnackWeb,
         },
@@ -163,8 +112,8 @@ const PortfolioListContainer = () => {
         {
           imagenCarrusel: ImagenCarruselMrSnackWeb3,
         },
-      ], 
-       
+      ],
+
       descripcionBreve:
         "Este proyecto realizado para un emprendimiento de snacks. Fue llevado a cabo usando Html5 y Css3, ademas...",
       descripcion:
@@ -177,10 +126,10 @@ const PortfolioListContainer = () => {
       linkRepositorio: "https://github.com/danielvergaray/pagina-web-mrSnack",
     },
     {
-      id:"5",
+      id: "5",
       titulo: "Ecommerce GameStage",
       imagenRecuadro: ImagenGameStage,
-      imagenesCarusel : [
+      imagenesCarusel: [
         {
           imagenCarrusel: ImagenGameStage,
         },
@@ -203,10 +152,10 @@ const PortfolioListContainer = () => {
       linkRepositorio: "https://github.com/danielvergaray/react_ecommerce",
     },
     {
-      id:"6",
+      id: "6",
       titulo: "Blog de viajes/ecommerce",
       imagenRecuadro: ImagenViajesWp,
-      imagenesCarusel : [
+      imagenesCarusel: [
         {
           imagenCarrusel: ImagenViajesWp,
         },
@@ -230,10 +179,10 @@ const PortfolioListContainer = () => {
       linkRepositorio: "",
     },
     {
-      id:"7",
+      id: "7",
       titulo: "Web Centro odontologico",
       imagenRecuadro: ImagenCentroMedicoWp,
-      imagenesCarusel : [
+      imagenesCarusel: [
         {
           imagenCarrusel: ImagenCentroMedicoWp,
         },
@@ -275,7 +224,6 @@ const PortfolioListContainer = () => {
 
   const abrirPopUp = (e) => {
     setAbrirInfo(true);
-    
   };
 
   return (
@@ -283,7 +231,7 @@ const PortfolioListContainer = () => {
       <PortfolioList
         infoProyectos={proyectos}
         infoMenu={menuProyectos}
-        funcionAbrirPopUp={ abrirPopUp}
+        funcionAbrirPopUp={abrirPopUp}
         abrirInfo={abrirInfo}
       />
     </>

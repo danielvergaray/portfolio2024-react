@@ -4,13 +4,14 @@ import imagenHero from "../../assets/imagenes/fotoHero.jpeg";
 import imagenBio from "../../assets/imagenes/fotoBio.jpeg";
 import PortfolioListContainer from "../portfolio/PortfolioListContainer";
 import ClientesListContainer from "../seccionClientes/ClientesListContainer";
+import EstudiosListContainer from "../estudios/EstudiosListContainer";
 
 const Home = () => {
 
   const sectionRef1 = useRef(null);
   const sectionRef2 = useRef(null);
   const sectionRef3 = useRef(null);
-  
+  const sectionRef4 = useRef(null);
 
   const scrollFunction = (ref) => {
     console.log(ref)
@@ -69,7 +70,12 @@ const Home = () => {
         <PortfolioListContainer />
       </section>
 
-      <section id="sectionRef3" ref={sectionRef3} className="seccionClientes">
+      <section id="sectionRef3" ref={sectionRef3}  className="seccion-estudios">
+        <h2>ESTUDIOS</h2>
+        <EstudiosListContainer />
+      </section>
+
+      <section id="sectionRef4" ref={sectionRef4} className="seccionClientes">
         <h2>CLIENTES</h2>
         <ClientesListContainer />
       </section>

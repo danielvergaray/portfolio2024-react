@@ -1,0 +1,22 @@
+1- instalo
+
+npm install aos --save
+
+2- importar
+
+import Aos from "aos";
+import 'aos/dist/aos.css'
+
+3- usar useEffect (dentro de un componente existente o creando uno aparte para la animacion)
+
+useEffect(()=>{
+    Aos.init()
+  }, [{duration: 100}])
+
+4- agregar la animacion
+
+<div data-aos = "fade-right" className="estudio-recuadro estudio-recuadro-impar">
+
+https://www.youtube.com/watch?v=p-y3GvNGe4Y&t=165s
+
+https://michalsnik.github.io/aos/

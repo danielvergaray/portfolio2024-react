@@ -13,21 +13,20 @@ const NavBarListContainer = () => {
       ref: "1",
     },
     {
-      titulo: "ESTUDIOS",
-      ref: "2",
-    },
-    {
       titulo: "PORTFOLIO",
       ref: "2",
     },
     {
-      titulo: "CLIENTES",
+      titulo: "ESTUDIOS",
       ref: "3",
     },
-
+    {
+      titulo: "CLIENTES",
+      ref: "4",
+    },
     {
       titulo: "CONTACTO",
-      ref: "4",
+      ref: "5",
     },
   ];
 
