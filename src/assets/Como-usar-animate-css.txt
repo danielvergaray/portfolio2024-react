@@ -1,0 +1,14 @@
+1- Instalar 
+
+npm i animate.css-react
+
+2- Importar 
+
+import 'animate.css/animate.css'
+
+3- usar
+
+<div className= "animate__animated animate__flipInY cards"
+key={index}></div>
+
+https://www.npmjs.com/package/animate.css-react
