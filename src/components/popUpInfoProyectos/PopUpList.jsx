@@ -10,7 +10,7 @@ const PopUpList = ({
 }) => {
   const arrayProyecto = proyectosFiltrados[proyectoSeleccionado];
 
-  console.log(arrayProyecto);
+
   return (
     <div className="popup-container">
       <div className="popup">

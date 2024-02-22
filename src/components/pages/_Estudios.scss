@@ -30,73 +30,186 @@
     }
   }
 
-  .estudios-timeLine {
-    display: grid;
-    grid-template-columns: 47.5% 5% 47.5%;
-    grid-template-rows: 1;
-    padding: 0;
-    .estudio-recuadro-impar {
-      grid-column: 1;
-      clip-path: polygon(1% 0%, 97% 0%, 97% 11%, 100% 17%, 97% 22%, 97% 100%, 1% 100%);
-    }
-    .estudio-recuadro-par {
-      grid-column: 3;
-      clip-path: polygon(99% 0%, 3% 0%, 3% 11%, 0% 17%, 3% 22%, 3% 100%, 99% 100%);
-    }
-    .estudios-timeLine_line {
-      grid-column: 2;
-      position: relative; /* Para que la línea se mantenga fija en la pantalla */
-      top: -60px; /* Coloca la línea en la parte superior */
-      left: 50%; /* Coloca la línea en el centro horizontal de la pantalla */
-      width: 5px; /* Ancho de la línea */
-      height: 60vh; /* Alto de la línea, igual al alto de la pantalla */
-      background-color: black; /* Color de la línea */
-    
-      svg{
-        z-index: 500;
-        font-size: 50px;
-        position: relative;
-        left: -23px;
-        top: 48px;
+  .estudios-programacion {
+    .estudios-timeLine {
+      display: grid;
+      grid-template-columns: 47.5% 5% 47.5%;
+      grid-template-rows: 1;
+      padding: 0;
+      .estudio-recuadro-impar {
+        grid-column: 1;
+        clip-path: polygon(
+          1% 0%,
+          97% 0%,
+          97% 11%,
+          100% 17%,
+          97% 22%,
+          97% 100%,
+          1% 100%
+        );
       }
-    }
-    .fecha-izquierda {
-      grid-column: 1;
-      grid-row: 1;
-      text-align: right;
-      font-weight: 700;
-    }
-    .fecha-derecha {
-      grid-column: 3;
-      grid-row: 1;
-      text-align: left;
-      font-weight: 700;
-    }
+      .estudio-recuadro-par {
+        grid-column: 3;
+        clip-path: polygon(
+          99% 0%,
+          3% 0%,
+          3% 11%,
+          0% 17%,
+          3% 22%,
+          3% 100%,
+          99% 100%
+        );
+      }
+      .estudios-timeLine_line {
+        grid-column: 2;
+        position: relative; /* Para que la línea se mantenga fija en la pantalla */
+        top: -60px; /* Coloca la línea en la parte superior */
+        left: 50%; /* Coloca la línea en el centro horizontal de la pantalla */
+        width: 5px; /* Ancho de la línea */
+        height: 60vh; /* Alto de la línea, igual al alto de la pantalla */
+        background-color: black; /* Color de la línea */
 
-    .estudio-recuadro {
-      padding: 10px;
-      background-color: $Principal-Negro;
-      border: 1px solid black;
-      text-align: left;
-      width: 100%;
-      grid-row: 1;
-      color: white;
-      padding: 50px;
-      height: fit-content;
-      border-radius: 10px;
-      position: relative;
-      top: -40px;
-
-      p{
-        margin: 0;
-        padding: 5px 0;
-
-        svg{
-            font-size: 30px;
-            margin-top: 10px;
+        svg {
+          z-index: 500;
+          font-size: 50px;
+          position: relative;
+          left: -23px;
+          top: 48px;
         }
       }
-      
+      .fecha-izquierda {
+        grid-column: 1;
+        grid-row: 1;
+        text-align: right;
+        font-weight: 700;
+      }
+      .fecha-derecha {
+        grid-column: 3;
+        grid-row: 1;
+        text-align: left;
+        font-weight: 700;
+      }
+
+      .estudio-recuadro {
+        padding: 10px;
+        background-color: $Principal-Negro;
+        border: 1px solid black;
+        text-align: left;
+        width: 100%;
+        grid-row: 1;
+        color: white;
+        padding: 50px;
+        height: fit-content;
+        border-radius: 10px;
+        position: relative;
+        top: -40px;
+
+        p {
+          margin: 0;
+          padding: 5px 0;
+
+          svg {
+            font-size: 30px;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+  .estudios-idiomas {
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 80%;
+    max-width: 80%;
+    margin: auto;
+
+    .cards {
+      padding: 20px 40px;
+      max-width: 30%;
+      width: 30%;
+      border: 1px solid rgb(66, 57, 73);
+      background-color: $Principal-Negro;
+      color: white;
+      min-height: 304px;
+
+      .card-body {
+        display: grid;
+        grid-template-rows: 20% 60% 20%;
+
+        .cards-iconos {
+          grid-row: 1;
+          img {
+            width: 50px;
+          }
+        }
+
+        .cards-titulos {
+          grid-row: 2;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          p {
+            padding: 0;
+            margin: 0;
+            font-weight: 500;
+            font-size: 18px;
+          }
+        }
+        .cards-flechas {
+          grid-row: 3;
+          svg {
+            font-size: 30px;
+          }
+        }
+      }
+      .cards-informacion {
+        display: grid;
+        grid-template-rows: 10% 20% 50% 20%;
+
+        .cards-nivel {
+          grid-row: 2;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+         
+          p {
+            padding: 0;
+            margin: 0;
+            font-size: 15px;
+          }
+        }
+        .cards-descripcion {
+          grid-row: 3;
+          display: flex;
+          align-items: center;
+          p {
+            margin: 0;
+            padding: 0;
+            font-size: 15px;
+          }
+        }
+        .cards-titulos {
+          grid-row: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          p {
+            padding: 0;
+            margin: 0;
+            font-weight: 500;
+            font-size: 18px;
+          }
+        }
+        .cards-flechas {
+          grid-row: 4;
+          svg {
+            font-size: 30px;
+          }
+        }
+      }
     }
   }
 }

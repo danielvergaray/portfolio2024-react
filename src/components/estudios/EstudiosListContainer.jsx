@@ -6,6 +6,9 @@ import { FaHtml5 } from "react-icons/fa";
 import { RiJavascriptFill } from "react-icons/ri";
 import { FaReact } from "react-icons/fa";
 import { FaWordpress } from "react-icons/fa";
+import banderaEspania from "../../assets/imagenes/spanish-flag.png";
+import banderaIngles from "../../assets/imagenes/usa-flag.png";
+import banderaFrancia from "../../assets/imagenes/french-flag.png";
 
 const EstudiosListContainer = () => {
   const menuProyectos = [
@@ -20,24 +23,24 @@ const EstudiosListContainer = () => {
   const cursos = [
     {
       titulo: "Español",
-      instituto: "Nivel: Nativo",
+      nivel: "Nivel: Nativo",
       descripcion: "",
-      categoria: "idiomas",
-      /* iconoVerMasHtml: "iconoVerMasEsp", */
+      categoria: "IDIOMAS",
+      bandera: banderaEspania,
     },
     {
       titulo: "Inglés",
-      instituto: "Nivel: Avanzado",
+      nivel: "Nivel: Avanzado",
       descripcion: "Más de 10 años de estudios y prácticas en el idioma",
-      categoria: "idiomas",
-      /* iconoVerMasHtml: "iconoVerMasIng", */
+      categoria: "IDIOMAS",
+      bandera: banderaIngles,
     },
     {
       titulo: "Francés",
-      instituto: "Nivel: Básico",
+      nivel: "Nivel: Básico",
       descripcion: "Comprensión lectora, capacidad de comunicacón básica",
-      categoria: "idiomas",
-      /* iconoVerMasHtml: "iconoVerMasFr", */
+      categoria: "IDIOMAS",
+      bandera: banderaFrancia,
     },
     {
       titulo: "Desarrollo web",
