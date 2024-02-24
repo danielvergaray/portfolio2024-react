@@ -42,19 +42,18 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
     };
   }, []);
 
-  console.log(categoriaSeleccionada);
   return (
     <>
       <article className="estudios-proyectos_barraMenu">
         {infoMenu.map((opcionMenu, index) => (
           <NavLink
+            key={index}
             className={
               categoriaSeleccionada === opcionMenu.titulo
                 ? "portfolio-categoriaSeleccionada"
                 : "categoriaSinSeleccionar"
             }
             to="#"
-            key={index}
             onClick={() => handleClick(opcionMenu.titulo)}
           >
             {opcionMenu.titulo}

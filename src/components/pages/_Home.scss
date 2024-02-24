@@ -1,44 +1,109 @@
 @import "/src/sass/reutilizables/colors";
+@import "/src/sass/reutilizables/tipografias";
+@import "/src/sass/reutilizables/variables";
 
 .home {
   .home-info {
     .home-info__hero {
       display: grid;
-      grid-template-columns: 30% 70%;
+      grid-template-columns: 60% 40%;
+      background-color: $Principal-Negro;
+
+      padding: 0px 80px;
 
       .home-info__hero-title {
         grid-column: 1;
-        color: white;
-        padding-top: 75vh;
-        text-align: right;
+        color: $Textos-blancos;
+        padding-top: 40vh;
+        text-align: left;
 
-        h1 {
-          font-size: 3.5rem;
+        .home-titulo {
+          display: flex;
+
+          p {
+            padding: 0px;
+            border: none;
+            margin: 0;
+            font-size: $Tamanio-texto-hero * 0.6;
+            font-weight: bold;
+            text-transform: capitalize;
+            width: fit-content;
+          }
+          span {
+            color: $textos-secundarios-GrisOscuro;
+            font-size: $Tamanio-texto-hero * 0.6;
+            width: fit-content;
+            padding-left: 15px;
+            font-weight: bold;
+          }
         }
-        button {
-          padding: 20px;
-          border: none;
-          background-color: $Enfasis-celeste;
-          font-size: 1.5rem;
 
-          margin-top: 10px;
+        .home-titulo_profesion {
+          line-height: 45px;
+          display: flex;
+          p,
+          span {
+            font-size: $Tamanio-texto-hero;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 0;
+          }
+          span {
+            padding-left: 10px;
+            color: $Terciario-verde;
+          }
+        }
+
+        /* .titulo-profesion_jr {
+          display: flex;
+          height: fit-content;
+          p,
+          span {
+            font-size: $Tamanio-texto-hero;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 0;
+          }
+          span {
+            color: red;
+            padding-left: 10px;
+          }
+        } */
+
+        .boton-contacto {
+          padding-top: 10px;
+          button {
+            padding: 10px 20px;
+            border: none;
+            background-color: $Terciario-verde;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: $Textos-blancos;
+            font-size: 13px;
+          }
         }
       }
 
       .home-info__hero-image {
         grid-column: 2;
-        height: 100vh;
+        height: 90vh;
         background-repeat: no-repeat;
         background-position: center;
-        background-size: contain;
+        background-size: cover;
+        width: 100%;/*  img {
+          width: 500px;
+          height: 80%;
+        } */
       }
     }
 
     .home-info__bio {
       display: grid;
       grid-template-columns: 50% 50%;
-
-      background-color: $Secundario-gris;
+      width: 100%;
+      background-color: $Secundario-negro;
       padding: 50px 100px;
       .home-info__bio-imagen {
         grid-column: 1;
@@ -53,15 +118,16 @@
       .home-info__bio-biografia {
         grid-column: 2;
         margin: auto;
-        color: $Texto-negro;
+        color: $Textos-blancos;
         h2 {
-          font-size: 2rem;
+          font-size: $Tamanio-texto-hero;
+          font-weight: bold;
           padding-bottom: 20px;
-          color: $Texto-negro;
+          color: $Textos-blancos;
         }
 
         p {
-          font-size: 1.25rem;
+          font-size: $Tamanio-texto-parrafos;
         }
       }
     }
@@ -76,9 +142,10 @@
       height: fit-content;
       justify-content: space-evenly;
       padding-top: 50px;
-      width: 50%;
+      width: 80%;
       margin: auto;
-
+      font-size: $Tamanio-texto-submenu;
+      font-weight: bold;
       .categoriaSinSeleccionar {
         text-decoration: none;
         cursor: pointer;
@@ -137,7 +204,7 @@
     }
   }
   .seccionClientes {
-    background-color: $Principal-Negro;
+    background-color: $Secundario-negro;
     text-align: center;
     padding: 50px;
     p {
@@ -157,7 +224,7 @@
           .card {
             width: 40vw;
             text-align: center;
-            background-color: $Enfasis-celeste;
+            background-color: $Terciario-verde;
             padding: 20px;
             border-radius: 40px;
             font-family: var(--font-quotes);
@@ -216,7 +283,119 @@
   }
 
   h2 {
-    color: white;
-    font-family: var(--font-principal);
+    color: $Textos-blancos;
+    font-size: $Tamanio-texto-hero;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 576px) {
+  .home {
+    .home-info {
+      .home-info__hero {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 40px 0;
+        .home-info__hero-title {
+          padding-top: 5vh;
+          .home-titulo {
+            display: flex;
+            justify-content: center;
+            p {
+              font-size: $Tamanio-texto-hero * 0.5;
+            }
+            span {
+              font-size: $Tamanio-texto-hero * 0.5;
+            }
+          }
+
+          .home-titulo_profesion {
+            display: flex;
+            justify-content: center;
+            line-height: 20px;
+            p {
+              font-size: $Tamanio-texto-hero * 0.5;
+            }
+          }
+          .titulo-profesion_jr {
+            display: flex;
+            justify-content: center;
+            p,
+            span {
+              font-size: $Tamanio-texto-hero * 0.5;
+            }
+          }
+          .boton-contacto {
+            display: flex;
+            justify-content: center;
+          }
+        }
+
+        .home-info__hero-image {
+          padding: 20px 0;
+          img {
+            width: 100px;
+          }
+        }
+      }
+      .home-info__bio {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 20px;
+        padding-top: 100px;
+
+        .home-info__bio-biografia {
+          padding: 0 50px;
+          h2 {
+            position: relative;
+            top: -300px;
+            text-align: center;
+            font-size: $Tamanio-texto-hero * 0.5;
+            padding: 0;
+            margin: 0;
+          }
+          p {
+            font-size: $Tamanio-texto-parrafos * 0.8;
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .portfolio {
+      padding: 20px;
+
+      .portfolio-proyectos_barraMenu {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        flex-wrap: wrap;
+        width: 100%;
+        font-size: $Tamanio-texto-submenu * 0.8;
+        padding: 20px 0 30px;
+        .categoriaSinSeleccionar {
+          width: fit-content;
+        }
+        .portfolio-categoriaSeleccionada {
+          width: fit-content;
+        }
+      }
+
+      .portfolio-proyectos {
+        width: 100%;
+        justify-content: space-between;
+        text-align: center;
+        .portfolio-proyectos_recuadro {
+          width: 150px;
+          height: 150px;
+          margin: 20px auto;
+        }
+      }
+    }
+
+    .seccionClientes {
+      padding: 20px;
+    }
   }
 }

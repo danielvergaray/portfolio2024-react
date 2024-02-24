@@ -26,7 +26,7 @@ function App() {
   }; */
   return (
     <>
-      <ParticlesBackground />
+     {/*  <ParticlesBackground /> */}
 
       {/* <GeneralContextProvider> */}
         <BrowserRouter>

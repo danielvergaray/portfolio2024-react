@@ -1,12 +1,12 @@
 .seccion-estudios {
   padding: 50px;
   margin: 0;
-  background-color: $Secundario-gris;
+  background-color: $Principal-Negro;
   text-align: center;
   overflow-x: hidden;
   overflow-y: hidden;
   h2 {
-    color: $Texto-negro;
+    color: $Textos-blancos;
   }
 
   .estudios-proyectos_barraMenu {
@@ -17,11 +17,12 @@
     padding-bottom: 80px;
     width: 50%;
     margin: auto;
-
+    font-size: $Tamanio-texto-submenu;
+    font-weight: bold;
     .categoriaSinSeleccionar {
       text-decoration: none;
       cursor: pointer;
-      color: white;
+      color: $Textos-blancos;
     }
     .portfolio-categoriaSeleccionada {
       color: $Enfasis-celeste;
@@ -67,7 +68,7 @@
         left: 50%; /* Coloca la línea en el centro horizontal de la pantalla */
         width: 5px; /* Ancho de la línea */
         height: 60vh; /* Alto de la línea, igual al alto de la pantalla */
-        background-color: black; /* Color de la línea */
+        background-color: $Secundario-negro; /* Color de la línea */
 
         svg {
           z-index: 500;
@@ -75,6 +76,7 @@
           position: relative;
           left: -23px;
           top: 48px;
+          color: $Secundario-negro;
         }
       }
       .fecha-izquierda {
@@ -82,22 +84,24 @@
         grid-row: 1;
         text-align: right;
         font-weight: 700;
+        color: $Textos-blancos;
       }
       .fecha-derecha {
         grid-column: 3;
         grid-row: 1;
         text-align: left;
         font-weight: 700;
+        color: $Textos-blancos;
       }
 
       .estudio-recuadro {
         padding: 10px;
-        background-color: $Principal-Negro;
-        border: 1px solid black;
+        background-color: $Secundario-negro;
+        border: 1px solid $Secundario-negro;
         text-align: left;
         width: 100%;
         grid-row: 1;
-        color: white;
+        color: $Textos-blancos;
         padding: 50px;
         height: fit-content;
         border-radius: 10px;
@@ -119,7 +123,6 @@
   .estudios-idiomas {
     display: flex;
     justify-content: space-evenly;
-
     width: 80%;
     max-width: 80%;
     margin: auto;
@@ -129,7 +132,7 @@
       max-width: 30%;
       width: 30%;
       border: 1px solid rgb(66, 57, 73);
-      background-color: $Principal-Negro;
+      background-color: $Secundario-negro;
       color: white;
       min-height: 304px;
 
@@ -173,7 +176,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-         
+
           p {
             padding: 0;
             margin: 0;
@@ -210,6 +213,27 @@
           }
         }
       }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .seccion-estudios {
+    padding: 20px;
+
+    h2 {
+      font-size: $Tamanio-texto-hero * 0.5;
+    }
+
+    .estudios-proyectos_barraMenu {
+      justify-content: space-around;
+      width: 100%;
+      margin: auto;
+      font-size: $Tamanio-texto-submenu*.8;
+    }
+
+    .estudios-programacion{
+      display: flex;
     }
   }
 }
