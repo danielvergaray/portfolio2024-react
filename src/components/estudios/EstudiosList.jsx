@@ -5,6 +5,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { TbPointFilled } from "react-icons/tb";
 import IdiomasList from "./IdiomasList";
+import Carousel from "react-bootstrap/Carousel";
 
 const EstudiosList = ({ infoCursos, infoMenu }) => {
   const [categoriaSeleccionada, setCategoriaSeleccionada] =
@@ -14,6 +15,11 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
     setCategoriaSeleccionada(categoria);
   };
 
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex) => {
+    setIndex(selectedIndex);
+  };
   const proyectosFiltrados =
     categoriaSeleccionada === "PROGRAMACION"
       ? infoCursos
@@ -113,6 +119,36 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
                 ) : null}
               </div>
             ))}
+          </>
+        ) : (
+          <article className="estudios-idiomas">
+            <IdiomasList
+              infoCursos={proyectosFiltrados}
+              categoriaSeleccionada={categoriaSeleccionada}
+            />
+          </article>
+        )}
+      </article>
+
+      <article className="estudios-programacion-mobile">
+        {categoriaSeleccionada === "PROGRAMACION" ? (
+          <>
+          <Carousel activeIndex={index} onSelect={handleSelect}>
+            {proyectosFiltrados.map((proyecto, index) => (
+              <Carousel.Item key={index}>
+                {proyecto.id ? (
+                  <div
+                    className="estudio-recuadro"
+                  >
+                    <h3>{proyecto.titulo}</h3>
+                    <p>{proyecto.instituto}</p>
+                    <p>{proyecto.descripcion}</p>
+                    <p>{proyecto.iconos}</p>
+                  </div>
+                ) : null}
+              </Carousel.Item>
+            ))}
+           </Carousel>
           </>
         ) : (
           <article className="estudios-idiomas">

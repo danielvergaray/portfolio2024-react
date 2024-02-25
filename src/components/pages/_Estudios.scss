@@ -1,3 +1,7 @@
+.estudios-programacion-mobile{
+  display: none;
+}
+
 .seccion-estudios {
   padding: 50px;
   margin: 0;
@@ -218,22 +222,56 @@
 }
 
 @media (max-width: 576px) {
-  .seccion-estudios {
+
+  .estudios-programacion{
+    display: none;
+  }
+
+  .seccion-estudios{
     padding: 20px;
-
-    h2 {
-      font-size: $Tamanio-texto-hero * 0.5;
-    }
-
-    .estudios-proyectos_barraMenu {
-      justify-content: space-around;
-      width: 100%;
-      margin: auto;
-      font-size: $Tamanio-texto-submenu*.8;
-    }
-
-    .estudios-programacion{
+    .estudios-programacion-mobile {
+      padding: 20px;
       display: flex;
+  
+      h2 {
+        font-size: $Tamanio-texto-hero * 0.5;
+      }
+  
+      .estudio-recuadro {
+        padding: 10px;
+        background-color: $Secundario-negro;
+        border: 1px solid $Secundario-negro;
+        text-align: left;
+        width: 100%;
+        grid-row: 1;
+        color: $Textos-blancos;
+        padding: 20px;
+        height: fit-content;
+        border-radius: 10px;
+        position: relative;
+        top: -40px;
+  
+        p {
+          margin: 0;
+          padding: 5px 0;
+  
+          svg {
+            font-size: 30px;
+            margin-top: 10px;
+          }
+        }
+      }
+  
+      .estudios-proyectos_barraMenu {
+        justify-content: space-around;
+        width: 100%;
+        margin: auto;
+        font-size: $Tamanio-texto-submenu*.8;
+      }
+  
+     
     }
   }
+
+  
 }
