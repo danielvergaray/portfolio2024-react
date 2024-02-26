@@ -105,12 +105,21 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
                         <p>{proyecto.descripcion}</p>
                         <p>{proyecto.iconos}</p>
                       </div>
-                      <div
-                        data-aos="fade-up"
-                        className="estudios-timeLine_line"
-                      >
-                        <TbPointFilled />
-                      </div>
+                      {proyecto.titulo !== "Wordpress" ? (
+                        <div
+                          data-aos="fade-up"
+                          className="estudios-timeLine_line"
+                        >
+                          <TbPointFilled />
+                        </div>
+                      ) : proyecto.titulo === "Wordpress" ? (
+                        <div
+                          data-aos="fade-up"
+                          className="estudios-timeLine_line-ultimoPunto"
+                        >
+                          <TbPointFilled />
+                        </div>
+                      ) : null}
                       <div data-aos="fade-right" className="fecha-izquierda">
                         <p>{proyecto.duracion}</p>
                       </div>
@@ -133,22 +142,20 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
       <article className="estudios-programacion-mobile">
         {categoriaSeleccionada === "PROGRAMACION" ? (
           <>
-          <Carousel activeIndex={index} onSelect={handleSelect}>
-            {proyectosFiltrados.map((proyecto, index) => (
-              <Carousel.Item key={index}>
-                {proyecto.id ? (
-                  <div
-                    className="estudio-recuadro"
-                  >
-                    <h3>{proyecto.titulo}</h3>
-                    <p>{proyecto.instituto}</p>
-                    <p>{proyecto.descripcion}</p>
-                    <p>{proyecto.iconos}</p>
-                  </div>
-                ) : null}
-              </Carousel.Item>
-            ))}
-           </Carousel>
+            <Carousel activeIndex={index} onSelect={handleSelect}>
+              {proyectosFiltrados.map((proyecto, index) => (
+                <Carousel.Item key={index}>
+                  {proyecto.id ? (
+                    <div className="estudio-recuadro">
+                      <h3>{proyecto.titulo}</h3>
+                      <p>{proyecto.instituto}</p>
+                      <p>{proyecto.descripcion}</p>
+                      <p>{proyecto.iconos}</p>
+                    </div>
+                  ) : null}
+                </Carousel.Item>
+              ))}
+            </Carousel>
           </>
         ) : (
           <article className="estudios-idiomas">

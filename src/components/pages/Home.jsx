@@ -135,6 +135,7 @@ const Home = () => {
           </div>
           <div className="home-info__bio-biografia">
             <h2>¿QUIEN SOY?</h2>
+            <h3>Sobre mí</h3>
             <p> {info[0].bio} </p> <br />
             <p> {info[0].bio2} </p>
           </div>

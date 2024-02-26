@@ -1,4 +1,4 @@
-.estudios-programacion-mobile{
+.estudios-programacion-mobile {
   display: none;
 }
 
@@ -22,16 +22,16 @@
     width: 50%;
     margin: auto;
     font-size: $Tamanio-texto-submenu;
-    font-weight: bold;
+
     .categoriaSinSeleccionar {
       text-decoration: none;
       cursor: pointer;
       color: $Textos-blancos;
     }
     .portfolio-categoriaSeleccionada {
-      color: $Enfasis-celeste;
+      color: $Terciario-verde;
       text-decoration: none;
-      font-weight: 700;
+      font-weight: bold;
     }
   }
 
@@ -41,6 +41,7 @@
       grid-template-columns: 47.5% 5% 47.5%;
       grid-template-rows: 1;
       padding: 0;
+
       .estudio-recuadro-impar {
         grid-column: 1;
         clip-path: polygon(
@@ -68,7 +69,7 @@
       .estudios-timeLine_line {
         grid-column: 2;
         position: relative; /* Para que la línea se mantenga fija en la pantalla */
-        top: -60px; /* Coloca la línea en la parte superior */
+        top: 15px; /* Coloca la línea en la parte superior */
         left: 50%; /* Coloca la línea en el centro horizontal de la pantalla */
         width: 5px; /* Ancho de la línea */
         height: 60vh; /* Alto de la línea, igual al alto de la pantalla */
@@ -79,8 +80,21 @@
           font-size: 50px;
           position: relative;
           left: -23px;
-          top: 48px;
-          color: $Secundario-negro;
+          top: -25px;
+          color: $Terciario-verde;
+        }
+      }
+      .estudios-timeLine_line-ultimoPunto {
+        position: relative;
+        top: 15px;
+        left: 40%;
+        svg {
+          z-index: 500;
+          font-size: 50px;
+          position: relative;
+          left: -23px;
+          top: -25px;
+          color: $Terciario-verde;
         }
       }
       .fecha-izquierda {
@@ -112,14 +126,23 @@
         position: relative;
         top: -40px;
 
+        h3 {
+          margin: 0;
+        }
+
         p {
           margin: 0;
-          padding: 5px 0;
+          padding-bottom: 5px;
 
           svg {
             font-size: 30px;
             margin-top: 10px;
           }
+        }
+
+        p:nth-child(2) {
+          color: $Terciario-verde;
+          padding-bottom: 50px;
         }
       }
     }
@@ -222,21 +245,20 @@
 }
 
 @media (max-width: 576px) {
-
-  .estudios-programacion{
+  .estudios-programacion {
     display: none;
   }
 
-  .seccion-estudios{
+  .seccion-estudios {
     padding: 20px;
     .estudios-programacion-mobile {
       padding: 20px;
       display: flex;
-  
+
       h2 {
         font-size: $Tamanio-texto-hero * 0.5;
       }
-  
+
       .estudio-recuadro {
         padding: 10px;
         background-color: $Secundario-negro;
@@ -250,28 +272,24 @@
         border-radius: 10px;
         position: relative;
         top: -40px;
-  
+
         p {
           margin: 0;
           padding: 5px 0;
-  
+
           svg {
             font-size: 30px;
             margin-top: 10px;
           }
         }
       }
-  
+
       .estudios-proyectos_barraMenu {
         justify-content: space-around;
         width: 100%;
         margin: auto;
-        font-size: $Tamanio-texto-submenu*.8;
+        font-size: $Tamanio-texto-submenu * 0.8;
       }
-  
-     
     }
   }
-
-  
 }

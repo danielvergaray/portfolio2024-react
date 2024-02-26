@@ -32,16 +32,13 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
 
   const abrirPopUp = (index) => {
     setProyectoSeleccionado(index);
-    document.body.classList.add("popup-open")
-    
+    document.body.classList.add("popup-open");
   };
 
   const cerrarPopUp = () => {
     setProyectoSeleccionado(null);
-    document.body.classList.remove("popup-open")
+    document.body.classList.remove("popup-open");
   };
-
-
 
   return (
     <>
@@ -71,24 +68,33 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
           </article>
           <section className="portfolio-proyectos">
             {proyectosFiltrados.map((proyecto, index) => (
-              <div
-                onMouseEnter={() => mostrarInfo(index)}
-                onMouseLeave={() => ocultarInfo()}
-                onClick={() => abrirPopUp(index)}
-                key={index}
-                style={{ backgroundImage: `url(${proyecto.imagenRecuadro})` }}
-                className="portfolio-proyectos_recuadro"
-              >
-                {infoVisible[index] && (
-                  <div className="portfolio-proyectos_recuadro-info">
-                    <div>
-                      <FaSearch />
-                    </div>
-                    <h3>{proyecto.titulo}</h3>
-                    <p>{proyecto.descripcionBreve}</p>
+              <>
+                <div>
+                  <div
+                    className="portfolio-proyectos_recuadro"
+                    onMouseEnter={() => mostrarInfo(index)}
+                    onMouseLeave={() => ocultarInfo()}
+                    onClick={() => abrirPopUp(index)}
+                    key={index}
+                    style={{
+                      backgroundImage: `url(${proyecto.imagenRecuadro})`,
+                    }}
+                  >
+                    {infoVisible[index] && (
+                      <div className="portfolio-proyectos_recuadro-info">
+                        <h3>{proyecto.titulo}</h3>
+                        <p>{proyecto.descripcionBreve}</p>
+                        <div>
+                          <button>Ver</button>
+                        </div>
+                      </div>
+                    )}
                   </div>
-                )}
-              </div>
+                  <div className="portfolio-proyectos_recuadro-titulo">
+                    <h4>{proyecto.titulo} </h4>
+                  </div>
+                </div>
+              </>
             ))}
           </section>
         </>

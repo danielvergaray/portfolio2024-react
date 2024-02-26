@@ -19,7 +19,7 @@ const PortfolioListContainer = () => {
   const proyectos = [
     {
       id: "1",
-      titulo: "Adivina el Número",
+      titulo: "Juego: Adivina el Número",
       imagenRecuadro: ImagenAdivina,
       imagenesCarusel: [
         {
