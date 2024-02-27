@@ -134,8 +134,8 @@ const Home = () => {
             <img src={info[0].imagenBio} alt="" />
           </div>
           <div className="home-info__bio-biografia">
-            <h2>Sobre mí</h2>
-            <h3>¿Quien soy?</h3>
+            <h3>Sobre mí</h3>
+            <h2>¿Quien soy?</h2>
             <p> {info[0].bio} </p> <br />
             <p> {info[0].bio2} </p>
           </div>

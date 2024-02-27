@@ -142,7 +142,7 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
       <article className="estudios-programacion-mobile">
         {categoriaSeleccionada === "PROGRAMACION" ? (
           <>
-            <Carousel activeIndex={index} onSelect={handleSelect}>
+            {/* <Carousel activeIndex={index} onSelect={handleSelect}>
               {proyectosFiltrados.map((proyecto, index) => (
                 <Carousel.Item key={index}>
                   {proyecto.id ? (
@@ -155,7 +155,27 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
                   ) : null}
                 </Carousel.Item>
               ))}
-            </Carousel>
+            </Carousel> */}
+
+            <div className="estudios-programacion-container">
+              {proyectosFiltrados.map((proyecto, index) => (
+                <div key={index}>
+                  {proyecto.id ? (
+                    <div className="estudio-recuadr-container">
+                      <div className="estudio-recuadro">
+                        <h3>{proyecto.titulo}</h3>
+                        <p>{proyecto.instituto}</p>
+                        <p>{proyecto.descripcion}</p>
+                        <p>{proyecto.iconos}</p>
+                      </div>
+                      {index !== infoCursos.length - 1 && ( // Para no mostrar la linea cuando se el ultimo elemento
+                        <div className="estudio-recuadro-linea"></div>
+                      )}
+                    </div>
+                  ) : null}
+                </div>
+              ))}
+            </div>
           </>
         ) : (
           <article className="estudios-idiomas">

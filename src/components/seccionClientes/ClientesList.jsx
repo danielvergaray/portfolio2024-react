@@ -26,7 +26,7 @@ useEffect(() => {
     <Carousel interval={5000} data-bs-theme="dark" activeIndex={index} onSelect={handleSelect}>
       {gruposClientes.map((grupo, index) => (
         <Carousel.Item key={index}>
-          <div className="d-flex justify-content-center">
+          <div className="clientes-container">
             {grupo.map((cliente, index) => (
               <div key={index} className="clientes-card">
                 <div className="card-frase">

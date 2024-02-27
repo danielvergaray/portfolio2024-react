@@ -70,8 +70,8 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
             {proyectosFiltrados.map((proyecto, index) => (
               <>
                 <div>
-                  <div
-                    className="portfolio-proyectos_recuadro"
+                  <div className="portfolio-proyectos_recuadro"
+                    
                     onMouseEnter={() => mostrarInfo(index)}
                     onMouseLeave={() => ocultarInfo()}
                     onClick={() => abrirPopUp(index)}

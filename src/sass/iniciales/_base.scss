@@ -1,4 +1,5 @@
 @import "../reutilizables/colors";
+@import "/src/sass/reutilizables/tipografias";
 
 body {
   font-family: var(--font-principal);
@@ -16,6 +17,21 @@ body {
     font-size: 15px;
     text-transform: uppercase;
   }
+
+  h2 {
+    
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $Textos-blancos;
+    font-size: $Tamanio-texto-hero;
+  }
+
+  h3 {
+    color: $Terciario-verde;
+    font-weight: bold;
+    font-size: $Tamanio-texto-submenu;
+    text-transform: uppercase;
+  }
 }
 .popup-open {
   overflow: hidden;
@@ -26,4 +42,17 @@ body {
   height: 100%;
   background-color: yellow;
   z-index: 9998; */
+}
+
+@media (max-width: 576px){
+
+  body{
+   
+    h2{
+      font-size: $Tamanio-texto-hero * 0.5;
+    }
+  }
+
+ 
+
 }

@@ -162,7 +162,7 @@
       background-color: $Secundario-negro;
       color: white;
       min-height: 304px;
-
+      margin: 10px;
       .card-body {
         display: grid;
         grid-template-rows: 20% 60% 20%;
@@ -251,44 +251,92 @@
 
   .seccion-estudios {
     padding: 20px;
+
+    .estudios-proyectos_barraMenu {
+      padding: 20px 0;
+      width: 100%;
+    }
     .estudios-programacion-mobile {
-      padding: 20px;
       display: flex;
 
-      h2 {
-        font-size: $Tamanio-texto-hero * 0.5;
-      }
+      .estudios-programacion-container {
+        display: flex;
+        overflow-x: scroll;
 
-      .estudio-recuadro {
-        padding: 10px;
-        background-color: $Secundario-negro;
-        border: 1px solid $Secundario-negro;
-        text-align: left;
-        width: 100%;
-        grid-row: 1;
-        color: $Textos-blancos;
-        padding: 20px;
-        height: fit-content;
-        border-radius: 10px;
-        position: relative;
-        top: -40px;
+        .estudio-recuadr-container {
+          display: flex;
+          width: 100%;
+          .estudio-recuadro {
+            padding: 10px;
+            background-color: $Secundario-negro;
+            border: 1px solid $Secundario-negro;
+            text-align: left;
+            width: 50vw;
+            grid-row: 1;
+            color: $Textos-blancos;
+            padding: 20px;
+            height: fit-content;
+            border-radius: 10px;
+            height: 320px;
+            /* position: relative;
+            top: -40px; */
 
-        p {
-          margin: 0;
-          padding: 5px 0;
+            p {
+              margin: 0;
+              padding: 5px 0;
+              font-size: $Tamanio-texto-parrafos * 0.8;
 
-          svg {
-            font-size: 30px;
-            margin-top: 10px;
+              svg {
+                font-size: 30px;
+                margin-top: 10px;
+              }
+            }
+          }
+          .estudio-recuadro-linea {
+            position: relative; /* Para que la línea se mantenga fija en la pantalla */
+            top: 15px; /* Coloca la línea en la parte superior */
+            left: 0; /* Coloca la línea en el centro horizontal de la pantalla */
+            width: 20px; /* Ancho de la línea */
+            height: 1px; /* Alto de la línea, igual al alto de la pantalla */
+            background-color: white; /* Color de la línea */
+            margin: auto;
           }
         }
       }
+    }
 
-      .estudios-proyectos_barraMenu {
-        justify-content: space-around;
-        width: 100%;
-        margin: auto;
-        font-size: $Tamanio-texto-submenu * 0.8;
+    .estudios-idiomas {
+      flex-wrap: wrap;
+
+      .cards {
+        padding: 0;
+        max-width: 100%;
+        width: 50%;
+        min-height: 200px;
+        .card-body {
+          margin: 20px;
+          .cards-iconos {
+            img {
+              width: 30px;
+            }
+          }
+          .cards-titulos,
+          .cards-nivel {
+            p {
+              font-size: $Tamanio-texto-parrafos * 0.8;
+            }
+          }
+          .cards-flechas {
+            svg {
+              font-size: 20px;
+            }
+          }
+          .cards-descripcion {
+            p {
+              font-size: $Tamanio-texto-parrafos * 0.7;
+            }
+          }
+        }
       }
     }
   }

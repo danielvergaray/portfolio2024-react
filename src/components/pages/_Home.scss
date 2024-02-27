@@ -120,17 +120,19 @@
         margin: 0 auto;
         color: $Textos-blancos;
         h2 {
-          font-size: $Tamanio-texto-submenu;
+          /* font-size: $Tamanio-texto-submenu;
           text-transform: uppercase;
           font-weight: bold;
-          color: $Terciario-verde;
-          padding-top: 20px;
+          color: $Terciario-verde; */
+          padding-top: 0px;
+          padding-bottom: 50px;
         }
         h3 {
-          font-size: $Tamanio-texto-hero;
+          /* font-size: $Tamanio-texto-hero;
           font-weight: bold;
-          padding-bottom: 20px;
-          color: $Textos-blancos;
+          color: $Textos-blancos; */
+          padding-bottom: 0px;
+          margin: 0;
         }
 
         p {
@@ -204,6 +206,7 @@
             padding: 10px 0;
             font-size: 16px;
             font-weight: 700;
+            color: $Textos-blancos;
           }
           button {
             padding: 10px 20px;
@@ -248,20 +251,22 @@
 
         .carousel-item,
         .active {
-         /*  display: flex; */
-
-          .clientes-card {
-            border: 1px solid;
-            padding: 50px;
-            text-align: left;
-            margin: 10px;
+          .clientes-container {
+            display: flex;
+            justify-content: center;
+            .clientes-card {
+              border: 1px solid;
+              padding: 50px;
+              text-align: left;
+              margin: 10px;
+            }
           }
 
           .card-frase {
             display: flex;
             h3 {
               color: $Terciario-verde;
-              font-size: 25px;
+              font-size: $Tamanio-texto-quote;
               padding: 0 10px;
               text-align: center;
               font-family: var(--font-quotes);
@@ -309,20 +314,20 @@
         position: absolute;
         width: fit-content;
 
-        .carousel-control-prev-icon, .carousel-control-next-icon{
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
           filter: none;
         }
-        
       }
     }
   }
 
-  h2 {
+  /* h2 {
     color: $Textos-blancos;
     font-size: $Tamanio-texto-hero;
     font-weight: bold;
     text-transform: capitalize;
-  }
+  } */
 }
 
 @media (max-width: 576px) {
@@ -353,14 +358,14 @@
               font-size: $Tamanio-texto-hero * 0.5;
             }
           }
-          .titulo-profesion_jr {
+          /* .titulo-profesion_jr {
             display: flex;
             justify-content: center;
             p,
             span {
               font-size: $Tamanio-texto-hero * 0.5;
             }
-          }
+          } */
           .boton-contacto {
             display: flex;
             justify-content: center;
@@ -382,14 +387,18 @@
         padding-top: 100px;
 
         .home-info__bio-biografia {
-          padding: 0 50px;
+          padding: 0 20px;
           h2 {
             position: relative;
-            top: -300px;
+            top: 00px;
             text-align: center;
-            font-size: $Tamanio-texto-hero * 0.5;
             padding: 0;
+            padding-bottom: 20px;
             margin: 0;
+          }
+          h3 {
+            position: relative;
+            top: -280px;
           }
           p {
             font-size: $Tamanio-texto-parrafos * 0.8;
@@ -409,7 +418,7 @@
         flex-wrap: wrap;
         width: 100%;
         font-size: $Tamanio-texto-submenu * 0.8;
-        padding: 20px 0 30px;
+        padding: 20px 10px 30px;
         .categoriaSinSeleccionar {
           width: fit-content;
         }
@@ -421,17 +430,73 @@
       .portfolio-proyectos {
         width: 100%;
         justify-content: space-between;
+        display: flex;
         text-align: center;
-        .portfolio-proyectos_recuadro {
-          width: 150px;
-          height: 150px;
-          margin: 20px auto;
+
+        div {
+          width: 50%;
+          margin: 5px 0;
+          .portfolio-proyectos_recuadro {
+            width: 90%;
+            height: 150px;
+            margin: auto;
+          }
+          .portfolio-proyectos_recuadro-titulo {
+            width: 100%;
+            h4 {
+              font-size: $Tamanio-texto-parrafos * 0.7;
+            }
+          }
         }
       }
     }
 
     .seccionClientes {
       padding: 20px;
+
+      h2 {
+        padding-bottom: 0px;
+        color: white;
+      }
+      .carousel {
+        padding: 20px;
+
+        .carousel-inner {
+          .carousel-item,
+          .active {
+            .clientes-container {
+              display: flex;
+              flex-direction: column;
+
+              .clientes-card {
+                margin: 20px 0;
+                padding: 20px;
+              }
+            }
+            .card-frase {
+              h3 {
+                font-size: $Tamanio-texto-quote * 0.7;
+              }
+            }
+            .card-comentario {
+              p {
+                font-size: $Tamanio-texto-parrafos * 0.8;
+              }
+            }
+            .card-cliente {
+              p {
+                font-size: $Tamanio-texto-parrafos * 0.7;
+              }
+            }
+          }
+        }
+        .carousel-indicators {
+          position: absolute;
+          margin: 0;
+          bottom: 0px;
+        }
+        
+      }
     }
   }
 }
