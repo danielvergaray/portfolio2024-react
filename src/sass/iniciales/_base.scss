@@ -4,6 +4,18 @@ body {
   font-family: var(--font-principal);
   
   background-color: $Principal-Negro;
+
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    background-color: $Terciario-verde;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $Textos-blancos;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
 }
 .popup-open {
   overflow: hidden;

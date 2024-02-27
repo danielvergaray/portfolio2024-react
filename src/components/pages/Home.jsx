@@ -134,8 +134,8 @@ const Home = () => {
             <img src={info[0].imagenBio} alt="" />
           </div>
           <div className="home-info__bio-biografia">
-            <h2>¿QUIEN SOY?</h2>
-            <h3>Sobre mí</h3>
+            <h2>Sobre mí</h2>
+            <h3>¿Quien soy?</h3>
             <p> {info[0].bio} </p> <br />
             <p> {info[0].bio2} </p>
           </div>
@@ -145,17 +145,17 @@ const Home = () => {
       {/* PORTAFOLIO */}
 
       <section id="sectionRef2" ref={sectionRef2} className="portfolio">
-        <h2>PORTFOLIO</h2>
+        <h2>portfolio</h2>
         <PortfolioListContainer />
       </section>
 
       <section id="sectionRef3" ref={sectionRef3} className="seccion-estudios">
-        <h2>ESTUDIOS</h2>
+        <h2>estudios</h2>
         <EstudiosListContainer />
       </section>
 
       <section id="sectionRef4" ref={sectionRef4} className="seccionClientes">
-        <h2>CLIENTES</h2>
+        <h2>clientes</h2>
         <ClientesListContainer />
       </section>
     </div>

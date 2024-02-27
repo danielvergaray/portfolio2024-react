@@ -6,7 +6,8 @@ const FooterList = ({ infoBotones, barraInferior }) => {
   const sectionRef5 = useRef(null);
   return (
     <section id="sectionRef5" ref={sectionRef5} className="footer-section">
-      <h2>HABLEMOS ACERCA DEL PRÓXIMO PROYECTO JUNTOS.</h2>
+      <h2>CONTACTO</h2>
+      <h3>Hablemos acerca del próximo proyecto juntos.</h3>
       <div className="footer-botones">
         {infoBotones.map((boton, index) => (
           <Link to={boton.link} target="_blank" key={index}>

@@ -8,21 +8,27 @@ import { useRef } from "react";
 import scrollToSection from "../scroll/scrollUtils";
 import GeneralContext from "../context/GeneralContext";
 import { useContext } from "react";
+import { useEffect, useState } from "react";
 
 const NavBarList = ({ menu }) => {
-  /*  const sectionRef1 = useRef(null);
-  const sectionRef2 = useRef(null);
-  const sectionRef3 = useRef(null);
-  const sectionRef4 = useRef(null); */
+ 
 
-  /* const scrollToSection = (ref) => {
-    ref.current.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }; */
+  const [scrolling, setScrolling] = useState(false);
 
-  /* const {scrollFunction}= useContext(GeneralContext); */
+  useEffect(() => { // Cambio de color del navbar
+    const handleScroll = () => {
+      if (window.scrollY > 50) { // 50 es el ancho del navbar
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const scrollFunction = (refIndex) => {
     const ref = document.getElementById(`sectionRef${refIndex}`);
@@ -37,7 +43,7 @@ const NavBarList = ({ menu }) => {
   
 
   return (
-    <Navbar expand="lg" className="navbar bg-body-tertiary">
+    <Navbar expand="lg" className={`navbar ${scrolling ? "bg-body-scroll" : "bg-body-tertiary"}`}>
       <Container>
         <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
