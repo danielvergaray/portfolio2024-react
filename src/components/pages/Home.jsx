@@ -102,22 +102,7 @@ const Home = () => {
                 </div>
               ))}
             </div>
-            {/* <div className="titulo-profesion_jr">
-              {juniorArray.map((junior, index) => (
-                <div key={index}>
-                  {junior.type === "p" && (
-                    <>
-                      <p>{junior.content}</p>
-                    </>
-                  )}
-                  {junior.type === "span" && (
-                    <>
-                      <span>{junior.content}</span>
-                    </>
-                  )}
-                </div>
-              ))}
-            </div> */}
+        
             <div className="boton-contacto">
               <button>Contáctame</button>
             </div>

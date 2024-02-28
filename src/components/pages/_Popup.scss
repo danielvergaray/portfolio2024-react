@@ -1,5 +1,5 @@
 .popup-container {
-  background-color: $Terciario-verde;
+  background-color: $Principal-Negro;
   width: 90vw;
   height: 95vh;
   position: fixed;
@@ -15,20 +15,22 @@
     padding: 50px;
 
     .popup-botonCerrar {
-      position: relative;
+      /* position: relative;
       top: -10px;
-      left: 40%;
-
+      left: 40%; */
+display: flex;
+justify-content: right;
       svg {
         font-size: 30px;
         cursor: pointer;
+        color: $Textos-blancos;
       }
     }
 
     .popup-titulo {
       h2 {
         margin: 0;
-        color: $Texto-negro;
+        color: $Textos-blancos;
         padding-bottom: 40px;
       }
     }
@@ -49,10 +51,19 @@
             width: 10px;
             height: 10px;
             border-radius: 50%;
+            background-color: white;
           }
         }
         img {
           width: 500px;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+          .carousel-control-prev-icon,
+          .carousel-control-next-icon {
+            filter: none;
+          }
         }
       }
       .popup-descripcion {
@@ -61,6 +72,7 @@
         text-align: left;
         p {
           margin: 0;
+          color: $Textos-blancos;
         }
       }
     }
@@ -76,13 +88,13 @@
         padding: 20px;
         border: 1px solid white;
         background-color: black;
-        color: white;
-        border-radius: 40px;
+
         width: 100%;
         text-align: center;
 
         &:hover {
-          background-color: $Enfasis-celeste;
+          background-color: $Terciario-verde;
+          border: none;
         }
       }
     }

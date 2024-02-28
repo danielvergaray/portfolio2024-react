@@ -52,14 +52,14 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
         <>
           <article className="portfolio-proyectos_barraMenu">
             {infoMenu.map((opcionMenu, index) => (
-              <NavLink
+              <NavLink key={index}
                 className={
                   categoriaSeleccionada === opcionMenu.titulo
                     ? "portfolio-categoriaSeleccionada"
                     : "categoriaSinSeleccionar"
                 }
                 to="#"
-                key={index}
+                
                 onClick={() => handleClick(opcionMenu.titulo)}
               >
                 {opcionMenu.titulo}
@@ -68,14 +68,14 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
           </article>
           <section className="portfolio-proyectos">
             {proyectosFiltrados.map((proyecto, index) => (
-              <>
+              <div key={index}>
                 <div>
                   <div className="portfolio-proyectos_recuadro"
                     
                     onMouseEnter={() => mostrarInfo(index)}
                     onMouseLeave={() => ocultarInfo()}
                     onClick={() => abrirPopUp(index)}
-                    key={index}
+                    
                     style={{
                       backgroundImage: `url(${proyecto.imagenRecuadro})`,
                     }}
@@ -94,7 +94,7 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
                     <h4>{proyecto.titulo} </h4>
                   </div>
                 </div>
-              </>
+              </div>
             ))}
           </section>
         </>

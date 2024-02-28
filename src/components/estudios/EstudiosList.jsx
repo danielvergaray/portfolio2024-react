@@ -5,7 +5,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { TbPointFilled } from "react-icons/tb";
 import IdiomasList from "./IdiomasList";
-import Carousel from "react-bootstrap/Carousel";
+
 
 const EstudiosList = ({ infoCursos, infoMenu }) => {
   const [categoriaSeleccionada, setCategoriaSeleccionada] =
@@ -52,8 +52,8 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
     <>
       <article className="estudios-proyectos_barraMenu">
         {infoMenu.map((opcionMenu, index) => (
-          <NavLink
-            key={index}
+          <NavLink key={index}
+            
             className={
               categoriaSeleccionada === opcionMenu.titulo
                 ? "portfolio-categoriaSeleccionada"
@@ -142,21 +142,6 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
       <article className="estudios-programacion-mobile">
         {categoriaSeleccionada === "PROGRAMACION" ? (
           <>
-            {/* <Carousel activeIndex={index} onSelect={handleSelect}>
-              {proyectosFiltrados.map((proyecto, index) => (
-                <Carousel.Item key={index}>
-                  {proyecto.id ? (
-                    <div className="estudio-recuadro">
-                      <h3>{proyecto.titulo}</h3>
-                      <p>{proyecto.instituto}</p>
-                      <p>{proyecto.descripcion}</p>
-                      <p>{proyecto.iconos}</p>
-                    </div>
-                  ) : null}
-                </Carousel.Item>
-              ))}
-            </Carousel> */}
-
             <div className="estudios-programacion-container">
               {proyectosFiltrados.map((proyecto, index) => (
                 <div key={index}>

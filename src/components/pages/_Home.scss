@@ -6,7 +6,7 @@
   .home-info {
     .home-info__hero {
       display: grid;
-      grid-template-columns: 60% 40%;
+      grid-template-columns: 50% 50%;
       background-color: $Principal-Negro;
 
       padding: 0px 80px;
@@ -55,23 +55,6 @@
           }
         }
 
-        /* .titulo-profesion_jr {
-          display: flex;
-          height: fit-content;
-          p,
-          span {
-            font-size: $Tamanio-texto-hero;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin: 0;
-            padding: 0;
-          }
-          span {
-            color: red;
-            padding-left: 10px;
-          }
-        } */
-
         .boton-contacto {
           padding-top: 10px;
           button {
@@ -90,12 +73,9 @@
         grid-column: 2;
         height: 90vh;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: center center;
         background-size: cover;
-        width: 100%; /*  img {
-          width: 500px;
-          height: 80%;
-        } */
+        width: 100%; 
       }
     }
 
@@ -334,38 +314,46 @@
   .home {
     .home-info {
       .home-info__hero {
-        display: flex;
-        flex-direction: column;
-        padding: 20px 40px 0;
+        /* display: flex;
+        flex-direction: column; */
+        display: grid;
+        grid-template-columns: 60% 40%;
+        padding: 20px;
         .home-info__hero-title {
-          padding-top: 5vh;
+          padding-top: 15vh;
           .home-titulo {
             display: flex;
             justify-content: center;
+            flex-direction: column;
             p {
               font-size: $Tamanio-texto-hero * 0.5;
             }
             span {
               font-size: $Tamanio-texto-hero * 0.5;
+              padding: 0;
             }
           }
 
           .home-titulo_profesion {
             display: flex;
-            justify-content: center;
+
             line-height: 20px;
             p {
-              font-size: $Tamanio-texto-hero * 0.5;
+              font-size: $Tamanio-texto-hero * 0.4;
+              width: min-content;
+            }
+            div {
+             
+              span {
+                padding-left: 0px;
+                position: relative;
+                left: -130px;
+                bottom: -10px;
+                
+              }
             }
           }
-          /* .titulo-profesion_jr {
-            display: flex;
-            justify-content: center;
-            p,
-            span {
-              font-size: $Tamanio-texto-hero * 0.5;
-            }
-          } */
+         
           .boton-contacto {
             display: flex;
             justify-content: center;
@@ -374,6 +362,8 @@
 
         .home-info__hero-image {
           padding: 20px 0;
+          width: 100%;
+          height: 50vh;
           img {
             width: 100px;
           }
@@ -495,7 +485,6 @@
           margin: 0;
           bottom: 0px;
         }
-        
       }
     }
   }
