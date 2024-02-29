@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import PopUpList from "../popUpInfoProyectos/PopUpList";
+import Aos from "aos";
+import 'aos/dist/aos.css';
 
 const PortfolioList = ({ infoProyectos, infoMenu }) => {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("TODOS");
@@ -28,6 +30,7 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
 
   const ocultarInfo = () => {
     setInfoVisible({});
+    
   };
 
   const abrirPopUp = (index) => {
@@ -49,7 +52,7 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
           proyectoSeleccionado={proyectoSeleccionado}
         />
       ) : (
-        <>
+        <div data-aos-easing="linear" data-aos-duration="1000" data-aos="fade-up">
           <article className="portfolio-proyectos_barraMenu">
             {infoMenu.map((opcionMenu, index) => (
               <NavLink key={index}
@@ -66,7 +69,7 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
               </NavLink>
             ))}
           </article>
-          <section className="portfolio-proyectos">
+          <section /* data-aos-easing="linear" data-aos-duration="1000" data-aos="flip-left" */ className="portfolio-proyectos">
             {proyectosFiltrados.map((proyecto, index) => (
               <div key={index}>
                 <div>
@@ -97,7 +100,7 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
               </div>
             ))}
           </section>
-        </>
+        </div>
       )}
     </>
   );

@@ -1,10 +1,13 @@
 import React from "react";
-import { useRef } from "react";
-import imagenHero from "../../assets/imagenes/fotoHero2.png";
+import { useRef, useEffect } from "react";
+import imagenHero from "../../assets/imagenes/yo-cv.png";
 import imagenBio from "../../assets/imagenes/fotoBio.jpeg";
 import PortfolioListContainer from "../portfolio/PortfolioListContainer";
 import ClientesListContainer from "../seccionClientes/ClientesListContainer";
 import EstudiosListContainer from "../estudios/EstudiosListContainer";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const sectionRef1 = useRef(null);
@@ -62,7 +65,10 @@ const Home = () => {
 
   const tituloArray = Object.values(info[0].title);
   const profesionArray = Object.values(info[0].profesion);
-  /* const juniorArray = Object.values(info[0].junior); */
+
+  useEffect(() => {
+    Aos.init();
+  }, [{ duration: 500 }]);
 
   return (
     <div className="home">
@@ -89,36 +95,44 @@ const Home = () => {
             <div className="home-titulo_profesion">
               {profesionArray.map((profesion, index) => (
                 <div key={index}>
-                  {profesion.type === "p" && (
-                  
-                      <p>{profesion.content}</p>
-                    
-                  )}
+                  {profesion.type === "p" && <p>{profesion.content}</p>}
                   {profesion.type === "span" && (
-               
-                      <span>{profesion.content}</span>
-                   
+                    <span>{profesion.content}</span>
                   )}
                 </div>
               ))}
             </div>
-        
+
             <div className="boton-contacto">
-              <button>Contáctame</button>
+              <Link target="_blank" to="https://wa.me/51950011434">
+                <button>Contáctame</button>
+              </Link>
             </div>
           </div>
 
-          <div className="home-info__hero-image"
-           style={{ backgroundImage: `url(${info[0].imagenHero})` }}>
+          <div
+            className="home-info__hero-image"
+            style={{ backgroundImage: `url(${info[0].imagenHero})` }}
+          >
             {/* <img src={info[0].imagenHero} alt="" /> */}
           </div>
         </article>
 
         <article id="sectionRef1" ref={sectionRef1} className="home-info__bio">
-          <div className="home-info__bio-imagen">
+          <div
+            data-aos-easing="linear"
+            
+            data-aos="zoom-in"
+            className="home-info__bio-imagen"
+          >
             <img src={info[0].imagenBio} alt="" />
           </div>
-          <div className="home-info__bio-biografia">
+          <div
+            data-aos="fade-left"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+            className="home-info__bio-biografia"
+          >
             <h3>Sobre mí</h3>
             <h2>¿Quien soy?</h2>
             <p> {info[0].bio} </p> <br />
@@ -131,15 +145,33 @@ const Home = () => {
 
       <section id="sectionRef2" ref={sectionRef2} className="portfolio">
         <h2>portfolio</h2>
-        <PortfolioListContainer />
+        <PortfolioListContainer
+          data-aos-easing="linear"
+          data-aos-duration="1000"
+          data-aos="fade-up"
+        />
       </section>
 
-      <section id="sectionRef3" ref={sectionRef3} className="seccion-estudios">
+      <section
+        data-aos-easing="linear"
+        data-aos-duration="1000"
+        data-aos="fade-up"
+        id="sectionRef3"
+        ref={sectionRef3}
+        className="seccion-estudios"
+      >
         <h2>estudios</h2>
         <EstudiosListContainer />
       </section>
 
-      <section id="sectionRef4" ref={sectionRef4} className="seccionClientes">
+      <section
+        data-aos-easing="linear"
+        data-aos-duration="1000"
+        data-aos="fade-up"
+        id="sectionRef4"
+        ref={sectionRef4}
+        className="seccionClientes"
+      >
         <h2>clientes</h2>
         <ClientesListContainer />
       </section>

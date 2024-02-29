@@ -4,6 +4,9 @@ import Carousel from "react-bootstrap/Carousel";
 import Card from "react-bootstrap/Card";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 import { useEffect } from "react";
+import Aos from "aos";
+import 'aos/dist/aos.css';
+
 
 const ClientesList = ({ clientes }) => {
   const [index, setIndex] = useState(0);
@@ -21,6 +24,10 @@ useEffect(() => {
   }
   setGruposClientes(grupos);
 }, [clientes]);
+
+useEffect(()=>{
+  Aos.init()
+}, [{duration: 500}])
 
   return (
     <Carousel interval={5000} data-bs-theme="dark" activeIndex={index} onSelect={handleSelect}>

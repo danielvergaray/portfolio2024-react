@@ -37,11 +37,18 @@
     display: grid;
     grid-template-columns: 33% 33% 33%;
 
+    .footer-barraInferior_info:nth-child(1){
+      .barraInferior_informacion{
+        padding-left: 15px;
+      }
+    }
+
+
     .footer-barraInferior_info {
       display: grid;
-      grid-template-columns: 40% 60%;
+      grid-template-columns: 30% 70%;
       grid-template-rows: 100%;
-      width: 100%;
+      width: fit-content;
       margin: auto;
       padding-top: 30px;
 
@@ -61,8 +68,9 @@
         }
       }
 
+      
       .footer-barraInferior_info-icono {
-        width: 100%;
+        width: fit-content;
         display: flex;
         justify-content: right;
         padding-right: 20px;
@@ -75,8 +83,14 @@
           padding: 8px;
           color: white;
           background-color: $Terciario-verde;
+          &:hover{
+            scale: 1.5;
+          }
+          
         }
+      
       }
+      
     }
   }
 }
@@ -104,12 +118,26 @@
       display: flex;
       flex-direction: column;
 
+      .footer-barraInferior_info:nth-child(1){
+        .barraInferior_informacion{
+          padding-left: 0px;
+        }
+      }
+
       .footer-barraInferior_info{
         padding: 10px 0;
+        margin: 0;
+        width: 100%;
+
+        .barraInferior_informacion{
+          width: 100%;
+        }
 
         .footer-barraInferior_info-icono{
           justify-content: center;
+          width: 100%;
           padding-right: 0px;
+
         }
       }
 

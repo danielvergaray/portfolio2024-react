@@ -271,15 +271,24 @@
             background-color: $Secundario-negro;
             border: 1px solid $Secundario-negro;
             text-align: left;
-            width: 50vw;
+            width: 60vw;
             grid-row: 1;
             color: $Textos-blancos;
             padding: 20px;
+            min-height: 320px;
             height: fit-content;
             border-radius: 10px;
-            height: 320px;
-            /* position: relative;
-            top: -40px; */
+           display: grid;
+           grid-template-rows: 5% 10% 65% 20%;
+
+           p:nth-child(2){
+            color: yellow;
+           }
+
+           h3{
+            margin: 0;
+            height: fit-content;
+           }
 
             p {
               margin: 0;
@@ -288,9 +297,10 @@
 
               svg {
                 font-size: 30px;
-                margin-top: 10px;
+                margin-top: 0px;
               }
             }
+            
           }
           .estudio-recuadro-linea {
             position: relative; /* Para que la línea se mantenga fija en la pantalla */

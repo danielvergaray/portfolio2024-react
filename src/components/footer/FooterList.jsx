@@ -1,11 +1,19 @@
 import React from "react";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import Aos from "aos";
+import 'aos/dist/aos.css';
 
 const FooterList = ({ infoBotones, barraInferior }) => {
   const sectionRef5 = useRef(null);
+
+  useEffect(()=>{
+    Aos.init()
+  }, [{duration: 500}])
+
   return (
-    <section id="sectionRef5" ref={sectionRef5} className="footer-section">
+    <section data-aos-easing="linear" data-aos-duration="1000" data-aos="fade-up" id="sectionRef5" ref={sectionRef5} className="footer-section">
       <h3>CONTACTO</h3>
       <h2>Hablemos acerca del próximo proyecto juntos.</h2>
       <div className="footer-botones">

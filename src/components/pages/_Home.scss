@@ -75,7 +75,7 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
-        width: 100%; 
+        width: 100%;
       }
     }
 
@@ -343,17 +343,15 @@
               width: min-content;
             }
             div {
-             
               span {
                 padding-left: 0px;
                 position: relative;
                 left: -130px;
                 bottom: -10px;
-                
               }
             }
           }
-         
+
           .boton-contacto {
             display: flex;
             justify-content: center;
@@ -411,9 +409,11 @@
         padding: 20px 10px 30px;
         .categoriaSinSeleccionar {
           width: fit-content;
+          margin: 5px 0;
         }
         .portfolio-categoriaSeleccionada {
           width: fit-content;
+          margin: 5px 0;
         }
       }
 
@@ -422,19 +422,22 @@
         justify-content: space-between;
         display: flex;
         text-align: center;
+        flex-wrap: wrap;
 
         div {
           width: 50%;
           margin: 5px 0;
-          .portfolio-proyectos_recuadro {
-            width: 90%;
-            height: 150px;
-            margin: auto;
-          }
-          .portfolio-proyectos_recuadro-titulo {
+          div {
             width: 100%;
-            h4 {
-              font-size: $Tamanio-texto-parrafos * 0.7;
+
+            .portfolio-proyectos_recuadro {
+              width: 90%;
+              height: 150px;
+              margin: auto;
+
+              .portfolio-proyectos_recuadro-info{
+                display: none !important;
+              }
             }
           }
         }

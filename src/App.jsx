@@ -7,23 +7,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import NavBarListContainer from "./components/navbar/NavBarListContainer";
 import FooterListContainer from "./components/footer/FooterListContainer";
 import { useRef } from "react";
-/* import GeneralContextProvider from "./components/context/GeneralContextProvider";
- */
+
 function App() {
-  /* const sectionRefs = {
-    section1: useRef(null),
-    section2: useRef(null),
-    section3: useRef(null),
-  }; */
- /*  const scrollToSection = (sectionId) => {
-    const ref = sectionRefs[sectionId];
-    if (ref && ref.current) {
-      ref.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  }; */
+  
   return (
     <>
      {/*  <ParticlesBackground /> */}
