@@ -12,7 +12,6 @@ const CarouselMaker = ({ proyectosFiltrados, proyectoSeleccionado }) => {
   const arrayImagenes =
     proyectosFiltrados[proyectoSeleccionado].imagenesCarusel;
 
-  console.log(arrayImagenes);
   return (
     <Carousel variant="dark" activeIndex={index} onSelect={handleSelect}>
       {arrayImagenes.map((imagen) => (

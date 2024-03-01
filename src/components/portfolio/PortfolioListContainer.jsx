@@ -9,6 +9,7 @@ import ImagenMrSnackWeb from "../../assets/imagenes/proyectos/MR-SNACK_01.png";
 import ImagenGameStage from "../../assets/imagenes/proyectos/react-gameStage.jpeg";
 import ImagenViajesWp from "../../assets/imagenes/proyectos/wp-blog.jpeg";
 import ImagenCentroMedicoWp from "../../assets/imagenes/proyectos/centroMedicoWp.jpeg";
+import ImagenBee from "../../assets/imagenes/proyectos/TiendaBee.jpeg";
 
 const PortfolioListContainer = () => {
   const [abrirInfo, setAbrirInfo] = useState(false);
@@ -193,13 +194,39 @@ const PortfolioListContainer = () => {
           imagenCarrusel: ImagenCentroMedicoWp,
         },
       ],
-      descripcionBreve: "",
-      descripcion: "",
-      imagen: "",
+      descripcionBreve: "ofrece una plataforma intuitiva y eficiente para que los usuarios reserven citas médicas en línea. Con una interfaz profesional y fácil de usar...",
+      descripcion: "El sitio web del centro médico, diseñado y desarrollado con WordPress, ofrece una plataforma intuitiva y eficiente para que los usuarios reserven citas médicas en línea. Con una interfaz profesional y fácil de usar, los pacientes pueden navegar por el sitio, encontrar información detallada sobre los servicios ofrecidos, conocer al personal médico y programar sus citas de manera conveniente.",
+   
       category: "wordpress",
       tituloWeb: TituloWeb,
       tituloRepositorio: TituloRepositorio,
       linkWeb: "https://dev-centromedicodental.pantheonsite.io/",
+      linkRepositorio: "",
+    },
+    {
+      id: "8",
+      titulo: "Tienda Bee",
+      imagenRecuadro: ImagenBee,
+      imagenesCarusel: [
+        {
+          imagenCarrusel: ImagenBee,
+        },
+        {
+          imagenCarrusel: ImagenBee,
+        },
+        {
+          imagenCarrusel: ImagenBee,
+        },
+      ],
+      descripcionBreve:
+        "Bee es un emprendimiento argentino, cuyo rubro es la confección de prendas que van desde lo deportivo hasta lo laboral...",
+      descripcion:
+        "Bee es un emprendimiento argentino, cuyo rubro es la confección de prendas que van desde lo deportivo hasta lo laboral. Para este proyecto se ha utilizado React, creando todos los elementos de manera dinámica. Se ha trabajado con un equipo de diseño UX/UI, y con otro programador web, por lo cual se ha utilizado Git y Github para el manejo de versiones. Además, se han realizado reuniones constantes tanto con el equipo de diseño como con el cliente final.",
+      imagen: "",
+      category: "react",
+      tituloWeb: TituloWeb,
+      tituloRepositorio: TituloRepositorio,
+      linkWeb: "https://beemendoza.com/",
       linkRepositorio: "",
     },
   ];

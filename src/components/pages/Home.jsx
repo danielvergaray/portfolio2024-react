@@ -16,7 +16,6 @@ const Home = () => {
   const sectionRef4 = useRef(null);
 
   const scrollFunction = (ref) => {
-    console.log(ref);
     ref.current.scrollIntoView({
       behavior: "smooth",
       block: "start",

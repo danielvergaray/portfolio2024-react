@@ -80,9 +80,9 @@ const NavBarList = ({ menu }) => {
         <div
           className="navbar-mobile_barra"
           variant="primary"
-          onClick={handleShow}
+          
         >
-          <IoMenu />
+          <IoMenu onClick={handleShow}/>
           <NavLink>PORTFOLIO</NavLink>
         </div>
 

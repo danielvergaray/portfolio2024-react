@@ -11,16 +11,16 @@ const ClientesListContainer = () => {
         comentario:
           "Nuestro programador Daniel, demostró un excelente nivel de profesionalismo en el desarrollo de la página web, entregando la misma de alta calidad que superó todas nuestras  expectativas. Cabe destacar que ha sido super amable y colaborativo,  con una comunicación clara y una atención super meticulosa ybdetallista, la verdad  que trabajar con él fuera una experiencia excepcional.Super recomendable.",
         frase:
-          "Excelente nivel de profesionalismo en el desarrollo de la página web",
+          "Excelente nivel de profesionalismo en el desarrollo de la página web.",
       },
       {
         nombre: "Claudia Cardenas",
         id: 2,
-        empresa: "d",
+        empresa: "",
         comentario:
-          "Nuestro programador Daniel, demostró un excelente nivel de profesionalismo en el desarrollo de la página web, entregando la misma de alta calidad que superó todas nuestras  expectativas. Cabe destacar que ha sido super amable y colaborativo,  con una comunicación clara y una atención super meticulosa ybdetallista, la verdad  que trabajar con él fuera una experiencia excepcional.Super recomendable.",
+          "Es un placer para mí recomendar a Daniel por su excelente trabajo en la creación del sitio web del cumpleaños de mi hijo. Su dedicación y habilidades técnicas fueron evidentes desde el principio. No solo logró capturar perfectamente la esencia del tema del cumpleaños, sino que también incorporó características interactivas que hicieron que la experiencia fuera memorable para todos los invitados.",
         frase:
-          "Excelente nivel de profesionalismo en el desarrollo de la página web",
+          "Su dedicación y habilidades técnicas fueron evidentes desde el principio.",
       },
       /* {
         nombre: "3",
