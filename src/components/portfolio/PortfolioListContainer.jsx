@@ -15,7 +15,7 @@ const PortfolioListContainer = () => {
   const [abrirInfo, setAbrirInfo] = useState(false);
 
   const TituloRepositorio = "Ver repositorio";
-  const TituloWeb = "Visitar página web";
+  const TituloWeb = "Visitar web";
 
   const proyectos = [
     {
