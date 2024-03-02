@@ -13,6 +13,7 @@
   z-index: 1000;
   /* height: $altura-navBar */
 }
+
 .bg-body-tertiary {
   background-color: transparent !important;
 
@@ -23,7 +24,6 @@
 
     .nav-link {
       font-size: 12px;
-      font-weight: 700;
       padding: 0;
       width: fit-content;
       margin: 0 5px;
@@ -50,7 +50,6 @@
 
     .nav-link {
       font-size: 12px;
-      font-weight: 700;
       padding: 0;
       width: fit-content;
       margin: 0 5px;
@@ -62,6 +61,10 @@
         &:hover {
           color: white;
         }
+      }
+      .menu-activo {
+        color: black;
+        font-weight: bold;
       }
     }
   }
@@ -124,12 +127,11 @@
         margin: 5px 0;
       }
     }
-    .btn-close{
+    .btn-close {
       font-weight: bold;
     }
-    .offcanvas-title{
+    .offcanvas-title {
       font-weight: bold;
-     
     }
   }
 }

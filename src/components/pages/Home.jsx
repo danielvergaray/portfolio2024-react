@@ -153,7 +153,7 @@ const Home = () => {
 
       <section
         data-aos-easing="linear"
-        data-aos-duration="1000"
+        data-aos-duration="500"
         data-aos="fade-up"
         id="sectionRef3"
         ref={sectionRef3}

@@ -19,7 +19,8 @@
     justify-content: space-evenly;
     padding: 50px 0;
     padding-bottom: 80px;
-    width: 50%;
+    padding-top: 0;
+    width: 30%;
     margin: auto;
     font-size: $Tamanio-texto-submenu;
 
@@ -128,6 +129,7 @@
 
         h3 {
           margin: 0;
+          color: $Textos-blancos;
         }
 
         p {
@@ -163,6 +165,7 @@
       color: white;
       min-height: 304px;
       margin: 10px;
+
       .card-body {
         display: grid;
         grid-template-rows: 20% 60% 20%;
@@ -173,7 +176,6 @@
             width: 50px;
           }
         }
-
         .cards-titulos {
           grid-row: 2;
           display: flex;

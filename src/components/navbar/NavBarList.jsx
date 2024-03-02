@@ -11,12 +11,14 @@ const NavBarList = ({ menu }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const [menuActivo, setMenuActivo] = useState(null);
 
   const [scrolling, setScrolling] = useState(false);
 
   const handleMenuClick = (refIndex) => {
     handleClose();
     scrollFunction(refIndex);
+    
   };
 
   useEffect(() => {
@@ -38,6 +40,7 @@ const NavBarList = ({ menu }) => {
 
   const scrollFunction = (refIndex) => {
     const ref = document.getElementById(`sectionRef${refIndex}`);
+    setMenuActivo(refIndex)
     if (ref) {
       const scrollAmount = ref.offsetTop - 60;
       window.scrollTo({
@@ -62,7 +65,7 @@ const NavBarList = ({ menu }) => {
             <Nav className="me-auto">
               {menu.map((opcion, index) => (
                 <Nav.Link key={index}>
-                  <NavLink onClick={() => scrollFunction(`${opcion.ref}`)}>
+                  <NavLink className={menuActivo === opcion.ref ? "menu-activo" : ""} onClick={() => scrollFunction(`${opcion.ref}`)}>
                     {opcion.titulo}
                   </NavLink>
                 </Nav.Link>
@@ -77,12 +80,8 @@ const NavBarList = ({ menu }) => {
           scrolling ? "bg-body-scroll" : "bg-body-tertiary"
         }`}
       >
-        <div
-          className="navbar-mobile_barra"
-          variant="primary"
-          
-        >
-          <IoMenu onClick={handleShow}/>
+        <div className="navbar-mobile_barra" variant="primary">
+          <IoMenu onClick={handleShow} />
           <NavLink>PORTFOLIO</NavLink>
         </div>
 

@@ -97,20 +97,13 @@
       }
       .home-info__bio-biografia {
         grid-column: 2;
-        margin: 0 auto;
+        margin: auto;
         color: $Textos-blancos;
         h2 {
-          /* font-size: $Tamanio-texto-submenu;
-          text-transform: uppercase;
-          font-weight: bold;
-          color: $Terciario-verde; */
           padding-top: 0px;
           padding-bottom: 50px;
         }
         h3 {
-          /* font-size: $Tamanio-texto-hero;
-          font-weight: bold;
-          color: $Textos-blancos; */
           padding-bottom: 0px;
           margin: 0;
         }
@@ -131,7 +124,7 @@
       display: flex;
       height: fit-content;
       justify-content: space-evenly;
-      padding-top: 50px;
+      padding-top: 0px;
       width: 60%;
       margin: auto;
       font-size: $Tamanio-texto-submenu;
@@ -165,6 +158,8 @@
         border: solid 1px black;
         cursor: pointer;
 
+       
+
         .portfolio-proyectos_recuadro-info {
           display: flex;
           flex-direction: column;
@@ -186,7 +181,7 @@
             padding: 10px 0;
             font-size: 16px;
             font-weight: 700;
-            color: $Textos-blancos;
+            color: $Textos-blancos !important;
           }
           button {
             padding: 10px 20px;
@@ -210,6 +205,22 @@
         }
       }
     }
+    .portfolio-boton-ver-mas {
+      padding-top: 70px;
+      button {
+        padding: 20px;
+        border: 1px solid white;
+        background-color: black;
+        color: $Textos-blancos;
+        text-align: center;
+        border-radius: 0;
+
+        &:hover {
+          background-color: $Terciario-verde;
+          border: none;
+        }
+      }
+    }
   }
   .seccionClientes {
     background-color: $Secundario-negro;
@@ -220,7 +231,6 @@
       color: yellow;
     }
     h2 {
-      padding-bottom: 50px;
       color: white;
     }
     .carousel {
@@ -234,22 +244,26 @@
           .clientes-container {
             display: flex;
             justify-content: center;
+
             .clientes-card {
+              display: grid;
+              grid-template-rows: 20% 50% 15% 15%;
               border: 1px solid;
               padding: 50px;
               text-align: left;
               margin: 10px;
+              margin-top: 0;
             }
           }
 
           .card-frase {
             display: flex;
+            grid-row: 1;
             h3 {
               color: $Terciario-verde;
               font-size: $Tamanio-texto-quote;
-              padding: 0 10px;
-              text-align: center;
-              font-family: var(--font-quotes);
+              padding: 0;
+              text-align: left;
             }
             .card-quotesIcon-right,
             .card-quotesIcon-left {
@@ -262,6 +276,7 @@
           }
 
           .card-comentario {
+            grid-row: 2;
             p {
               font-size: $Tamanio-texto-parrafos;
               color: white;
@@ -271,8 +286,15 @@
           }
 
           .card-cliente {
+            grid-row: 4;
+            p:nth-child(1){
+              font-weight: bold;
+              
+            }
             p {
               margin: 0;
+              color: $Terciario-verde;
+              
             }
           }
         }
@@ -435,7 +457,7 @@
               height: 150px;
               margin: auto;
 
-              .portfolio-proyectos_recuadro-info{
+              .portfolio-proyectos_recuadro-info {
                 display: none !important;
               }
             }

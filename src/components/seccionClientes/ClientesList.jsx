@@ -37,13 +37,13 @@ useEffect(()=>{
             {grupo.map((cliente, index) => (
               <div key={index} className="clientes-card">
                 <div className="card-frase">
-                  <div className="card-quotesIcon-left">
+                  {/* <div className="card-quotesIcon-left">
                     <ImQuotesLeft />
-                  </div>
+                  </div> */}
                   <h3>{cliente.frase} </h3>
-                  <div className="card-quotesIcon-right">
+                  {/* <div className="card-quotesIcon-right">
                     <ImQuotesRight />
-                  </div>
+                  </div> */}
                 </div>
                 <div className="card-comentario">
                   <p>{cliente.comentario}</p>

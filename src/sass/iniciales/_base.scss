@@ -1,5 +1,6 @@
 @import "../reutilizables/colors";
 @import "/src/sass/reutilizables/tipografias";
+@import "/src/sass/reutilizables/variables";
 
 body {
   font-family: var(--font-principal);
@@ -19,11 +20,12 @@ body {
   }
 
   h2 {
-    
+    margin-bottom: 0;
     text-transform: uppercase;
     font-weight: bold;
     color: $Textos-blancos;
     font-size: $Tamanio-texto-hero;
+    padding-bottom: $padding-titulos-subtitulos;
   }
 
   h3 {
