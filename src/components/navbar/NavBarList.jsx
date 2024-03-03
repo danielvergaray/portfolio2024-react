@@ -13,12 +13,13 @@ const NavBarList = ({ menu }) => {
   const handleShow = () => setShow(true);
   const [menuActivo, setMenuActivo] = useState(null);
 
+  const [opcionActiva, setOpcionActiva] = useState("");
+
   const [scrolling, setScrolling] = useState(false);
 
   const handleMenuClick = (refIndex) => {
     handleClose();
     scrollFunction(refIndex);
-    
   };
 
   useEffect(() => {
@@ -37,10 +38,38 @@ const NavBarList = ({ menu }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  
+
+ /*  console.log(opcionActiva);
+  useEffect(() => {
+    const handleScroll2 = () => {
+      if (window.scrollY > 150) {
+        setOpcionActiva("ABOUT");
+      } 
+      else if (window.scrollY > 250) {
+        setOpcionActiva("PORTFOLIO");
+      } 
+      else if (window.scrollY > 350) {
+        setOpcionActiva("ESTUDIOS");
+      } 
+      else if (window.scrollY > 450) {
+        setOpcionActiva("CLIENTES");
+      } 
+      else if (window.scrollY > 550) {
+        setOpcionActiva("CONTACTOS");
+      }
+      opcionActivaRef.current = opcionActiva;
+    };
+   
+    window.addEventListener("scroll", handleScroll2);
+    return () => {
+      window.removeEventListener("scroll", handleScroll2);
+    };
+  }, []); */
 
   const scrollFunction = (refIndex) => {
     const ref = document.getElementById(`sectionRef${refIndex}`);
-    setMenuActivo(refIndex)
+    setMenuActivo(refIndex);
     if (ref) {
       const scrollAmount = ref.offsetTop - 60;
       window.scrollTo({
@@ -65,7 +94,10 @@ const NavBarList = ({ menu }) => {
             <Nav className="me-auto">
               {menu.map((opcion, index) => (
                 <Nav.Link key={index}>
-                  <NavLink className={menuActivo === opcion.ref ? "menu-activo" : ""} onClick={() => scrollFunction(`${opcion.ref}`)}>
+                  <NavLink
+                    className={menuActivo === opcion.ref ? "menu-activo" : ""}
+                    onClick={() => scrollFunction(`${opcion.ref}`)}
+                  >
                     {opcion.titulo}
                   </NavLink>
                 </Nav.Link>

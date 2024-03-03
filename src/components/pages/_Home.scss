@@ -89,9 +89,10 @@
         grid-column: 1;
         text-align: center;
         margin: auto;
+        width: 70%;
 
         img {
-          width: 70%;
+          width: 100%;
           margin: auto;
         }
       }
@@ -109,7 +110,7 @@
         }
 
         p {
-          font-size: $Tamanio-texto-parrafos;
+          font-size: $Tamanio-texto-parrafos * 0.9;
           margin: 0;
         }
       }
@@ -125,9 +126,10 @@
       height: fit-content;
       justify-content: space-evenly;
       padding-top: 0px;
-      width: 60%;
+      width: 65%;
       margin: auto;
       font-size: $Tamanio-texto-submenu;
+      flex-wrap: wrap;
 
       .categoriaSinSeleccionar {
         text-decoration: none;
@@ -138,6 +140,15 @@
         color: $Terciario-verde;
         text-decoration: none;
         font-weight: bold;
+
+        span {
+          background-color: $Terciario-verde; /* Cambia el color de fondo según tu preferencia */
+          width: 70%; /* Ajusta el tamaño del span */
+          height: 5px;
+          display: block;
+          margin: auto;
+          padding-top: 5px;
+        }
       }
     }
     .portfolio-proyectos {
@@ -157,8 +168,6 @@
         margin-bottom: 25px;
         border: solid 1px black;
         cursor: pointer;
-
-       
 
         .portfolio-proyectos_recuadro-info {
           display: flex;
@@ -236,14 +245,13 @@
     .carousel {
       padding: 0 80px;
       .carousel-inner {
-        /* display: flex; */
         margin: auto;
-
         .carousel-item,
         .active {
           .clientes-container {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
 
             .clientes-card {
               display: grid;
@@ -287,14 +295,12 @@
 
           .card-cliente {
             grid-row: 4;
-            p:nth-child(1){
+            p:nth-child(1) {
               font-weight: bold;
-              
             }
             p {
               margin: 0;
               color: $Terciario-verde;
-              
             }
           }
         }
@@ -510,6 +516,42 @@
           margin: 0;
           bottom: 0px;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 846px) {
+  .home {
+    .home-info {
+      .home-info__bio {
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+
+        .home-info__bio-imagen{
+          width: 50%;
+        }
+        .home-info__bio-biografia {
+          h2 {
+            padding-bottom: 10px;
+          }
+          h3{
+            padding-top: 20px;
+          }
+        }
+      }
+    }
+    .portfolio {
+      .portfolio-proyectos_barraMenu {
+        width: 100%;
+
+        
+      }
+    }
+    .seccionClientes{
+      .carousel{
+        padding: 0 40px;
       }
     }
   }

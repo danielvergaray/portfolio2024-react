@@ -33,6 +33,15 @@
       color: $Terciario-verde;
       text-decoration: none;
       font-weight: bold;
+
+      span {
+        background-color: $Terciario-verde; /* Cambia el color de fondo según tu preferencia */
+        width: 70%; /* Ajusta el tamaño del span */
+        height: 5px;
+        display: block; 
+        margin: auto;
+        margin-top: 5px;
+      }
     }
   }
 
@@ -351,5 +360,30 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 846px){
+  .seccion-estudios{
+    .estudios-proyectos_barraMenu{
+      width: 50%;
+    }
+    .estudios-programacion{
+      .estudios-timeLine{
+        .estudios-timeLine_line{
+          
+          height: 90vh
+        }
+      }
+    }
+    .estudios-idiomas{
+      .cards{
+        padding: 20px;
+        .card-body{
+          padding: 0;
+        }
+      }
+    }
+
   }
 }

@@ -58,3 +58,15 @@ body {
  
 
 }
+
+@media (max-width: 846px){
+  body{
+    h2{
+      font-size: $Tamanio-texto-hero*.8;
+    }
+    h3 {
+
+      font-size: $Tamanio-texto-submenu*.9;
+    }
+  }
+}

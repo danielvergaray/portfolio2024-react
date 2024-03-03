@@ -63,6 +63,7 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
             onClick={() => handleClick(opcionMenu.titulo)}
           >
             {opcionMenu.titulo}
+            <span></span>
           </NavLink>
         ))}
       </article>

@@ -10,11 +10,11 @@
   .popup {
     display: grid;
     height: 100%;
-    padding: 40px;
+    padding: 20px 40px;
 
     .popup-inner {
       display: grid;
-      grid-template-columns: 60% 40%;
+      grid-template-columns: 55% 45%;
       grid-template-rows: 1;
 
       .popup-imagenes {
@@ -30,7 +30,6 @@
             .active {
               img {
                 width: 90%;
-                height: 400px;
               }
             }
           }
@@ -62,7 +61,7 @@
       }
       .popup-informacion {
         display: grid;
-        grid-template-rows: 10% 15% 50% 25%;
+        grid-template-rows: 5% 15% 65% 15%;
 
         .popup-botonCerrar {
           display: flex;
@@ -90,7 +89,7 @@
         .popup-titulo {
           grid-row: 2;
           height: fit-content;
-          padding: 0 40px;
+          padding: 0 20px;
           h2 {
             margin: 0;
             color: $Textos-blancos;
@@ -103,7 +102,7 @@
           display: flex;
           align-items: center;
           text-align: left;
-          padding: 0 40px;
+          padding: 0 20px;
           grid-row: 3;
           p {
             margin: auto;
@@ -119,7 +118,7 @@
           display: flex;
           justify-content: space-evenly;
           button {
-            padding: 20px;
+            padding: 15px;
             border: 1px solid white;
             background-color: black;
             width: 100%;
@@ -189,6 +188,45 @@
           padding: 10px;
           font-size: 10px;
           margin: 5px 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 846px) {
+  .popup-container {
+    width: 95vw;
+    .popup {
+      padding: 10px;
+
+      .popup-inner {
+        .popup-informacion {
+          grid-template-rows: 10% 10% 45% 35%;
+          .popup-titulo {
+            h2 {
+              font-size: $Tamanio-texto-hero * 0.4;
+              padding: 0;
+            }
+          }
+          .popup-descripcion {
+            padding: 0 10px;
+            height: fit-content;
+            p {
+              margin: 0;
+              font-size: $Tamanio-texto-parrafos * 0.8;
+            }
+          }
+          .popup-botones {
+            display: flex;
+            flex-wrap: wrap;
+
+            button {
+              width: 100%;
+              font-size: 12px;
+              padding: 15px;
+            }
+          }
         }
       }
     }

@@ -75,6 +75,7 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
                 onClick={() => handleClick(opcionMenu.titulo)}
               >
                 {opcionMenu.titulo}
+                <span></span>
               </NavLink>
             ))}
           </article>
