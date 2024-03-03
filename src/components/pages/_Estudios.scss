@@ -23,7 +23,10 @@
     width: 30%;
     margin: auto;
     font-size: $Tamanio-texto-submenu;
-
+    flex-wrap: wrap;
+    a {
+      margin: 5px 0;
+    }
     .categoriaSinSeleccionar {
       text-decoration: none;
       cursor: pointer;
@@ -38,7 +41,7 @@
         background-color: $Terciario-verde; /* Cambia el color de fondo según tu preferencia */
         width: 70%; /* Ajusta el tamaño del span */
         height: 5px;
-        display: block; 
+        display: block;
         margin: auto;
         margin-top: 5px;
       }
@@ -263,20 +266,65 @@
   .seccion-estudios {
     padding: 20px;
 
+    h2 {
+      padding-top: 20px;
+      padding-bottom: 0;
+    }
+
     .estudios-proyectos_barraMenu {
       padding: 20px 0;
-      width: 100%;
+      width: 60%;
+      font-size: $Tamanio-texto-submenu * 0.8;
+      .portfolio-categoriaSeleccionada {
+        width: fit-content;
+        margin: 5px 0;
+
+        span {
+          padding-top: 3px;
+          height: 2px;
+        }
+      }
     }
     .estudios-programacion-mobile {
       display: flex;
+      flex-direction: column;
 
       .estudios-programacion-container {
         display: flex;
         overflow-x: scroll;
-
+        padding: 20px 0;
         .estudio-recuadr-container {
           display: flex;
           width: 100%;
+
+          flex-direction: column;
+          margin: 0 10px;
+
+          .fecha-izquierda {
+            font-size: $Tamanio-texto-parrafos * 0.8;
+            text-align: left;
+            font-weight: 700;
+            color: $Textos-blancos;
+            padding-left: 25px;
+          }
+
+          .estudios-timeLine_line {
+            /* Coloca la línea en el centro horizontal de la pantalla */
+            /* Ancho de la línea */
+            height: 5px; /* Alto de la línea, igual al alto de la pantalla */
+            background-color: $Secundario-negro; /* Color de la línea */
+            text-align: left;
+            padding-left: 25px;
+            svg {
+              z-index: 500;
+              font-size: 50px;
+              position: relative;
+              left: -23px;
+              top: -25px;
+              color: $Terciario-verde;
+            }
+          }
+
           .estudio-recuadro {
             padding: 10px;
             background-color: $Secundario-negro;
@@ -286,20 +334,21 @@
             grid-row: 1;
             color: $Textos-blancos;
             padding: 20px;
-            min-height: 320px;
+            min-height: 300px;
             height: fit-content;
             border-radius: 10px;
-           display: grid;
-           grid-template-rows: 5% 10% 65% 20%;
+            display: grid;
+            grid-template-rows: 5% 10% 55% 30%;
+            margin-top: 20px;
+            p:nth-child(2) {
+              color: $Terciario-verde;
+            }
 
-           p:nth-child(2){
-            color: yellow;
-           }
-
-           h3{
-            margin: 0;
-            height: fit-content;
-           }
+            h3 {
+              margin: 0;
+              height: fit-content;
+              color: $Textos-blancos;
+            }
 
             p {
               margin: 0;
@@ -311,16 +360,6 @@
                 margin-top: 0px;
               }
             }
-            
-          }
-          .estudio-recuadro-linea {
-            position: relative; /* Para que la línea se mantenga fija en la pantalla */
-            top: 15px; /* Coloca la línea en la parte superior */
-            left: 0; /* Coloca la línea en el centro horizontal de la pantalla */
-            width: 20px; /* Ancho de la línea */
-            height: 1px; /* Alto de la línea, igual al alto de la pantalla */
-            background-color: white; /* Color de la línea */
-            margin: auto;
           }
         }
       }
@@ -363,27 +402,22 @@
   }
 }
 
-@media (max-width: 846px){
-  .seccion-estudios{
-    .estudios-proyectos_barraMenu{
-      width: 50%;
-    }
-    .estudios-programacion{
-      .estudios-timeLine{
-        .estudios-timeLine_line{
-          
-          height: 90vh
+@media (max-width: 846px) {
+  .seccion-estudios {
+    .estudios-programacion {
+      .estudios-timeLine {
+        .estudios-timeLine_line {
+          height: 90vh;
         }
       }
     }
-    .estudios-idiomas{
-      .cards{
+    .estudios-idiomas {
+      .cards {
         padding: 20px;
-        .card-body{
+        .card-body {
           padding: 0;
         }
       }
     }
-
   }
 }

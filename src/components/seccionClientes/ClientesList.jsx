@@ -30,7 +30,10 @@ useEffect(()=>{
 }, [{duration: 500}])
 
   return (
-    <Carousel interval={5000} data-bs-theme="dark" activeIndex={index} onSelect={handleSelect}>
+
+    <>
+
+    <Carousel className="clientes" interval={5000} data-bs-theme="dark" activeIndex={index} onSelect={handleSelect}>
       {gruposClientes.map((grupo, index) => (
         <Carousel.Item key={index}>
           <div className="clientes-container">
@@ -50,6 +53,8 @@ useEffect(()=>{
                 </div>
                 <div className="card-cliente">
                   <p>{cliente.nombre}</p>
+                </div>
+                <div className="card-empresa">
                   <p>{cliente.empresa}</p>
                 </div>
               </div>
@@ -58,6 +63,36 @@ useEffect(()=>{
         </Carousel.Item>
       ))}
     </Carousel>
+
+
+    <Carousel className="clientes-mobile" interval={5000} data-bs-theme="dark" activeIndex={index} onSelect={handleSelect}>
+      {clientes.map((grupo, index) => (
+        <Carousel.Item key={index}>
+          <div className="clientes-container">
+          
+              <div key={index} className="clientes-card">
+                <div className="card-frase">
+                  
+                  <h3>{grupo.frase} </h3>
+                  
+                </div>
+                <div className="card-comentario">
+                  <p>{grupo.comentario}</p>
+                </div>
+                <div className="card-cliente">
+                  <p>{grupo.nombre}</p>
+                </div>
+                <div className="card-empresa">
+                  <p>{grupo.empresa}</p>
+                </div>
+              </div>
+    
+          </div>
+        </Carousel.Item>
+      ))}
+    </Carousel>
+
+    </>
   );
 };
 

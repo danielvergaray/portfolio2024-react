@@ -120,7 +120,6 @@ const Home = () => {
         <article id="sectionRef1" ref={sectionRef1} className="home-info__bio">
           <div
             data-aos-easing="linear"
-            
             data-aos="zoom-in"
             className="home-info__bio-imagen"
           >
@@ -138,6 +137,31 @@ const Home = () => {
             <p> {info[0].bio2} </p>
           </div>
         </article>
+
+        <article
+          id="sectionRef1"
+          ref={sectionRef1}
+          className="home-info__bio-mobile"
+        >
+          <h3>Sobre mí</h3>
+          <h2>¿Quien soy?</h2>
+          <div
+            className="home-info__bio-imagen"
+            /* data-aos-easing="linear"
+            data-aos="zoom-in" */
+          >
+            <img src={info[0].imagenBio} alt="" />
+          </div>
+          <div
+            /* data-aos="fade-left"
+            data-aos-easing="linear"
+            data-aos-duration="1000" */
+            className="home-info__bio-biografia"
+          >
+            <p> {info[0].bio} </p> <br />
+            <p> {info[0].bio2} </p>
+          </div>
+        </article>
       </section>
 
       {/* PORTAFOLIO */}
@@ -146,7 +170,7 @@ const Home = () => {
         <h2>portfolio</h2>
         <PortfolioListContainer
           data-aos-easing="linear"
-          data-aos-duration="1000"
+          data-aos-duration="200"
           data-aos="fade-up"
         />
       </section>

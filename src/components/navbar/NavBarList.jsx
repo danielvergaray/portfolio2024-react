@@ -114,7 +114,7 @@ const NavBarList = ({ menu }) => {
       >
         <div className="navbar-mobile_barra" variant="primary">
           <IoMenu onClick={handleShow} />
-          <NavLink>PORTFOLIO</NavLink>
+          <Navbar.Brand href="/">Inicio</Navbar.Brand>
         </div>
 
         <Offcanvas show={show} onHide={handleClose}>

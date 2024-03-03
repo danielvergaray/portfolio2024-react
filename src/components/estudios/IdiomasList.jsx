@@ -44,6 +44,7 @@ const IdiomasList = ({ infoCursos, categoriaSeleccionada }) => {
                     </div>
                   </Card.Body>
                 </Card>
+                
               ) : (
                 <Card
                   className= "animate__animated animate__flipInY cards"

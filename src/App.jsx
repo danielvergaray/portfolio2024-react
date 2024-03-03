@@ -19,7 +19,7 @@ function App() {
           <NavBarListContainer />
           <>
             <Routes>
-              <Route index element={<Home />} />
+              <Route path="/" index element={<Home />} />
             </Routes>
           </>
           <FooterListContainer />

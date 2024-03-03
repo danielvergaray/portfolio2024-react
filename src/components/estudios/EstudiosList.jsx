@@ -6,7 +6,6 @@ import "aos/dist/aos.css";
 import { TbPointFilled } from "react-icons/tb";
 import IdiomasList from "./IdiomasList";
 
-
 const EstudiosList = ({ infoCursos, infoMenu }) => {
   const [categoriaSeleccionada, setCategoriaSeleccionada] =
     useState("PROGRAMACION");
@@ -52,8 +51,8 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
     <>
       <article className="estudios-proyectos_barraMenu">
         {infoMenu.map((opcionMenu, index) => (
-          <NavLink key={index}
-            
+          <NavLink
+            key={index}
             className={
               categoriaSeleccionada === opcionMenu.titulo
                 ? "portfolio-categoriaSeleccionada"
@@ -148,15 +147,23 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
                 <div key={index}>
                   {proyecto.id ? (
                     <div className="estudio-recuadr-container">
+                      <div /* data-aos="fade-right" */ className="fecha-izquierda">
+                        <p>{proyecto.duracion}</p>
+                      </div>
+                      <div className="estudios-timeLine_line"
+                        /* data-aos="fade-up" */ 
+                      >
+                        <TbPointFilled />
+                      </div>
                       <div className="estudio-recuadro">
                         <h3>{proyecto.titulo}</h3>
                         <p>{proyecto.instituto}</p>
                         <p>{proyecto.descripcion}</p>
                         <p>{proyecto.iconos}</p>
                       </div>
-                      {index !== infoCursos.length - 1 && ( // Para no mostrar la linea cuando se el ultimo elemento
+                      {/* {index !== infoCursos.length - 1 && ( // Para no mostrar la linea cuando se el ultimo elemento
                         <div className="estudio-recuadro-linea"></div>
-                      )}
+                      )} */}
                     </div>
                   ) : null}
                 </div>

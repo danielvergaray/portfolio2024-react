@@ -103,15 +103,17 @@
 @media (max-width: 576px) {
   .footer-section {
     padding: 20px;
+    
     h2 {
-      margin: 0;
+      margin: auto;
       padding-top: 30px;
     }
 
     .footer-botones {
       display: flex;
       flex-direction: column;
-      padding: 30px 0;
+      padding: 0px 0;
+      padding-bottom: 20px;
       width: 100%;
       button {
         padding: 10px;
