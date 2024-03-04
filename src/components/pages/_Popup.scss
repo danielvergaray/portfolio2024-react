@@ -383,18 +383,23 @@
          
           display: flex;
           justify-content: space-evenly;
-          button {
-            padding: 15px;
-            border: 1px solid white;
-            background-color: black;
+          a{
             width: 100%;
-            text-align: center;
-            font-size: 13px;
-            &:hover {
-              background-color: $Terciario-verde;
-              border: none;
+            margin: 5px 0;
+            button {
+              padding: 15px;
+              border: 1px solid white;
+              background-color: black;
+              width: 100%;
+              text-align: center;
+              font-size: 13px;
+              &:hover {
+                background-color: $Terciario-verde;
+                border: none;
+              }
             }
           }
+          
         }
       }
     }

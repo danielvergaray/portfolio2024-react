@@ -364,11 +364,12 @@
     .home-info {
       .home-info__hero {
         display: grid;
-        grid-template-columns: 60% 40%;
+        grid-template-columns: 50% 50%;
         padding: 20px;
         
         .home-info__hero-title {
           padding-top: 15vh;
+          z-index: 200;
           .home-titulo {
             display: flex;
             justify-content: center;
@@ -413,10 +414,9 @@
         .home-info__hero-image {
           padding: 0px;
           width: 100%;
+          background-size: cover;
          
-          img {
-            width: 100px;
-          }
+         
         }
       }
       .home-info__bio-mobile {
@@ -722,7 +722,7 @@
     }
     .portfolio {
       .portfolio-proyectos_barraMenu {
-        width: 55%;
+        width: 75%;
       }
     }
     .seccionClientes {
