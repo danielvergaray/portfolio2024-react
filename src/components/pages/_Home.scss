@@ -9,7 +9,8 @@
       grid-template-columns: 50% 50%;
       background-color: $Principal-Negro;
 
-      padding: 0px 80px;
+      padding: 0px;
+      padding-left: 60px;
 
       .home-info__hero-title {
         grid-column: 1;
@@ -49,9 +50,16 @@
             margin: 0;
             padding: 0;
           }
-          span {
-            padding-left: 10px;
-            color: $Terciario-verde;
+          div {
+            display: flex;
+            align-items: end;
+            height: fit-content;
+            span {
+              padding-left: 10px;
+              color: $Terciario-verde;
+              
+              
+            }
           }
         }
 
@@ -234,8 +242,9 @@
   .seccionClientes {
     background-color: $Secundario-negro;
     text-align: center;
-    padding: 50px;
+    padding: 20px;
     padding-bottom: 100px;
+
     p {
       color: yellow;
     }
@@ -251,8 +260,6 @@
           .clientes-container {
             display: grid;
             grid-template-columns: 50% 50%;
-            justify-content: center;
-            flex-wrap: wrap;
 
             .clientes-card {
               display: grid;
@@ -351,25 +358,27 @@
 }
 
 @media (max-width: 576px) {
+
+ 
   .home {
     .home-info {
       .home-info__hero {
-        /* display: flex;
-        flex-direction: column; */
         display: grid;
         grid-template-columns: 60% 40%;
         padding: 20px;
+        
         .home-info__hero-title {
           padding-top: 15vh;
           .home-titulo {
             display: flex;
             justify-content: center;
             flex-direction: column;
+            line-height: 20px;
             p {
-              font-size: $Tamanio-texto-hero * 0.5;
+              font-size: $Tamanio-texto-hero * 0.4;
             }
             span {
-              font-size: $Tamanio-texto-hero * 0.5;
+              font-size: $Tamanio-texto-hero * 0.4;
               padding: 0;
             }
           }
@@ -383,25 +392,28 @@
               width: min-content;
             }
             div {
+              display: block;
               span {
                 padding-left: 0px;
                 position: relative;
                 left: -130px;
-                bottom: -10px;
+                bottom: -15px;
+                font-size: 35px;
               }
             }
           }
 
           .boton-contacto {
             display: flex;
-            justify-content: center;
+            justify-content: left;
+            padding-top: 20px;
           }
         }
 
         .home-info__hero-image {
-          padding: 20px 0;
+          padding: 0px;
           width: 100%;
-          height: 50vh;
+         
           img {
             width: 100px;
           }
@@ -412,7 +424,7 @@
         flex-direction: column;
         margin: 0;
         padding: 20px;
-        padding-top: 100px;
+        padding-top: 50px;
 
         h2 {
           position: relative;
@@ -581,12 +593,12 @@
                 }
                 .card-cliente {
                   p {
-                    font-size: $Tamanio-texto-parrafos * 0.7;
+                    font-size: $Tamanio-texto-parrafos * 0.8;
                   }
                 }
                 .card-empresa {
                   p {
-                    font-size: $Tamanio-texto-parrafos * 0.7;
+                    font-size: $Tamanio-texto-parrafos * 0.8;
                   }
                 }
               }
@@ -611,28 +623,168 @@
   .home {
     .home-info {
       .home-info__bio-mobile {
-        padding: 20px;
         display: flex;
         flex-direction: column;
+        margin: 0;
+        padding: 20px;
+        padding-top: 30px;
 
-        .home-info__bio-biografia-mobile {
+        h2 {
+          position: relative;
+          top: 00px;
+          text-align: center;
+          padding: 0;
+          padding-bottom: 20px;
+          margin: 0;
+        }
+
+        .home-info__bio-imagen {
+          width: 50%;
+          margin: auto;
+
+          img {
+            width: 100%;
+            margin: auto;
+          }
+        }
+
+        .home-info__bio-biografia {
+          display: block;
+          margin: auto;
+          padding: 20px 30px 0;
           h2 {
-            padding-bottom: 10px;
+            padding-top: 0px;
+            padding-bottom: 50px;
           }
           h3 {
+            padding-bottom: 0px;
+            margin: 0;
+          }
+
+          p {
+            font-size: $Tamanio-texto-parrafos * 0.9;
+            margin: 0;
+            color: $Textos-blancos;
+          }
+        }
+      }
+
+      .home-info__hero {
+        padding: 0px;
+        padding-left: 40px;
+
+        .home-info__hero-title {
+          padding-top: 40vh;
+          .home-titulo {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            line-height: 30px;
+            p {
+              font-size: $Tamanio-texto-hero * 0.6;
+            }
+            span {
+              font-size: $Tamanio-texto-hero * 0.6;
+              padding: 0;
+            }
+          }
+
+          .home-titulo_profesion {
+            display: flex;
+
+            line-height: 30px;
+            p {
+              font-size: $Tamanio-texto-hero * 0.7;
+              width: min-content;
+            }
+            div {
+              display: block;
+              span {
+                padding-left: 0px;
+                position: relative;
+                left: -220px;
+                bottom: -30px;
+                font-size: 35px;
+              }
+            }
+          }
+
+          .boton-contacto {
+            display: flex;
+            justify-content: left;
             padding-top: 20px;
           }
         }
       }
+      .home-info__bio {
+        display: none;
+      }
     }
     .portfolio {
       .portfolio-proyectos_barraMenu {
-        width: 60%;
+        width: 55%;
       }
     }
     .seccionClientes {
+      padding: 40px 0 20px;
+
+      .clientes {
+        display: none;
+      }
+      .clientes-mobile {
+        display: block;
+      }
+
+      h2 {
+        padding-bottom: 0px;
+        color: white;
+      }
       .carousel {
-        padding: 0 40px;
+        padding: 20px;
+
+        .carousel-inner {
+          .carousel-item,
+          .active {
+            .clientes-container {
+              display: flex;
+              flex-direction: column;
+
+              .clientes-card {
+                margin: 20px 0;
+                padding: 20px;
+                grid-template-rows: 15% 70% 8% 7%;
+                min-height: 345px;
+                .card-frase {
+                  h3 {
+                    font-size: $Tamanio-texto-quote * 0.7;
+                  }
+                }
+                .card-comentario {
+                  p {
+                    font-size: $Tamanio-texto-parrafos * 0.8;
+                    padding: 10px 0;
+                  }
+                }
+                .card-cliente {
+                  p {
+                    height: fit-content;
+                    font-size: $Tamanio-texto-parrafos * 0.8;
+                  }
+                }
+                .card-empresa {
+                  p {
+                    font-size: $Tamanio-texto-parrafos * 0.8;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .carousel-indicators {
+          position: absolute;
+          margin: 0;
+          bottom: 0px;
+        }
       }
     }
   }

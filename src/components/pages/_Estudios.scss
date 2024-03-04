@@ -1,4 +1,5 @@
-.estudios-programacion-mobile {
+.estudios-programacion-mobile,
+.idiomas-mobile {
   display: none;
 }
 
@@ -162,95 +163,97 @@
     }
   }
   .estudios-idiomas {
-    display: flex;
-    justify-content: space-evenly;
     width: 80%;
     max-width: 80%;
     margin: auto;
 
-    .cards {
-      padding: 20px 40px;
-      max-width: 30%;
-      width: 30%;
-      border: 1px solid rgb(66, 57, 73);
-      background-color: $Secundario-negro;
-      color: white;
-      min-height: 304px;
-      margin: 10px;
+    .idiomas-desktop {
+      display: flex;
+      justify-content: space-evenly;
+      .cards {
+        padding: 20px 40px;
+        max-width: 30%;
+        width: 30%;
+        border: 1px solid rgb(66, 57, 73);
+        background-color: $Secundario-negro;
+        color: white;
+        min-height: 304px;
+        margin: 10px;
 
-      .card-body {
-        display: grid;
-        grid-template-rows: 20% 60% 20%;
+        .card-body {
+          display: grid;
+          grid-template-rows: 20% 60% 20%;
 
-        .cards-iconos {
-          grid-row: 1;
-          img {
-            width: 50px;
+          .cards-iconos {
+            grid-row: 1;
+            img {
+              width: 50px;
+            }
+          }
+          .cards-titulos {
+            grid-row: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            p {
+              padding: 0;
+              margin: 0;
+              font-weight: 500;
+              font-size: 18px;
+            }
+          }
+          .cards-flechas {
+            grid-row: 3;
+            svg {
+              font-size: 30px;
+            }
           }
         }
-        .cards-titulos {
-          grid-row: 2;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+        .cards-informacion {
+          display: grid;
+          grid-template-rows: 10% 20% 50% 20%;
 
-          p {
-            padding: 0;
-            margin: 0;
-            font-weight: 500;
-            font-size: 18px;
-          }
-        }
-        .cards-flechas {
-          grid-row: 3;
-          svg {
-            font-size: 30px;
-          }
-        }
-      }
-      .cards-informacion {
-        display: grid;
-        grid-template-rows: 10% 20% 50% 20%;
+          .cards-nivel {
+            grid-row: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-        .cards-nivel {
-          grid-row: 2;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+            p {
+              padding: 0;
+              margin: 0;
+              font-size: 15px;
+            }
+          }
+          .cards-descripcion {
+            grid-row: 3;
+            display: flex;
+            align-items: center;
+            p {
+              margin: 0;
+              padding: 0;
+              font-size: 15px;
+            }
+          }
+          .cards-titulos {
+            grid-row: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-          p {
-            padding: 0;
-            margin: 0;
-            font-size: 15px;
+            p {
+              padding: 0;
+              margin: 0;
+              font-weight: 500;
+              font-size: 18px;
+            }
           }
-        }
-        .cards-descripcion {
-          grid-row: 3;
-          display: flex;
-          align-items: center;
-          p {
-            margin: 0;
-            padding: 0;
-            font-size: 15px;
-          }
-        }
-        .cards-titulos {
-          grid-row: 1;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          p {
-            padding: 0;
-            margin: 0;
-            font-weight: 500;
-            font-size: 18px;
-          }
-        }
-        .cards-flechas {
-          grid-row: 4;
-          svg {
-            font-size: 30px;
+          .cards-flechas {
+            grid-row: 4;
+            svg {
+              font-size: 30px;
+            }
           }
         }
       }
@@ -264,7 +267,7 @@
   }
 
   .seccion-estudios {
-    padding: 20px;
+    padding: 20px 0px 40px;
 
     h2 {
       padding-top: 20px;
@@ -273,7 +276,7 @@
 
     .estudios-proyectos_barraMenu {
       padding: 20px 0;
-      width: 60%;
+      width: 30%;
       font-size: $Tamanio-texto-submenu * 0.8;
       .portfolio-categoriaSeleccionada {
         width: fit-content;
@@ -366,35 +369,124 @@
     }
 
     .estudios-idiomas {
-      flex-wrap: wrap;
+      width: 100%;
+      max-width: 100%;
+      .idiomas-desktop {
+        display: none;
+      }
+      .idiomas-mobile {
+        display: block;
+        margin: auto;
+        .cards {
+          padding: 40px;
+          max-width: 100%;
+          width: 90%;
+          border: 1px solid rgb(66, 57, 73);
+          background-color: $Secundario-negro;
+          color: white;
+          min-height: 300px;
+          margin: auto;
 
-      .cards {
-        padding: 0;
-        max-width: 100%;
-        width: 50%;
-        min-height: 200px;
-        .card-body {
-          margin: 20px;
-          .cards-iconos {
-            img {
-              width: 30px;
+          .card-body {
+            display: grid;
+            grid-template-rows: 20% 60% 20%;
+            padding: 0 40px;
+            .cards-iconos {
+              grid-row: 1;
+              img {
+                width: 50px;
+              }
+            }
+            .cards-titulos {
+              grid-row: 2;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              p {
+                padding: 0;
+                margin: 0;
+                font-weight: bold;
+                font-size: 18px;
+                color: $Terciario-verde;
+              }
+            }
+            .cards-flechas {
+              grid-row: 3;
+              svg {
+                font-size: 30px;
+              }
             }
           }
-          .cards-titulos,
-          .cards-nivel {
-            p {
-              font-size: $Tamanio-texto-parrafos * 0.8;
+          .cards-informacion {
+            display: grid;
+            grid-template-rows: 10% 20% 50% 20%;
+
+            .cards-nivel {
+              grid-row: 2;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              p {
+                padding: 0;
+                margin: 0;
+                font-size: 15px;
+                color: $Terciario-verde;
+              }
+            }
+            .cards-descripcion {
+              grid-row: 3;
+              display: flex;
+              align-items: center;
+              p {
+                margin: 0;
+                padding: 0;
+                font-size: 15px;
+                text-align: left;
+              }
+            }
+            .cards-titulos {
+              grid-row: 1;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              p {
+                padding: 0;
+                margin: 0;
+                font-weight: 500;
+                font-size: 18px;
+              }
+            }
+            .cards-flechas {
+              grid-row: 4;
+              svg {
+                font-size: 30px;
+              }
             }
           }
-          .cards-flechas {
-            svg {
-              font-size: 20px;
-            }
+        }
+        .carousel-indicators {
+          position: absolute;
+          margin: 0;
+          bottom: -20px;
+
+          button {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $Textos-blancos;
           }
-          .cards-descripcion {
-            p {
-              font-size: $Tamanio-texto-parrafos * 0.7;
-            }
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+          position: absolute;
+          width: fit-content;
+
+          .carousel-control-prev-icon,
+          .carousel-control-next-icon {
+            filter: none;
           }
         }
       }
@@ -403,19 +495,232 @@
 }
 
 @media (max-width: 846px) {
+  .estudios-programacion {
+    display: none;
+  }
+
   .seccion-estudios {
-    .estudios-programacion {
-      .estudios-timeLine {
-        .estudios-timeLine_line {
-          height: 90vh;
+    padding: 20px 0px 40px;
+
+    h2 {
+      padding-top: 20px;
+      padding-bottom: 0;
+    }
+
+    .estudios-proyectos_barraMenu {
+      padding: 20px 0;
+      width: 30%;
+      font-size: $Tamanio-texto-submenu * 0.8;
+      .portfolio-categoriaSeleccionada {
+        width: fit-content;
+        margin: 5px 0;
+
+        span {
+          padding-top: 3px;
+          height: 2px;
         }
       }
     }
+    .estudios-programacion-mobile {
+      display: flex;
+      flex-direction: column;
+
+      .estudios-programacion-container {
+        display: flex;
+        overflow-x: scroll;
+        padding: 20px 0;
+        .estudio-recuadr-container {
+          display: flex;
+          width: 100%;
+
+          flex-direction: column;
+          margin: 0 10px;
+
+          .fecha-izquierda {
+            font-size: $Tamanio-texto-parrafos * 0.8;
+            text-align: left;
+            font-weight: 700;
+            color: $Textos-blancos;
+            padding-left: 25px;
+          }
+
+          .estudios-timeLine_line {
+            /* Coloca la línea en el centro horizontal de la pantalla */
+            /* Ancho de la línea */
+            height: 5px; /* Alto de la línea, igual al alto de la pantalla */
+            background-color: $Secundario-negro; /* Color de la línea */
+            text-align: left;
+            padding-left: 25px;
+            svg {
+              z-index: 500;
+              font-size: 50px;
+              position: relative;
+              left: -23px;
+              top: -25px;
+              color: $Terciario-verde;
+            }
+          }
+
+          .estudio-recuadro {
+            padding: 10px;
+            background-color: $Secundario-negro;
+            border: 1px solid $Secundario-negro;
+            text-align: left;
+            width: 60vw;
+            grid-row: 1;
+            color: $Textos-blancos;
+            padding: 20px;
+            min-height: 300px;
+            height: fit-content;
+            border-radius: 10px;
+            display: grid;
+            grid-template-rows: 5% 10% 55% 30%;
+            margin-top: 20px;
+            p:nth-child(2) {
+              color: $Terciario-verde;
+            }
+
+            h3 {
+              margin: 0;
+              height: fit-content;
+              color: $Textos-blancos;
+            }
+
+            p {
+              margin: 0;
+              padding: 5px 0;
+              font-size: $Tamanio-texto-parrafos * 0.8;
+
+              svg {
+                font-size: 30px;
+                margin-top: 0px;
+              }
+            }
+          }
+        }
+      }
+    }
+
     .estudios-idiomas {
-      .cards {
-        padding: 20px;
-        .card-body {
-          padding: 0;
+      width: 100%;
+      max-width: 100%;
+      .idiomas-desktop {
+        display: none;
+      }
+      .idiomas-mobile {
+        display: block;
+        margin: auto;
+        .cards {
+          padding: 40px;
+          max-width: 100%;
+          width: 90%;
+          border: 1px solid rgb(66, 57, 73);
+          background-color: $Secundario-negro;
+          color: white;
+          min-height: 300px;
+          margin: auto;
+
+          .card-body {
+            display: grid;
+            grid-template-rows: 20% 60% 20%;
+            padding: 0 40px;
+            .cards-iconos {
+              grid-row: 1;
+              img {
+                width: 50px;
+              }
+            }
+            .cards-titulos {
+              grid-row: 2;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              p {
+                padding: 0;
+                margin: 0;
+                font-weight: bold;
+                font-size: 18px;
+                color: $Terciario-verde;
+              }
+            }
+            .cards-flechas {
+              grid-row: 3;
+              svg {
+                font-size: 30px;
+              }
+            }
+          }
+          .cards-informacion {
+            display: grid;
+            grid-template-rows: 10% 20% 50% 20%;
+
+            .cards-nivel {
+              grid-row: 2;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              p {
+                padding: 0;
+                margin: 0;
+                font-size: 15px;
+                color: $Terciario-verde;
+              }
+            }
+            .cards-descripcion {
+              grid-row: 3;
+              display: flex;
+              align-items: center;
+              p {
+                margin: 0;
+                padding: 0;
+                font-size: 15px;
+                text-align: left;
+              }
+            }
+            .cards-titulos {
+              grid-row: 1;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              p {
+                padding: 0;
+                margin: 0;
+                font-weight: 500;
+                font-size: 18px;
+              }
+            }
+            .cards-flechas {
+              grid-row: 4;
+              svg {
+                font-size: 30px;
+              }
+            }
+          }
+        }
+        .carousel-indicators {
+          position: absolute;
+          margin: 0;
+          bottom: -20px;
+
+          button {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $Textos-blancos;
+          }
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+          position: absolute;
+          width: fit-content;
+
+          .carousel-control-prev-icon,
+          .carousel-control-next-icon {
+            filter: none;
+          }
         }
       }
     }

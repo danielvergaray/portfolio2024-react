@@ -38,9 +38,8 @@ const NavBarList = ({ menu }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
 
- /*  console.log(opcionActiva);
+  /*  console.log(opcionActiva);
   useEffect(() => {
     const handleScroll2 = () => {
       if (window.scrollY > 150) {
@@ -82,7 +81,6 @@ const NavBarList = ({ menu }) => {
   return (
     <>
       <Navbar
-        expand="lg"
         className={`navbar ${
           scrolling ? "bg-body-scroll" : "bg-body-tertiary"
         }`}
@@ -119,7 +117,9 @@ const NavBarList = ({ menu }) => {
 
         <Offcanvas show={show} onHide={handleClose}>
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title>PORTFOLIO</Offcanvas.Title>
+            <Navbar.Brand href="/">
+              <Offcanvas.Title>PORTFOLIO</Offcanvas.Title>
+            </Navbar.Brand>
           </Offcanvas.Header>
           <Offcanvas.Body>
             {menu.map((opcion, index) => (

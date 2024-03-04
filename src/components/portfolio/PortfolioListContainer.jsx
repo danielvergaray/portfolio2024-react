@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 import PortfolioList from "./PortfolioList";
-import ImagenAdivina from "../../assets/imagenes/proyectos/adivinaElNumero.jpeg";
+import ImagenAdivina1 from "../../assets/imagenes/proyectos/JUEGO-ADIVINA-EL-NUMERO_01.jpg";
+import ImagenAdivina2 from "../../assets/imagenes/proyectos/JUEGO-ADIVINA-EL-NUMERO_02.jpg";
+import ImagenAdivina3 from "../../assets/imagenes/proyectos/JUEGO-ADIVINA-EL-NUMERO_03.jpg";
+
 import ImagenMrSnackEcommerce from "../../assets/imagenes/proyectos/ecommerce.jpeg";
+import ImagenMrSnackWeb from "../../assets/imagenes/proyectos/MR-SNACK_01.jpg";
 import ImagenCarruselMrSnackWeb2 from "../../assets/imagenes/proyectos/MR-SNACK_02.jpg";
 import ImagenCarruselMrSnackWeb3 from "../../assets/imagenes/proyectos/MR-SNACK_03.jpg";
-import ImagenPigGame from "../../assets/imagenes/proyectos/pigGame.jpg";
-import ImagenMrSnackWeb from "../../assets/imagenes/proyectos/MR-SNACK_01.jpg";
-import ImagenGameStage from "../../assets/imagenes/proyectos/react-gameStage.jpeg";
+import ImagenPigGame1 from "../../assets/imagenes/proyectos/JUEGO-PIG-GAME_01.jpg";
+import ImagenPigGame2 from "../../assets/imagenes/proyectos/JUEGO-PIG-GAME_02.jpg";
+import ImagenPigGame3 from "../../assets/imagenes/proyectos/JUEGO-PIG-GAME_03.jpg";
+
+import ImagenGameStage1 from "../../assets/imagenes/proyectos/GAME-STAGE_01.jpg";
+import ImagenGameStage2 from "../../assets/imagenes/proyectos/GAME-STAGE_02.jpg";
+import ImagenGameStage3 from "../../assets/imagenes/proyectos/GAME-STAGE_03.jpg";
 import ImagenViajesWp from "../../assets/imagenes/proyectos/wp-blog.jpeg";
 import ImagenCentroMedicoWp from "../../assets/imagenes/proyectos/centroMedicoWp.jpeg";
 import ImagenBee from "../../assets/imagenes/proyectos/TiendaBee.jpeg";
@@ -21,16 +29,16 @@ const PortfolioListContainer = () => {
     {
       id: "1",
       titulo: "Juego: Adivina el Número",
-      imagenRecuadro: ImagenAdivina,
+      imagenRecuadro: ImagenAdivina1,
       imagenesCarusel: [
         {
-          imagenCarrusel: ImagenAdivina,
+          imagenCarrusel: ImagenAdivina1,
         },
         {
-          imagenCarrusel: ImagenAdivina,
+          imagenCarrusel: ImagenAdivina2,
         },
         {
-          imagenCarrusel: ImagenAdivina,
+          imagenCarrusel: ImagenAdivina3,
         },
       ],
       descripcionBreve:
@@ -76,16 +84,16 @@ const PortfolioListContainer = () => {
     {
       id: "3",
       titulo: "Juego: Pig Game",
-      imagenRecuadro: ImagenPigGame,
+      imagenRecuadro: ImagenPigGame1,
       imagenesCarusel: [
         {
-          imagenCarrusel: ImagenPigGame,
+          imagenCarrusel: ImagenPigGame1,
         },
         {
-          imagenCarrusel: ImagenPigGame,
+          imagenCarrusel: ImagenPigGame2,
         },
         {
-          imagenCarrusel: ImagenPigGame,
+          imagenCarrusel: ImagenPigGame3,
         },
       ],
       descripcionBreve:
@@ -129,16 +137,16 @@ const PortfolioListContainer = () => {
     {
       id: "5",
       titulo: "Ecommerce GameStage",
-      imagenRecuadro: ImagenGameStage,
+      imagenRecuadro: ImagenGameStage1,
       imagenesCarusel: [
         {
-          imagenCarrusel: ImagenGameStage,
+          imagenCarrusel: ImagenGameStage1,
         },
         {
-          imagenCarrusel: ImagenGameStage,
+          imagenCarrusel: ImagenGameStage2,
         },
         {
-          imagenCarrusel: ImagenGameStage,
+          imagenCarrusel: ImagenGameStage3,
         },
       ],
       descripcionBreve:

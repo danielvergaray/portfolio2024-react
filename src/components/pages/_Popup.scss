@@ -72,9 +72,7 @@
           justify-content: right;
           grid-row: 1;
           height: 40px;
-          position: relative;
-          top: -20px;
-          left: 15px;
+         
           svg {
             font-size: 40px;
             padding: 10px;
@@ -143,148 +141,6 @@
   display: none;
 }
 
-@media (max-width: 846px) {
-  .popup-container {
-    display: none;
-  }
-  .popup-container-mobile {
-    display: block;
-    background-color: $Principal-Negro;
-    width: 90vw;
-    height: 95vh;
-    position: fixed;
-    z-index: 4000;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    .popup {
-      display: grid;
-      height: 100%;
-      padding: 20px 40px;
-
-      .popup-inner {
-        display: grid;
-        grid-template-columns: 55% 45%;
-        grid-template-rows: 1;
-
-        .popup-imagenes {
-          text-align: center;
-          grid-column: 1;
-          width: 100%;
-          margin: auto;
-          .carousel {
-            height: 100%;
-
-            .carousel-inner {
-              .carousel-item,
-              .active {
-                img {
-                  width: 90%;
-                }
-              }
-            }
-          }
-
-          .carousel-indicators {
-            position: absolute;
-            margin: 0;
-            bottom: -30px;
-
-            button {
-              width: 10px;
-              height: 10px;
-              border-radius: 50%;
-              background-color: white;
-            }
-          }
-
-          .carousel-control-prev,
-          .carousel-control-next {
-            width: fit-content;
-            height: fit-content;
-            margin: auto 0px;
-            .carousel-control-prev-icon,
-            .carousel-control-next-icon {
-              filter: none;
-            }
-          }
-        }
-        .popup-informacion {
-          display: grid;
-          grid-template-rows: 5% 15% 65% 15%;
-
-          .popup-botonCerrar {
-            display: flex;
-            justify-content: right;
-            grid-row: 1;
-            height: 40px;
-            position: relative;
-            top: -20px;
-            left: 15px;
-            svg {
-              font-size: 40px;
-              padding: 10px;
-              cursor: pointer;
-              fill: $Textos-blancos;
-              background-color: $Terciario-verde;
-              font-weight: 100;
-
-              &:hover {
-                fill: white;
-                background-color: black;
-                border: 1px solid white;
-              }
-            }
-          }
-          .popup-titulo {
-            grid-row: 2;
-            height: fit-content;
-            padding: 0 20px;
-            h2 {
-              margin: 0;
-              color: $Textos-blancos;
-              padding-bottom: 0px;
-              font-size: $Tamanio-texto-hero * 0.5;
-              text-align: left;
-            }
-          }
-          .popup-descripcion {
-            display: flex;
-            align-items: center;
-            text-align: left;
-            padding: 0 20px;
-            grid-row: 3;
-            p {
-              margin: auto;
-              color: $Textos-blancos;
-              font-size: $Tamanio-texto-parrafos * 0.9;
-            }
-          }
-          .popup-botones {
-            width: 100%;
-            grid-row: 4;
-            margin: auto;
-            padding-top: 0px;
-            display: flex;
-            justify-content: space-evenly;
-            button {
-              padding: 15px;
-              border: 1px solid white;
-              background-color: black;
-              width: 100%;
-              text-align: center;
-
-              &:hover {
-                background-color: $Terciario-verde;
-                border: none;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
 
 @media (max-width: 576px) {
   .popup-container {
@@ -352,12 +208,12 @@
 
           .carousel-indicators {
             position: absolute;
-            margin: auto;
+            margin: 0;
             bottom: -30px;
-            width: 50%;
+
             button {
-              width: 5px;
-              height: 5px;
+              width: 10px;
+              height: 10px;
               border-radius: 50%;
               background-color: white;
             }
@@ -391,7 +247,140 @@
           width: 100%;
           grid-row: 4;
           margin: auto;
-          padding-top: 0px;
+          padding: 0px;
+          display: flex;
+          justify-content: space-evenly;
+          flex-wrap: wrap;
+          button {
+            padding: 15px;
+            border: 1px solid white;
+            background-color: black;
+            width: 100%;
+            text-align: center;
+            font-size: 13px;
+            &:hover {
+              background-color: $Terciario-verde;
+              border: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 846px) {
+  .popup-container {
+    display: none;
+  }
+  .popup-container-mobile {
+    display: block;
+    background-color: $Principal-Negro;
+    width: 90vw;
+    height: 95vh;
+    position: fixed;
+    z-index: 4000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .popup {
+      display: grid;
+      height: 100%;
+      padding: 20px 40px;
+
+      .popup-inner {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow-x: scroll;
+
+        .popup-botonCerrar {
+          display: flex;
+          justify-content: right;
+          grid-row: 1;
+          height: fit-content;
+
+          svg {
+            font-size: 30px;
+            padding: 5px;
+            cursor: pointer;
+            fill: $Textos-blancos;
+            background-color: $Terciario-verde;
+            font-weight: 100;
+            &:hover {
+              fill: white;
+              background-color: black;
+              border: 1px solid white;
+            }
+          }
+        }
+        .popup-titulo {
+          h2 {
+            padding: 20px 0;
+            font-size: $Tamanio-texto-hero * 0.5;
+          }
+        }
+
+        .popup-imagenes {
+          text-align: center;
+          grid-column: 1;
+          width: 100%;
+          margin: auto;
+          .carousel {
+            height: 100%;
+
+            .carousel-inner {
+              .carousel-item,
+              .active {
+                img {
+                  width: 90%;
+                }
+              }
+            }
+          }
+
+          .carousel-indicators {
+            position: absolute;
+            margin: 0;
+            bottom: -30px;
+
+            button {
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              background-color: white;
+            }
+          }
+
+          .carousel-control-prev,
+          .carousel-control-next {
+            width: fit-content;
+            height: fit-content;
+            margin: auto 0px;
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+              filter: none;
+            }
+          }
+        }
+        .popup-descripcion {
+          display: flex;
+          align-items: center;
+          text-align: left;
+          padding: 50px 20px 30px;
+          grid-row: 3;
+          p {
+            margin: auto;
+            color: $Textos-blancos;
+            font-size: $Tamanio-texto-parrafos * 0.9;
+          }
+        }
+        .popup-botones {
+          width: 100%;
+          grid-row: 4;
+          margin: auto;
+         
           display: flex;
           justify-content: space-evenly;
           button {
@@ -411,3 +400,5 @@
     }
   }
 }
+
+

@@ -31,6 +31,7 @@
       a {
         color: $Textos-blancos;
         text-decoration: none;
+        
 
         &:hover {
           color: white;
@@ -41,7 +42,7 @@
 }
 
 .bg-body-scroll {
-  background-color: $Terciario-verde;
+  background-color: $Secundario-negro;
 
   .navbar-nav {
     display: flex;
@@ -70,6 +71,8 @@
   }
 }
 
+
+
 @media (max-width: 846px) {
   .navbar {
     display: none;
@@ -85,23 +88,23 @@
     .navbar-mobile_barra {
       padding: 10px 20px;
       display: grid;
-      grid-template-columns: 20% 80%;
+      grid-template-columns: 80% 20%;
       width: 100vw;
       svg {
         color: $Textos-blancos;
-        background-color: $Terciario-verde;
+       /*  background-color: $Terciario-verde; */
         font-size: 35px;
         grid-column: 1;
         border-radius: 50%;
-        border: 1px solid $Terciario-verde;
+        /* border: 1px solid $Terciario-verde; */
         padding: 5px;
       }
       a {
         grid-column: 2;
-        text-align: right;
+        margin-left: 60vw;
         color: white;
-        margin: auto 0;
-        width: 100%;
+        margin: auto;
+        width: fit-content;
         text-decoration: none;
       }
     }
