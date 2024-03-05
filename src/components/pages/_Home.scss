@@ -6,9 +6,11 @@
   .home-info {
     .home-info__hero {
       display: grid;
-      grid-template-columns: 50% 50%;
+      grid-template-columns: 40% 60%;
       background-color: $Principal-Negro;
-
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
       padding: 0px;
       padding-left: 60px;
 
@@ -57,8 +59,6 @@
             span {
               padding-left: 10px;
               color: $Terciario-verde;
-              
-              
             }
           }
         }
@@ -84,6 +84,12 @@
         background-position: center center;
         background-size: cover;
         width: 100%;
+        background:
+                linear-gradient(rgba(0, 0, 0, 0.6), transparent),
+                url("../../assets/imagenes/FOTO-HOME3.jpeg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
       }
     }
 
@@ -358,15 +364,13 @@
 }
 
 @media (max-width: 576px) {
-
- 
   .home {
     .home-info {
       .home-info__hero {
         display: grid;
         grid-template-columns: 50% 50%;
         padding: 20px;
-        
+
         .home-info__hero-title {
           padding-top: 15vh;
           z-index: 200;
@@ -415,8 +419,6 @@
           padding: 0px;
           width: 100%;
           background-size: cover;
-         
-         
         }
       }
       .home-info__bio-mobile {

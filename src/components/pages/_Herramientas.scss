@@ -1,0 +1,63 @@
+.herramientas {
+  padding: 20px;
+  padding-bottom: 20px;
+  h2 {
+    text-align: center;
+  }
+  .slider {
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+
+    .slider-track {
+      display: flex;
+      width: calc(250px * 16);
+      animation: scroll 40s linear infinite;
+
+      &:hover {
+        animation-play-state: paused;
+      }
+
+      .slide {
+        height: 200px;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        perspective: 100px;
+
+        span {
+          font-size: 80px;
+          text-align: center;
+          color: $Terciario-verde;
+          transition: transform 1s;
+          &:hover {
+            transform: translateZ(20px);
+          }
+        }
+        p {
+          color: white;
+          font-size: 20px;
+          text-align: center;
+          text-transform: uppercase;
+          font-size: $Tamanio-texto-parrafos;
+          
+        }
+      }
+    }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 6));
+  }
+}

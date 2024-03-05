@@ -1,10 +1,11 @@
 import React from "react";
 import { useRef, useEffect } from "react";
-import imagenHero from "../../assets/imagenes/yo-cv.png";
-import imagenBio from "../../assets/imagenes/fotoBio.jpeg";
+import imagenHero from "../../assets/imagenes/FOTO-HOME3.jpeg";
+import imagenBio from "../../assets/imagenes/FOTO-HOME1.jpeg";
 import PortfolioListContainer from "../portfolio/PortfolioListContainer";
 import ClientesListContainer from "../seccionClientes/ClientesListContainer";
 import EstudiosListContainer from "../estudios/EstudiosListContainer";
+import HerramientasListContainer from "../seccionHerramientas/HerramientasListContainer";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
@@ -72,7 +73,7 @@ const Home = () => {
   return (
     <div className="home">
       <section className="home-info">
-        <article className="home-info__hero">
+        <article /* style={{ backgroundImage: `url(${info[0].imagenHero})` }} */ className="home-info__hero">
           <div className="home-info__hero-title">
             <div className="home-titulo">
               {tituloArray.map((titulo, index) => (
@@ -111,7 +112,7 @@ const Home = () => {
 
           <div
             className="home-info__hero-image"
-            style={{ backgroundImage: `url(${info[0].imagenHero})` }}
+            /* style={{ backgroundImage: `url(${info[0].imagenHero})` }} */
           >
             {/* <img src={info[0].imagenHero} alt="" /> */}
           </div>
@@ -175,6 +176,7 @@ const Home = () => {
         />
       </section>
 
+      {/* ESTUDIOS */}
       <section
         data-aos-easing="linear"
         data-aos-duration="500"
@@ -185,6 +187,14 @@ const Home = () => {
       >
         <h2>estudios</h2>
         <EstudiosListContainer />
+      </section>
+
+      <section className="herramientas"
+      data-aos-easing="linear"
+      data-aos-duration="500"
+      data-aos="fade-up">
+        <h2>CONOCIMIENTOS</h2>
+        <HerramientasListContainer />
       </section>
 
       <section

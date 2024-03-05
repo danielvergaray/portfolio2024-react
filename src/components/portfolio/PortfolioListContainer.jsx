@@ -4,10 +4,14 @@ import ImagenAdivina1 from "../../assets/imagenes/proyectos/JUEGO-ADIVINA-EL-NUM
 import ImagenAdivina2 from "../../assets/imagenes/proyectos/JUEGO-ADIVINA-EL-NUMERO_02.jpg";
 import ImagenAdivina3 from "../../assets/imagenes/proyectos/JUEGO-ADIVINA-EL-NUMERO_03.jpg";
 
-import ImagenMrSnackEcommerce from "../../assets/imagenes/proyectos/ecommerce.jpeg";
+import ImagenMrSnackEcommerce1 from "../../assets/imagenes/proyectos/ECOMMERCE-MR-SNACK_01.jpg";
+import ImagenMrSnackEcommerce2 from "../../assets/imagenes/proyectos/ECOMMERCE-MR-SNACK_02.jpg";
+import ImagenMrSnackEcommerce3 from "../../assets/imagenes/proyectos/ECOMMERCE-MR-SNACK_03.jpg";
+
 import ImagenMrSnackWeb from "../../assets/imagenes/proyectos/MR-SNACK_01.jpg";
 import ImagenCarruselMrSnackWeb2 from "../../assets/imagenes/proyectos/MR-SNACK_02.jpg";
 import ImagenCarruselMrSnackWeb3 from "../../assets/imagenes/proyectos/MR-SNACK_03.jpg";
+
 import ImagenPigGame1 from "../../assets/imagenes/proyectos/JUEGO-PIG-GAME_01.jpg";
 import ImagenPigGame2 from "../../assets/imagenes/proyectos/JUEGO-PIG-GAME_02.jpg";
 import ImagenPigGame3 from "../../assets/imagenes/proyectos/JUEGO-PIG-GAME_03.jpg";
@@ -15,9 +19,22 @@ import ImagenPigGame3 from "../../assets/imagenes/proyectos/JUEGO-PIG-GAME_03.jp
 import ImagenGameStage1 from "../../assets/imagenes/proyectos/GAME-STAGE_01.jpg";
 import ImagenGameStage2 from "../../assets/imagenes/proyectos/GAME-STAGE_02.jpg";
 import ImagenGameStage3 from "../../assets/imagenes/proyectos/GAME-STAGE_03.jpg";
-import ImagenViajesWp from "../../assets/imagenes/proyectos/wp-blog.jpeg";
-import ImagenCentroMedicoWp from "../../assets/imagenes/proyectos/centroMedicoWp.jpeg";
-import ImagenBee from "../../assets/imagenes/proyectos/TiendaBee.jpeg";
+
+import ImagenViajesWp1 from "../../assets/imagenes/proyectos/BLOG-VIAJES_01.jpg";
+import ImagenViajesWp2 from "../../assets/imagenes/proyectos/BLOG-VIAJES_02.jpg";
+import ImagenViajesWp3 from "../../assets/imagenes/proyectos/BLOG-VIAJES_03.jpg";
+
+import ImagenCentroMedicoWp1 from "../../assets/imagenes/proyectos/CENTRO-ODONTOLOGICO_01.jpg";
+import ImagenCentroMedicoWp2 from "../../assets/imagenes/proyectos/CENTRO-ODONTOLOGICO_02.jpg";
+import ImagenCentroMedicoWp3 from "../../assets/imagenes/proyectos/CENTRO-ODONTOLOGICO_03.jpg";
+
+import ImagenBee1 from "../../assets/imagenes/proyectos/BEE_01.jpg";
+import ImagenBee2 from "../../assets/imagenes/proyectos/BEE_02.jpg";
+import ImagenBee3 from "../../assets/imagenes/proyectos/BEE_03.jpg";
+
+import ImagenSebas1 from "../../assets/imagenes/proyectos/SEBAS_01.jpg";
+import ImagenSebas2 from "../../assets/imagenes/proyectos/SEBAS_02.jpg";
+import ImagenSebas3 from "../../assets/imagenes/proyectos/SEBAS_03.jpg";
 
 const PortfolioListContainer = () => {
   const [abrirInfo, setAbrirInfo] = useState(false);
@@ -56,16 +73,16 @@ const PortfolioListContainer = () => {
     {
       id: "2",
       titulo: "Ecommerce Mr. Snack",
-      imagenRecuadro: ImagenMrSnackEcommerce,
+      imagenRecuadro: ImagenMrSnackEcommerce1,
       imagenesCarusel: [
         {
-          imagenCarrusel: ImagenMrSnackEcommerce,
+          imagenCarrusel: ImagenMrSnackEcommerce1,
         },
         {
-          imagenCarrusel: ImagenMrSnackEcommerce,
+          imagenCarrusel: ImagenMrSnackEcommerce2,
         },
         {
-          imagenCarrusel: ImagenMrSnackEcommerce,
+          imagenCarrusel: ImagenMrSnackEcommerce3,
         },
       ],
       descripcionBreve:
@@ -163,16 +180,16 @@ const PortfolioListContainer = () => {
     {
       id: "6",
       titulo: "Blog de viajes/ecommerce",
-      imagenRecuadro: ImagenViajesWp,
+      imagenRecuadro: ImagenViajesWp1,
       imagenesCarusel: [
         {
-          imagenCarrusel: ImagenViajesWp,
+          imagenCarrusel: ImagenViajesWp1,
         },
         {
-          imagenCarrusel: ImagenViajesWp,
+          imagenCarrusel: ImagenViajesWp2,
         },
         {
-          imagenCarrusel: ImagenViajesWp,
+          imagenCarrusel: ImagenViajesWp3,
         },
       ],
       descripcionBreve:
@@ -190,16 +207,16 @@ const PortfolioListContainer = () => {
     {
       id: "7",
       titulo: "Web Centro odontologico",
-      imagenRecuadro: ImagenCentroMedicoWp,
+      imagenRecuadro: ImagenCentroMedicoWp1,
       imagenesCarusel: [
         {
-          imagenCarrusel: ImagenCentroMedicoWp,
+          imagenCarrusel: ImagenCentroMedicoWp1,
         },
         {
-          imagenCarrusel: ImagenCentroMedicoWp,
+          imagenCarrusel: ImagenCentroMedicoWp2,
         },
         {
-          imagenCarrusel: ImagenCentroMedicoWp,
+          imagenCarrusel: ImagenCentroMedicoWp3,
         },
       ],
       descripcionBreve: "ofrece una plataforma intuitiva y eficiente para que los usuarios reserven citas médicas en línea. Con una interfaz profesional y fácil de usar...",
@@ -214,16 +231,16 @@ const PortfolioListContainer = () => {
     {
       id: "8",
       titulo: "Tienda Bee",
-      imagenRecuadro: ImagenBee,
+      imagenRecuadro: ImagenBee1,
       imagenesCarusel: [
         {
-          imagenCarrusel: ImagenBee,
+          imagenCarrusel: ImagenBee1,
         },
         {
-          imagenCarrusel: ImagenBee,
+          imagenCarrusel: ImagenBee2,
         },
         {
-          imagenCarrusel: ImagenBee,
+          imagenCarrusel: ImagenBee3,
         },
       ],
       descripcionBreve:
@@ -236,6 +253,33 @@ const PortfolioListContainer = () => {
       tituloRepositorio: TituloRepositorio,
       linkWeb: "https://beemendoza.com/",
       linkRepositorio: "",
+    },
+    {
+      id: "9",
+      titulo: "Invitación cumpleaños Sebastian",
+      imagenRecuadro: ImagenSebas1,
+      imagenesCarusel: [
+        {
+          imagenCarrusel: ImagenSebas1,
+        },
+        {
+          imagenCarrusel: ImagenSebas2,
+        },
+        {
+          imagenCarrusel: ImagenSebas3,
+        },
+      ],
+      descripcionBreve:
+        "Esta página web única combina funcionalidad y creatividad para ofrecer una experiencia de invitación interactiva...",
+      descripcion:
+        "Bienvenido a la invitación de cumpleaños diseñada con JavaScript para el próximo gran evento de tu hijo. Esta página web única combina funcionalidad y creatividad para ofrecer una experiencia de invitación interactiva y memorable. Con animaciones suaves y elementos dinámicos, los invitados podrán sumergirse en un entorno digital que refleja la emoción y la alegría del cumpleaños. Además de la información básica del evento, como la fecha, hora y ubicación. Con esta invitación de cumpleaños creada con JavaScript, asegúrate de que la celebración comience desde el momento en que se envíe la invitación.",
+      imagen: "",
+      category: "javascript",
+      tituloWeb: TituloWeb,
+      tituloRepositorio: TituloRepositorio,
+      linkWeb: "https://danielvergaray.github.io/SebasWars/",
+      linkRepositorio: "https://github.com/danielvergaray/SebasWars",
+      
     },
   ];
 

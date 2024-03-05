@@ -1,8 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
-import Card from "react-bootstrap/Card";
-import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
