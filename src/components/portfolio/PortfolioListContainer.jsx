@@ -61,7 +61,7 @@ const PortfolioListContainer = () => {
       descripcionBreve:
         "Este proyecto consiste en un juego donde se genera un numero al azar y el usuario debe adivinarlo...",
       descripcion:
-        "Este proyecto consiste en un juego donde se genera un numero al azar y el usuario debe adivinarlo, contando con pistas que se muestran de acuerdo al valor introducido por el usuario. Fue realizado usando javaScript.",
+        "Este proyecto consiste en un juego donde se genera un numero al azar y el usuario debe adivinarlo, contando con pistas que se muestran de acuerdo al valor introducido por el usuario. Fue realizado usando javaScript, html5 y css3.",
       imagen: "",
       category: "javascript",
       tituloWeb: TituloWeb,
@@ -88,7 +88,7 @@ const PortfolioListContainer = () => {
       descripcionBreve:
         "Este proyecto consiste en un Ecommerce creado para el emprendimiento Mr. Snack. Ha sido realizado...",
       descripcion:
-        "Este proyecto consiste en un Ecommerce creado para el emprendimiento Mr. Snack. Ha sido realizado utilizando javaScript, creando los productos del emprendimiento de manera dinamica pudiendo filtrar los productos por categoria y buscarlos por su nombre, se realizaron versiones desktop y mobile.",
+        "Este proyecto consiste en un Ecommerce creado para el emprendimiento Mr. Snack. Ha sido realizado utilizando javaScript, creando los productos del emprendimiento de manera dinamica pudiendo filtrar los productos por categoria y buscarlos por su nombre, se realizaron versiones desktop y mobile. Es un proyecto que se ha realizado durante el desarrollo del curso de javaScript, abarcando los requerimientos necesarios por el curso",
       imagen: "",
       category: "javascript",
       tituloWeb: TituloWeb,
@@ -116,7 +116,7 @@ const PortfolioListContainer = () => {
       descripcionBreve:
         "Este proyecto consiste en un juego donde se le permite al usuario lanzar el dado y sumar los numeros...",
       descripcion:
-        "Este proyecto consiste en un juego donde se le permite al usuario lanzar el dado y sumar los numeros obtenidos de manera aleatoria hasta llegar al objetivo. Fue realizado usando javaScript.",
+        "Este proyecto consiste en un juego donde se le permite al usuario lanzar el dado y sumar los numeros obtenidos de manera aleatoria hasta llegar al objetivo. Fue realizado manejando el dom de manera dinamica usando javaScript.",
       imagen: "",
       category: "javascript",
       tituloWeb: TituloWeb,
@@ -169,7 +169,7 @@ const PortfolioListContainer = () => {
       descripcionBreve:
         "Este proyecto consiste en un Ecommerce creado como una simulación de una tienda de videojuegos. Ha sido...",
       descripcion:
-        "Este proyecto consiste en un Ecommerce creado como una simulación de una tienda de videojuegos. Ha sido realizado utilizando React, creando los productos del emprendimiento de manera dinamica pudiendo filtrar los productos por categoria y buscarlos por su nombre, los productos fueron almacenados en una base de datos externa (API), se realizaron versiones desktop y mobile.",
+        "Este proyecto consiste en un Ecommerce creado como una simulación de una tienda de videojuegos. Ha sido realizado utilizando React, creando los productos del emprendimiento de manera dinamica pudiendo filtrar los productos por categoria y buscarlos por su nombre, los productos fueron almacenados en una base de datos externa, en dicha base de datos tambien se permiten enviar las compras realizados por los clientes, se realizaron versiones desktop y mobile.",
       imagen: "",
       category: "react",
       tituloWeb: TituloWeb,
@@ -219,8 +219,8 @@ const PortfolioListContainer = () => {
           imagenCarrusel: ImagenCentroMedicoWp3,
         },
       ],
-      descripcionBreve: "ofrece una plataforma intuitiva y eficiente para que los usuarios reserven citas médicas en línea. Con una interfaz profesional y fácil de usar...",
-      descripcion: "El sitio web del centro médico, diseñado y desarrollado con WordPress, ofrece una plataforma intuitiva y eficiente para que los usuarios reserven citas médicas en línea. Con una interfaz profesional y fácil de usar, los pacientes pueden navegar por el sitio, encontrar información detallada sobre los servicios ofrecidos, conocer al personal médico y programar sus citas de manera conveniente.",
+      descripcionBreve: "Este proyecto consiste en un centro odontologico, para esta web se ha implentado dinstintos plugins y elementor, mediante...",
+      descripcion: "Este proyecto consiste en un centro odontologico, para esta web se ha implentado dinstintos plugins y elementor, mediante la web se permite agendar citas medicas. Ha sido realizado con Wordpress",
    
       category: "wordpress",
       tituloWeb: TituloWeb,
@@ -272,7 +272,7 @@ const PortfolioListContainer = () => {
       descripcionBreve:
         "Esta página web única combina funcionalidad y creatividad para ofrecer una experiencia de invitación interactiva...",
       descripcion:
-        "Bienvenido a la invitación de cumpleaños diseñada con JavaScript para el próximo gran evento de tu hijo. Esta página web única combina funcionalidad y creatividad para ofrecer una experiencia de invitación interactiva y memorable. Con animaciones suaves y elementos dinámicos, los invitados podrán sumergirse en un entorno digital que refleja la emoción y la alegría del cumpleaños. Además de la información básica del evento, como la fecha, hora y ubicación. Con esta invitación de cumpleaños creada con JavaScript, asegúrate de que la celebración comience desde el momento en que se envíe la invitación.",
+        "Esta página web única combina funcionalidad y creatividad para ofrecer una experiencia de invitación interactiva, el cliente buscaba una web fresca y animada para el cumpleaños de su hijo. Esta web se ha desarrollado usando javaScript, Html5, css3 y bootstrap",
       imagen: "",
       category: "javascript",
       tituloWeb: TituloWeb,

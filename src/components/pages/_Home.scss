@@ -87,7 +87,7 @@
         grid-column: 1;
         text-align: center;
         margin: auto;
-        width: 70%;
+        width: 75%;
 
         img {
           width: 100%;
@@ -98,10 +98,7 @@
         grid-column: 2;
         margin: auto;
         color: $Textos-blancos;
-        h2 {
-          /* padding-top: 0px;
-          padding-bottom: 50px; */
-        }
+       
         h3 {
           padding-bottom: 0px;
           margin: 0;
@@ -357,7 +354,7 @@
       .home-info__hero {
         background: linear-gradient(rgba(0, 0, 0, 0.6), transparent),
           url("../../assets/imagenes/FOTO-HOME.jpg");
-        background-position: right top;
+        background-position: center top;
         background-size: cover;
         background-repeat: no-repeat;
         
@@ -425,7 +422,7 @@
         }
 
         .home-info__bio-imagen {
-          width: 70%;
+          min-width: 200px;
           margin: auto;
 
           img {
@@ -438,10 +435,7 @@
           display: block;
           margin: auto;
           padding: 20px 30px 0;
-          h2 {
-            /*   padding-top: 0px;
-            padding-bottom: 50px; */
-          }
+         
           h3 {
             padding-bottom: 0px;
             margin: 0;
@@ -461,11 +455,6 @@
 
     .portfolio {
       padding: 20px;
-
-      h2 {
-        /* padding-bottom: 0;
-        padding-top: 20px; */
-      }
 
       .portfolio-proyectos_barraMenu {
         /* display: grid;
@@ -617,18 +606,24 @@
         margin: 0;
         padding: 20px;
         padding-top: 30px;
+        
 
         h2 {
           position: relative;
           top: 0px;
-          text-align: center;
+          text-align: left;
           padding: 20px 0 20px;
+          padding-left: 30px;
           margin: 0;
+        }
+        h3{
+          padding-left: 30px;
         }
 
         .home-info__bio-imagen {
-          width: 50%;
+          width: 80%;
           margin: auto;
+          max-width: 365px;
 
           img {
             width: 100%;
@@ -639,13 +634,12 @@
         .home-info__bio-biografia {
           display: block;
           margin: auto;
-          padding: 20px 30px 0;
-          h2 {
-            /* padding-bottom: 50px; */
-          }
+          padding: 20px 8vw 0;
+       
           h3 {
             padding-bottom: 0px;
             margin: 0;
+            
           }
 
           p {
@@ -712,7 +706,6 @@
       }
     }
     .seccionClientes {
-      /* padding: 40px 0 20px; */
 
       .clientes {
         display: none;
@@ -722,7 +715,6 @@
       }
 
       h2 {
-        /* padding-bottom: 0px; */
         color: white;
       }
       .carousel {
@@ -736,7 +728,7 @@
               flex-direction: column;
 
               .clientes-card {
-                margin: 20px 0;
+                margin: 20px;
                 padding: 20px;
                 grid-template-rows: 15% 70% 8% 7%;
                 min-height: 345px;

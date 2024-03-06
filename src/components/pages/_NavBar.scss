@@ -88,15 +88,15 @@
     display: block;
     position: fixed;
     top: 0;
-    max-width: 100%;
+    width: 100%;
     padding: 0px;
     z-index: 1000;
 
     .navbar-mobile_barra {
       padding: 10px 20px;
       display: grid;
-      grid-template-columns: 60% 40%;
-      width: 100vw;
+      grid-template-columns: 40% 60%;
+      width: 100%;
       svg {
         color: $Textos-blancos;
        /*  background-color: $Terciario-verde; */
@@ -106,14 +106,21 @@
         /* border: 1px solid $Terciario-verde; */
         padding: 5px;
       }
-      a {
+      div{
         grid-column: 2;
-        margin-left: 60vw;
-        color: white;
-        margin: auto;
-        width: fit-content;
-        text-decoration: none;
+        width: 100%;
+       text-align: right;
+       margin: auto;
+        a {
+          
+          margin-left: 60vw;
+          color: white;
+          margin: auto;
+          width: fit-content;
+          text-decoration: none;
+        }
       }
+      
     }
   }
   .offcanvas {

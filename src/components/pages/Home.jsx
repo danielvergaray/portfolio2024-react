@@ -58,8 +58,8 @@ const Home = () => {
       ], */
 
       imagenBio: imagenBio,
-      bio: " Soy Daniel, ingeniero civil. En 2022, encontré mi pasión por la programación, lo que me llevó a reflexionar sobre la capacidad humana para adaptarse y reinventarse.",
-      bio2: "Mi experiencia en coordinación de proyectos y manejo de personal ha fortalecido habilidades esenciales como la gestión de conflictos y la comunicación, fundamentales para mi desempeño en cualquier entorno laboral.",
+      bio: " Mi nombre es Daniel, soy ingeniero civil de profesión. Esta carrera me ha llevado a conocer distintos aspectos de la vida como el hecho de que el ser humano es capaz de muchas cosas siempre que lo crea posible, capaz de adaptarse a cualquier situación y reinventarse las veces que sean necesarias. Es este último tópico que me llevo a darme cuenta que quería darle un rumbo a mi vida. Es por eso que desde el año 2022 encontré lo que me apasiona. Comencé a entrar al mundo de la programación porque jamás es tarde para volver a empezar.",
+      bio2: "A nivel profesional, como ingeniero civil he tenido experiencia en coordinación de proyectos, manejo de personal y trabajo en equipo. Experiencias que me han ayudado a mejorar habilidades blandas como gestión de conflictos, manejo del estrés, habilidades de comunicación, entre otras. Las cuales son fundamentales en el desempeño de actividades diarias dentro de cualquier empresa.",
     },
   ];
 
