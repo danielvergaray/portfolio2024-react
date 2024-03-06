@@ -1,7 +1,7 @@
 import React from "react";
 import { useRef, useEffect } from "react";
-import imagenHero from "../../assets/imagenes/FOTO-HOME3.jpeg";
-import imagenBio from "../../assets/imagenes/FOTO-HOME1-bn.jpeg";
+import imagenHero from "../../assets/imagenes/FOTO-HOME.jpg";
+import imagenBio from "../../assets/imagenes/FOTO-BIO1.jpeg";
 import PortfolioListContainer from "../portfolio/PortfolioListContainer";
 import ClientesListContainer from "../seccionClientes/ClientesListContainer";
 import EstudiosListContainer from "../estudios/EstudiosListContainer";
