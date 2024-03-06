@@ -55,7 +55,6 @@ const HerramientasListContainer = () => {
     ],
   };
 
-  const efectoIcono = () => {};
 
   return <HerramientasList herramientas={infoHerramientas.herramientas} />;
 };

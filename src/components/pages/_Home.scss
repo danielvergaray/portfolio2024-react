@@ -5,8 +5,7 @@
 .home {
   .home-info {
     .home-info__hero {
-      display: grid;
-      grid-template-columns: 40% 60%;
+      
       background: linear-gradient(rgba(0, 0, 0, 0.6), transparent),
         url("../../assets/imagenes/FOTO-HOME.jpg");
       background-position: center top;
@@ -14,7 +13,7 @@
       background-repeat: no-repeat;
       padding: 0px;
       padding-left: 60px;
-
+      height: 90vh;
       .home-info__hero-title {
         grid-column: 1;
         color: $Textos-blancos;
@@ -77,15 +76,6 @@
           }
         }
       }
-
-      .home-info__hero-image {
-        grid-column: 2;
-        height: 90vh;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        width: 100%;
-      }
     }
 
     .home-info__bio {
@@ -110,8 +100,8 @@
         margin: auto;
         color: $Textos-blancos;
         h2 {
-          padding-top: 0px;
-          padding-bottom: 50px;
+          /* padding-top: 0px;
+          padding-bottom: 50px; */
         }
         h3 {
           padding-bottom: 0px;
@@ -126,7 +116,7 @@
     }
   }
   .portfolio {
-    padding: 50px;
+   /*  padding: 50px; */
     background-color: $Principal-Negro;
     text-align: center;
 
@@ -144,6 +134,10 @@
         text-decoration: none;
         cursor: pointer;
         color: $Textos-blancos;
+
+        &:hover {
+          color: $Terciario-verde;
+        }
       }
       .portfolio-categoriaSeleccionada {
         color: $Terciario-verde;
@@ -425,10 +419,10 @@
 
         h2 {
           position: relative;
-          top: 00px;
+          top: 0px;
           text-align: center;
           padding: 0;
-          padding-bottom: 20px;
+         /*  padding-bottom: 20px; */
           margin: 0;
         }
 
@@ -447,8 +441,8 @@
           margin: auto;
           padding: 20px 30px 0;
           h2 {
-            padding-top: 0px;
-            padding-bottom: 50px;
+          /*   padding-top: 0px;
+            padding-bottom: 50px; */
           }
           h3 {
             padding-bottom: 0px;
@@ -471,8 +465,8 @@
       padding: 20px;
 
       h2 {
-        padding-bottom: 0;
-        padding-top: 20px;
+        /* padding-bottom: 0;
+        padding-top: 20px; */
       }
 
       .portfolio-proyectos_barraMenu {
@@ -559,7 +553,7 @@
       }
 
       h2 {
-        padding-bottom: 0px;
+        /* padding-bottom: 0px; */
         color: white;
       }
       .carousel {
@@ -630,8 +624,8 @@
           position: relative;
           top: 00px;
           text-align: center;
-          padding: 0;
-          padding-bottom: 20px;
+          /* padding: 0;
+          padding-bottom: 20px; */
           margin: 0;
         }
 
@@ -650,8 +644,8 @@
           margin: auto;
           padding: 20px 30px 0;
           h2 {
-            padding-top: 0px;
-            padding-bottom: 50px;
+          /*   padding-top: 0px;
+            padding-bottom: 50px; */
           }
           h3 {
             padding-bottom: 0px;
@@ -733,7 +727,7 @@
       }
 
       h2 {
-        padding-bottom: 0px;
+        /* padding-bottom: 0px; */
         color: white;
       }
       .carousel {

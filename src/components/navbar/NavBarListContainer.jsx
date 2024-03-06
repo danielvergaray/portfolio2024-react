@@ -9,7 +9,7 @@ const NavBarListContainer = () => {
   const sectionRef4 = useRef(null);
   const opcionesNavBar = [
     {
-      titulo: "ABOUT",
+      titulo: "SOBRE MI",
       ref: "1",
     },
     {

@@ -73,7 +73,7 @@ const Home = () => {
   return (
     <div className="home">
       <section className="home-info">
-        <article /* style={{ backgroundImage: `url(${info[0].imagenHero})` }} */ className="home-info__hero">
+        <article className="home-info__hero">
           <div className="home-info__hero-title">
             <div className="home-titulo">
               {tituloArray.map((titulo, index) => (
@@ -108,13 +108,6 @@ const Home = () => {
                 <button>Contáctame</button>
               </Link>
             </div>
-          </div>
-
-          <div
-            className="home-info__hero-image"
-            /* style={{ backgroundImage: `url(${info[0].imagenHero})` }} */
-          >
-            {/* <img src={info[0].imagenHero} alt="" /> */}
           </div>
         </article>
 
@@ -189,10 +182,12 @@ const Home = () => {
         <EstudiosListContainer />
       </section>
 
-      <section className="herramientas"
-      data-aos-easing="linear"
-      data-aos-duration="500"
-      data-aos="fade-up">
+      <section
+        className="herramientas"
+        data-aos-easing="linear"
+        data-aos-duration="500"
+        data-aos="fade-up"
+      >
         <h2>CONOCIMIENTOS</h2>
         <HerramientasListContainer />
       </section>

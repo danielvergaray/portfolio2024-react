@@ -1,7 +1,7 @@
 .popup-container {
   background-color: $Principal-Negro;
-  width: 90vw;
-  height: 95vh;
+  width: 95vw;
+  height: 100vh;
   position: fixed;
   z-index: 4000;
   top: 50%;
@@ -22,7 +22,7 @@
         grid-column: 1;
         width: 100%;
         margin: auto;
-        height: 100%;
+        height: 90%;
         .carousel {
           height: 100%;
 
@@ -65,14 +65,14 @@
       }
       .popup-informacion {
         display: grid;
-        grid-template-rows: 5% 10% 65% 20%;
-
+        grid-template-rows: 10% 12% 58% 20%;
+        padding: 20px 40px;
         .popup-botonCerrar {
           display: flex;
           justify-content: right;
           grid-row: 1;
           height: 40px;
-         
+
           svg {
             font-size: 40px;
             padding: 10px;
@@ -91,23 +91,24 @@
         .popup-titulo {
           grid-row: 2;
           height: fit-content;
-          padding: 0 20px;
+          padding: 0;
           h2 {
             margin: 0;
             color: $Textos-blancos;
-            padding-bottom: 0px;
+            padding: 0px;
             font-size: $Tamanio-texto-hero * 0.5;
             text-align: left;
+
           }
         }
         .popup-descripcion {
           display: flex;
           align-items: center;
           text-align: left;
-          padding: 0 20px;
           grid-row: 3;
+
           p {
-            margin: auto;
+            margin: 0 auto;
             color: $Textos-blancos;
             font-size: $Tamanio-texto-parrafos * 0.9;
           }
@@ -118,7 +119,11 @@
           margin: auto;
           padding-top: 0px;
           display: flex;
-          justify-content: space-evenly;
+          justify-content: left;
+
+          a:nth-child(1) {
+            margin-right: 20px;
+          }
           button {
             padding: 15px;
             border: 1px solid white;
@@ -140,7 +145,6 @@
 .popup-container-mobile {
   display: none;
 }
-
 
 @media (max-width: 576px) {
   .popup-container {
@@ -269,7 +273,6 @@
   }
 }
 
-
 @media (max-width: 846px) {
   .popup-container {
     display: none;
@@ -380,10 +383,10 @@
           width: 100%;
           grid-row: 4;
           margin: auto;
-         
+
           display: flex;
           justify-content: space-evenly;
-          a{
+          a {
             width: 100%;
             margin: 5px 0;
             button {
@@ -399,11 +402,8 @@
               }
             }
           }
-          
         }
       }
     }
   }
 }
-
-

@@ -4,9 +4,7 @@
 
 body {
   font-family: var(--font-principal);
-  
-  background-color: $Principal-Negro;
-
+background-color: $Principal-Negro;
 
   button {
     padding: 10px 20px;
@@ -25,7 +23,8 @@ body {
     font-weight: bold;
     color: $Textos-blancos;
     font-size: $Tamanio-texto-hero;
-    padding-bottom: $padding-titulos-subtitulos;
+    /* padding-bottom: $padding-titulos-subtitulos; */
+    padding: 50px 0 30px;
   }
 
   h3 {
@@ -33,6 +32,10 @@ body {
     font-weight: bold;
     font-size: $Tamanio-texto-submenu;
     text-transform: uppercase;
+  }
+
+  .seccion-estudios,.portfolio {
+    padding: 0 50px;
   }
 }
 .popup-open {
@@ -46,27 +49,22 @@ body {
   z-index: 9998; */
 }
 
-@media (max-width: 576px){
 
-  body{
-   
-    h2{
+@media (max-width: 576px) {
+  body {
+    h2 {
       font-size: $Tamanio-texto-hero * 0.5;
     }
   }
-
- 
-
 }
 
-@media (max-width: 846px){
-  body{
-    h2{
-      font-size: $Tamanio-texto-hero*.8;
+@media (max-width: 846px) {
+  body {
+    h2 {
+      font-size: $Tamanio-texto-hero * 0.8;
     }
     h3 {
-
-      font-size: $Tamanio-texto-submenu*.9;
+      font-size: $Tamanio-texto-submenu * 0.9;
     }
   }
 }

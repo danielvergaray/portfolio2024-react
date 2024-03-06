@@ -86,7 +86,7 @@ const NavBarList = ({ menu }) => {
         }`}
       >
         <Container>
-          <Navbar.Brand href="/">PORTFOLIO</Navbar.Brand>
+          <Navbar.Brand href="/">DANIEL VERGARAY</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -118,7 +118,7 @@ const NavBarList = ({ menu }) => {
         <Offcanvas show={show} onHide={handleClose}>
           <Offcanvas.Header closeButton>
             <Navbar.Brand href="/">
-              <Offcanvas.Title>PORTFOLIO</Offcanvas.Title>
+              <Offcanvas.Title>DANIEL VERGARAY</Offcanvas.Title>
             </Navbar.Brand>
           </Offcanvas.Header>
           <Offcanvas.Body>

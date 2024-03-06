@@ -12,6 +12,13 @@
   padding: 20px;
   z-index: 1000;
   /* height: $altura-navBar */
+
+  .container{
+    .navbar-brand{
+      color: $Terciario-verde;
+      font-weight: bold;
+    }
+  }
 }
 
 .bg-body-tertiary {
@@ -34,7 +41,7 @@
         
 
         &:hover {
-          color: white;
+          color: $Terciario-verde;
         }
       }
     }
@@ -60,11 +67,11 @@
         text-decoration: none;
 
         &:hover {
-          color: white;
+          color: $Terciario-verde;
         }
       }
       .menu-activo {
-        color: black;
+        color: $Terciario-verde;
         font-weight: bold;
       }
     }

@@ -1,6 +1,6 @@
 .herramientas {
-  padding: 20px;
-  padding-bottom: 20px;
+  /* padding: 20px;
+  padding-bottom: 20px; */
   h2 {
     text-align: center;
   }
@@ -15,8 +15,8 @@
 
     .slider-track {
       display: flex;
-      width: calc(250px * 16);
-      animation: scroll 40s linear infinite;
+      width: calc(200px * 16); //Cantidad de iconos * 2
+      animation: scroll 30s linear infinite;
 
       &:hover {
         animation-play-state: paused;
@@ -58,6 +58,6 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 6));
+    transform: translateX(calc(-200px * 6)); //cantidad de iconos
   }
 }
