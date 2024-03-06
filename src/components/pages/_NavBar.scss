@@ -14,6 +14,9 @@
   /* height: $altura-navBar */
 
   .container {
+    padding: 0;
+    margin: 0;
+    padding-left: 40px;
     .navbar-brand {
       img {
         width: 120px;
@@ -89,7 +92,7 @@
     width: 100%;
     padding: 0px;
     z-index: 1000;
-
+    height: 90vh;
     .navbar-mobile_barra {
       padding: 10px 20px;
       display: grid;
@@ -98,7 +101,7 @@
       svg {
         color: $Textos-blancos;
         /*  background-color: $Terciario-verde; */
-        font-size: 35px;
+        font-size: 50px;
         grid-column: 1;
         border-radius: 50%;
         /* border: 1px solid $Terciario-verde; */
@@ -112,7 +115,7 @@
         padding-top: 5px;
         .navbar-brand {
           img {
-            width: 100px;
+            width: 120px;
           }
         }
       }
@@ -145,11 +148,9 @@
     .offcanvas-title {
       font-weight: bold;
 
-      
-        img {
-          width: 100px;
-        }
-     
+      img {
+        width: 120px;
+      }
     }
   }
 }
