@@ -5,7 +5,6 @@
 .home {
   .home-info {
     .home-info__hero {
-      
       background: linear-gradient(rgba(0, 0, 0, 0.6), transparent),
         url("../../assets/imagenes/FOTO-HOME.jpg");
       background-position: center top;
@@ -116,7 +115,7 @@
     }
   }
   .portfolio {
-   /*  padding: 50px; */
+    /*  padding: 50px; */
     background-color: $Principal-Negro;
     text-align: center;
 
@@ -356,13 +355,16 @@
   .home {
     .home-info {
       .home-info__hero {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        padding: 20px;
-
+        background: linear-gradient(rgba(0, 0, 0, 0.6), transparent),
+          url("../../assets/imagenes/FOTO-HOME.jpg");
+        background-position: right top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
         .home-info__hero-title {
-          padding-top: 15vh;
+      
           z-index: 200;
+          padding-left: 20px;
           .home-titulo {
             display: flex;
             justify-content: center;
@@ -404,11 +406,7 @@
           }
         }
 
-        .home-info__hero-image {
-          padding: 0px;
-          width: 100%;
-          background-size: cover;
-        }
+        
       }
       .home-info__bio-mobile {
         display: flex;
@@ -422,7 +420,7 @@
           top: 0px;
           text-align: center;
           padding: 0;
-         /*  padding-bottom: 20px; */
+          /*  padding-bottom: 20px; */
           margin: 0;
         }
 
@@ -441,7 +439,7 @@
           margin: auto;
           padding: 20px 30px 0;
           h2 {
-          /*   padding-top: 0px;
+            /*   padding-top: 0px;
             padding-bottom: 50px; */
           }
           h3 {
@@ -644,7 +642,7 @@
           margin: auto;
           padding: 20px 30px 0;
           h2 {
-          /*   padding-top: 0px;
+            /*   padding-top: 0px;
             padding-bottom: 50px; */
           }
           h3 {
@@ -662,10 +660,9 @@
 
       .home-info__hero {
         padding: 0px;
-        padding-left: 40px;
-
+        
         .home-info__hero-title {
-          padding-top: 40vh;
+          padding-top: 45vh;
           .home-titulo {
             display: flex;
             justify-content: center;
@@ -717,7 +714,7 @@
       }
     }
     .seccionClientes {
-      padding: 40px 0 20px;
+      /* padding: 40px 0 20px; */
 
       .clientes {
         display: none;

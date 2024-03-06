@@ -4,7 +4,7 @@
 
 body {
   font-family: var(--font-principal);
-background-color: $Principal-Negro;
+  background-color: $Principal-Negro;
 
   button {
     padding: 10px 20px;
@@ -34,7 +34,8 @@ background-color: $Principal-Negro;
     text-transform: uppercase;
   }
 
-  .seccion-estudios,.portfolio {
+  .seccion-estudios,
+  .portfolio {
     padding: 0 50px;
   }
 }
@@ -49,11 +50,16 @@ background-color: $Principal-Negro;
   z-index: 9998; */
 }
 
-
 @media (max-width: 576px) {
   body {
     h2 {
       font-size: $Tamanio-texto-hero * 0.5;
+      padding: 40px 0 20px;
+    }
+
+    .seccion-estudios,
+    .portfolio {
+      padding: 0 20px;
     }
   }
 }
@@ -65,6 +71,11 @@ background-color: $Principal-Negro;
     }
     h3 {
       font-size: $Tamanio-texto-submenu * 0.9;
+    }
+
+    .seccion-estudios,
+    .portfolio {
+      padding: 0 20px;
     }
   }
 }

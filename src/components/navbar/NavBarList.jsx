@@ -112,7 +112,7 @@ const NavBarList = ({ menu }) => {
       >
         <div className="navbar-mobile_barra" variant="primary">
           <IoMenu onClick={handleShow} />
-          <Navbar.Brand href="/">Inicio</Navbar.Brand>
+          <Navbar.Brand href="/">DANIEL VERGARAY</Navbar.Brand>
         </div>
 
         <Offcanvas show={show} onHide={handleClose}>
