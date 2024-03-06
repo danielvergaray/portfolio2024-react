@@ -6,6 +6,8 @@ import { NavLink } from "react-router-dom";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { useEffect, useState } from "react";
 import { IoMenu } from "react-icons/io5";
+import logo from "../../assets/imagenes/LOGO.png";
+import logoNegro from "../../assets/imagenes/LOGONEGRO.png";
 
 const NavBarList = ({ menu }) => {
   const [show, setShow] = useState(false);
@@ -86,7 +88,9 @@ const NavBarList = ({ menu }) => {
         }`}
       >
         <Container>
-          <Navbar.Brand href="/">DANIEL VERGARAY</Navbar.Brand>
+          <Navbar.Brand href="/">
+            <img src={logo} alt="logo" />
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -113,14 +117,18 @@ const NavBarList = ({ menu }) => {
         <div className="navbar-mobile_barra" variant="primary">
           <IoMenu onClick={handleShow} />
           <div>
-            <Navbar.Brand href="/">DANIEL VERGARAY</Navbar.Brand>
+            <Navbar.Brand href="/">
+              <img src={logo} alt="logo" />
+            </Navbar.Brand>
           </div>
         </div>
 
         <Offcanvas show={show} onHide={handleClose}>
           <Offcanvas.Header closeButton>
             <Navbar.Brand href="/">
-              <Offcanvas.Title>DANIEL VERGARAY</Offcanvas.Title>
+              <Offcanvas.Title>
+                <img src={logoNegro} alt="logo" />
+              </Offcanvas.Title>
             </Navbar.Brand>
           </Offcanvas.Header>
           <Offcanvas.Body>

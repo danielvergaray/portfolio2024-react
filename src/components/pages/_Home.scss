@@ -357,7 +357,7 @@
         background-position: center top;
         background-size: cover;
         background-repeat: no-repeat;
-        
+        height: 90vh;
         .home-info__hero-title {
       
           z-index: 200;
@@ -369,10 +369,13 @@
             line-height: 20px;
             p {
               font-size: $Tamanio-texto-hero * 0.4;
+              
             }
             span {
               font-size: $Tamanio-texto-hero * 0.4;
               padding: 0;
+              font-weight: bold;
+              color: $Terciario-verde;
             }
           }
 

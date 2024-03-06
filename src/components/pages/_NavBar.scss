@@ -13,10 +13,11 @@
   z-index: 1000;
   /* height: $altura-navBar */
 
-  .container{
-    .navbar-brand{
-      color: $Terciario-verde;
-      font-weight: bold;
+  .container {
+    .navbar-brand {
+      img {
+        width: 120px;
+      }
     }
   }
 }
@@ -38,7 +39,6 @@
       a {
         color: $Textos-blancos;
         text-decoration: none;
-        
 
         &:hover {
           color: $Terciario-verde;
@@ -78,8 +78,6 @@
   }
 }
 
-
-
 @media (max-width: 846px) {
   .navbar {
     display: none;
@@ -99,28 +97,25 @@
       width: 100%;
       svg {
         color: $Textos-blancos;
-       /*  background-color: $Terciario-verde; */
+        /*  background-color: $Terciario-verde; */
         font-size: 35px;
         grid-column: 1;
         border-radius: 50%;
         /* border: 1px solid $Terciario-verde; */
         padding: 5px;
       }
-      div{
+      div {
         grid-column: 2;
         width: 100%;
-       text-align: right;
-       margin: auto;
-        a {
-          
-          margin-left: 60vw;
-          color: white;
-          margin: auto;
-          width: fit-content;
-          text-decoration: none;
+        text-align: right;
+        margin: auto;
+        padding-top: 5px;
+        .navbar-brand {
+          img {
+            width: 100px;
+          }
         }
       }
-      
     }
   }
   .offcanvas {
@@ -149,8 +144,12 @@
     }
     .offcanvas-title {
       font-weight: bold;
+
+      
+        img {
+          width: 100px;
+        }
+     
     }
   }
 }
-
-
