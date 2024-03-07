@@ -11,7 +11,7 @@
       background-size: cover;
       background-repeat: no-repeat;
       padding: 0px;
-      padding-left: 60px;
+      padding-left: 5vw;
       height: 90vh;
       .home-info__hero-title {
         grid-column: 1;
@@ -32,7 +32,7 @@
             width: fit-content;
           }
           span {
-            color: $textos-secundarios-GrisOscuro;
+            color: $Terciario-verde;
             font-size: $Tamanio-texto-hero * 0.6;
             width: fit-content;
             padding-left: 15px;
@@ -656,6 +656,7 @@
       .home-info__hero {
         padding: 0px;
         height: 90vh;
+        padding-left: 5vw;
         .home-info__hero-title {
           padding-top: 45vh;
           .home-titulo {

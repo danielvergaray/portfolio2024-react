@@ -3,7 +3,12 @@ import Carousel from "react-bootstrap/Carousel";
 
 const HerramientasList = ({ herramientas }) => {
   return (
-    <div className="slider">
+    <div
+      className="slider"
+      data-aos-easing="linear"
+      data-aos-duration="1000"
+      data-aos="fade-up"
+    >
       <div className="slider-track">
         {herramientas.map((herramienta, index) => (
           <div className="slide" key={index}>
@@ -12,12 +17,17 @@ const HerramientasList = ({ herramientas }) => {
           </div>
         ))}
 
-        {herramientas.map((herramienta, index) => (  /* Se repite 2 veces para que sea infinito */
-          <div className="slide" key={index}>
-            <span>{herramienta.icono}</span>
-            <p>{herramienta.nombre}</p>
-          </div>
-        ))}
+        {herramientas.map(
+          (
+            herramienta,
+            index /* Se repite 2 veces para que sea infinito */
+          ) => (
+            <div className="slide" key={index}>
+              <span>{herramienta.icono}</span>
+              <p>{herramienta.nombre}</p>
+            </div>
+          )
+        )}
       </div>
     </div>
   );

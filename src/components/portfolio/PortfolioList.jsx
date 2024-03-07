@@ -62,7 +62,10 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
           data-aos-duration="1000"
           data-aos="fade-up"
         >
-          <article className="portfolio-proyectos_barraMenu">
+          <article className="portfolio-proyectos_barraMenu"
+          data-aos-easing="linear"
+          data-aos-duration="1000"
+          data-aos="fade-up">
             {infoMenu.map((opcionMenu, index) => (
               <NavLink
                 key={index}

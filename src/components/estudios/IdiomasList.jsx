@@ -30,7 +30,7 @@ const IdiomasList = ({ infoCursos, categoriaSeleccionada }) => {
                   <Card className="cards" key={index}>
                     <Card.Body>
                       <div className="cards-iconos">
-                        <img src={idioma.bandera} alt="" />
+                        <img src={idioma.bandera} alt={idioma.titulo} />
                       </div>
                       <div className="cards-titulos">
                         <p>{idioma.titulo}</p>
@@ -84,7 +84,7 @@ const IdiomasList = ({ infoCursos, categoriaSeleccionada }) => {
                   <Card className="cards" key={index}>
                     <Card.Body>
                       <div className="cards-iconos">
-                        <img src={idioma.bandera} alt="" />
+                        <img src={idioma.bandera} alt={idioma.titulo} />
                       </div>
                       <div className="cards-titulos">
                         <p>{idioma.titulo}</p>

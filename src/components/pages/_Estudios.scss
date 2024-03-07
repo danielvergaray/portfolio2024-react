@@ -19,7 +19,7 @@
     height: fit-content;
     justify-content: space-evenly;
     padding: 50px 0;
-    padding-bottom: 80px;
+    padding-bottom: 20px;
     padding-top: 0;
     width: 30%;
     margin: auto;
@@ -59,6 +59,7 @@
       grid-template-columns: 47.5% 5% 47.5%;
       grid-template-rows: 1;
       padding: 0;
+      padding-top: 60px;
 
       .estudio-recuadro-impar {
         grid-column: 1;

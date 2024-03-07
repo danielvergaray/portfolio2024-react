@@ -49,7 +49,12 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
 
   return (
     <>
-      <article className="estudios-proyectos_barraMenu">
+      <article
+        className="estudios-proyectos_barraMenu"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
+        data-aos="fade-up"
+      >
         {infoMenu.map((opcionMenu, index) => (
           <NavLink
             key={index}
@@ -130,7 +135,12 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
             ))}
           </>
         ) : (
-          <article className="estudios-idiomas">
+          <article
+            className="estudios-idiomas"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+            data-aos="fade-up"
+          >
             <IdiomasList
               infoCursos={proyectosFiltrados}
               categoriaSeleccionada={categoriaSeleccionada}
@@ -147,11 +157,14 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
                 <div key={index}>
                   {proyecto.id ? (
                     <div className="estudio-recuadr-container">
-                      <div /* data-aos="fade-right" */ className="fecha-izquierda">
+                      <div
+                        /* data-aos="fade-right" */ className="fecha-izquierda"
+                      >
                         <p>{proyecto.duracion}</p>
                       </div>
-                      <div className="estudios-timeLine_line"
-                        /* data-aos="fade-up" */ 
+                      <div
+                        className="estudios-timeLine_line"
+                        /* data-aos="fade-up" */
                       >
                         <TbPointFilled />
                       </div>

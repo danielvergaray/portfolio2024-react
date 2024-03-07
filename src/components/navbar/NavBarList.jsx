@@ -127,7 +127,7 @@ const NavBarList = ({ menu }) => {
           <Offcanvas.Header closeButton>
             <Navbar.Brand href="/">
               <Offcanvas.Title>
-                <img src={logoNegro} alt="logo" />
+                <img src={logo} alt="logo" />
               </Offcanvas.Title>
             </Navbar.Brand>
           </Offcanvas.Header>

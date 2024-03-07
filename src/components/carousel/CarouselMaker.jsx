@@ -16,7 +16,7 @@ const CarouselMaker = ({ proyectosFiltrados, proyectoSeleccionado }) => {
     <Carousel variant="dark" activeIndex={index} onSelect={handleSelect}>
       {arrayImagenes.map((imagen) => (
         <Carousel.Item>
-          <img src={imagen.imagenCarrusel} alt="" />
+          <img src={imagen.imagenCarrusel} alt={imagen.titulo} />
         </Carousel.Item>
       ))}
     </Carousel>

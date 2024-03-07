@@ -77,7 +77,12 @@ const Home = () => {
           <div className="home-info__hero-title">
             <div className="home-titulo">
               {tituloArray.map((titulo, index) => (
-                <div key={index}>
+                <div
+                  data-aos-easing="linear"
+                  data-aos="fade-down"
+                  data-aos-duration="1500"
+                  key={index}
+                >
                   {titulo.type === "p" && (
                     <>
                       <p>{titulo.content}</p>
@@ -94,7 +99,12 @@ const Home = () => {
 
             <div className="home-titulo_profesion">
               {profesionArray.map((profesion, index) => (
-                <div key={index}>
+                <div
+                  data-aos-easing="linear"
+                  data-aos="fade-down"
+                  data-aos-duration="2500"
+                  key={index}
+                >
                   {profesion.type === "p" && <p>{profesion.content}</p>}
                   {profesion.type === "span" && (
                     <span>{profesion.content}</span>
@@ -103,7 +113,12 @@ const Home = () => {
               ))}
             </div>
 
-            <div className="boton-contacto">
+            <div
+              className="boton-contacto"
+              data-aos-easing="linear"
+              data-aos="fade-right"
+              data-aos-duration="1500"
+            >
               <Link target="_blank" to="https://wa.me/51950011434">
                 <button>Contáctame</button>
               </Link>
@@ -112,21 +127,35 @@ const Home = () => {
         </article>
 
         <article id="sectionRef1" ref={sectionRef1} className="home-info__bio">
-          <div
-            data-aos-easing="linear"
-            data-aos="zoom-in"
-            className="home-info__bio-imagen"
-          >
-            <img src={info[0].imagenBio} alt="" />
+          <div className="home-info__bio-imagen">
+            <img
+              data-aos-easing="linear"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              src={info[0].imagenBio}
+              alt="Imagen-Daniel-Vergaray"
+            />
           </div>
           <div
             data-aos="fade-left"
             data-aos-easing="linear"
-            data-aos-duration="1000"
+            data-aos-duration="2400"
             className="home-info__bio-biografia"
           >
-            <h3>Sobre mí</h3>
-            <h2>¿Quien soy?</h2>
+            <h3
+              data-aos="fade-left"
+              data-aos-easing="linear"
+              data-aos-duration="800"
+            >
+              Sobre mí
+            </h3>
+            <h2
+              data-aos="fade-left"
+              data-aos-easing="linear"
+              data-aos-duration="1600"
+            >
+              ¿Quien soy?
+            </h2>
             <p> {info[0].bio} </p> <br />
             <p> {info[0].bio2} </p>
           </div>
@@ -137,20 +166,34 @@ const Home = () => {
           ref={sectionRef1}
           className="home-info__bio-mobile"
         >
-          <h3>Sobre mí</h3>
-          <h2>¿Quien soy?</h2>
-          <div
-            className="home-info__bio-imagen"
-            /* data-aos-easing="linear"
-            data-aos="zoom-in" */
+          <h3
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="800"
           >
-            <img src={info[0].imagenBio} alt="" />
+            Sobre mí
+          </h3>
+          <h2
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1600"
+          >
+            ¿Quien soy?
+          </h2>
+          <div className="home-info__bio-imagen">
+            <img
+              src={info[0].imagenBio}
+              data-aos-easing="linear"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              alt="Imagen-Daniel-Vergaray"
+            />
           </div>
           <div
-            /* data-aos="fade-left"
-            data-aos-easing="linear"
-            data-aos-duration="1000" */
             className="home-info__bio-biografia"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="2400"
           >
             <p> {info[0].bio} </p> <br />
             <p> {info[0].bio2} </p>
@@ -160,13 +203,16 @@ const Home = () => {
 
       {/* PORTAFOLIO */}
 
-      <section id="sectionRef2" ref={sectionRef2} className="portfolio">
+      <section
+        data-aos-easing="linear"
+        data-aos-duration="500"
+        data-aos="fade-up"
+        id="sectionRef2"
+        ref={sectionRef2}
+        className="portfolio"
+      >
         <h2>portfolio</h2>
-        <PortfolioListContainer
-          data-aos-easing="linear"
-          data-aos-duration="200"
-          data-aos="fade-up"
-        />
+        <PortfolioListContainer />
       </section>
 
       {/* ESTUDIOS */}
@@ -194,7 +240,7 @@ const Home = () => {
 
       <section
         data-aos-easing="linear"
-        data-aos-duration="1000"
+        data-aos-duration="500"
         data-aos="fade-up"
         id="sectionRef4"
         ref={sectionRef4}
