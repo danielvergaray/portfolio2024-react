@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import PopUpList from "../popUpInfoProyectos/PopUpList";
@@ -28,26 +28,34 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
 
   const mostrarInfo = (index) => {
     setInfoVisible({ ...infoVisible, [index]: true });
+    setInformacion(true);
   };
+
+  const [informacion, setInformacion] = useState(false);
 
   const ocultarInfo = () => {
     setInfoVisible({});
+    setInformacion(false);
   };
 
   const abrirPopUp = (index) => {
     setProyectoSeleccionado(index);
     document.body.classList.add("popup-open");
+    setInformacion(true);
+    setInfoVisible({});
   };
 
   const cerrarPopUp = () => {
     setProyectoSeleccionado(null);
     document.body.classList.remove("popup-open");
+    setInformacion(false);
   };
   const verMasProyectos = () => {
     setCantProductos(cantProductos + 6);
     setVerMas(!verMas);
   };
 
+  console.log(informacion)
   return (
     <>
       {proyectoSeleccionado !== null ? (
@@ -62,10 +70,12 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
           data-aos-duration="1000"
           data-aos="fade-up"
         >
-          <article className="portfolio-proyectos_barraMenu"
-          data-aos-easing="linear"
-          data-aos-duration="1000"
-          data-aos="fade-up">
+          <article
+            className="portfolio-proyectos_barraMenu"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+            data-aos="fade-up"
+          >
             {infoMenu.map((opcionMenu, index) => (
               <NavLink
                 key={index}
@@ -82,9 +92,8 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
               </NavLink>
             ))}
           </article>
-          <section
-            /* data-aos-easing="linear" data-aos-duration="1000" data-aos="flip-left" */ className="portfolio-proyectos"
-          >
+
+          <section className="portfolio-proyectos">
             {proyectosFiltrados.slice(0, cantProductos).map(
               (
                 proyecto,
@@ -101,7 +110,7 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
                         backgroundImage: `url(${proyecto.imagenRecuadro})`,
                       }}
                     >
-                      {infoVisible[index] && (
+                      {infoVisible[index] && informacion  && (
                         <div className="portfolio-proyectos_recuadro-info">
                           <h3>{proyecto.titulo}</h3>
                           <p>{proyecto.descripcionBreve}</p>
@@ -119,6 +128,7 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
               )
             )}
           </section>
+
           {verMas && proyectosFiltrados.length > 6 && (
             <section className="portfolio-boton-ver-mas">
               <button onClick={verMasProyectos}>Ver más proyectos</button>

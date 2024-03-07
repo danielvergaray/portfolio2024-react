@@ -74,7 +74,7 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
 
       <article className="estudios-programacion">
         {categoriaSeleccionada === "PROGRAMACION" ? (
-          <>
+          <div className="timeLine-container">
             {proyectosFiltrados.map((proyecto, index) => (
               <div key={index}>
                 {proyecto.id ? (
@@ -133,7 +133,7 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
                 ) : null}
               </div>
             ))}
-          </>
+          </div>
         ) : (
           <article
             className="estudios-idiomas"

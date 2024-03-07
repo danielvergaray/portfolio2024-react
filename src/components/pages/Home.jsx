@@ -204,14 +204,15 @@ const Home = () => {
       {/* PORTAFOLIO */}
 
       <section
-        data-aos-easing="linear"
-        data-aos-duration="500"
-        data-aos="fade-up"
         id="sectionRef2"
         ref={sectionRef2}
         className="portfolio"
       >
-        <h2>portfolio</h2>
+        <h2
+        data-aos-easing="linear"
+        data-aos-duration="500"
+        data-aos="fade-up"
+        >portfolio</h2>
         <PortfolioListContainer />
       </section>
 

@@ -163,7 +163,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        margin: 50px 10px;
+        margin: 50px 15px;
         margin-bottom: 25px;
         border: solid 1px black;
         cursor: pointer;
@@ -213,6 +213,8 @@
         }
       }
     }
+
+    
     .portfolio-boton-ver-mas {
       padding-top: 70px;
       button {
@@ -235,6 +237,7 @@
     text-align: center;
     padding: 20px;
     padding-bottom: 100px;
+    padding-top: 0;
 
     p {
       color: yellow;
@@ -501,9 +504,9 @@
               height: 150px;
               margin: auto;
 
-              .portfolio-proyectos_recuadro-info {
+              /* .portfolio-proyectos_recuadro-info {
                 display: none !important;
-              }
+              } */
             }
 
             .portfolio-proyectos_recuadro-titulo {
@@ -514,6 +517,7 @@
           }
         }
       }
+     
       .portfolio-boton-ver-mas {
         padding-top: 40px;
         button {
@@ -723,6 +727,7 @@
       }
       .carousel {
         padding: 20px;
+        padding-top: 0;
 
         .carousel-inner {
           .carousel-item,
@@ -734,6 +739,7 @@
               .clientes-card {
                 margin: 20px;
                 padding: 20px;
+                margin-top: 0;
                 grid-template-rows: 15% 70% 8% 7%;
                 min-height: 345px;
                 .card-frase {
