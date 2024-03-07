@@ -486,7 +486,7 @@
         }
       }
 
-      .portfolio-proyectos {
+      .portfolio-proyectos-mobile {
         width: 100%;
         justify-content: space-between;
         display: flex;
@@ -503,10 +503,6 @@
               width: 90%;
               height: 150px;
               margin: auto;
-
-              /* .portfolio-proyectos_recuadro-info {
-                display: none !important;
-              } */
             }
 
             .portfolio-proyectos_recuadro-titulo {
@@ -516,6 +512,10 @@
             }
           }
         }
+      }
+
+      .portfolio-proyectos{
+        display: none;
       }
      
       .portfolio-boton-ver-mas {
@@ -712,6 +712,7 @@
       .portfolio-proyectos_barraMenu {
         width: 80%;
       }
+      
     }
     .seccionClientes {
 

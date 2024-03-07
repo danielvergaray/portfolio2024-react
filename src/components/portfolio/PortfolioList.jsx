@@ -129,6 +129,33 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
             )}
           </section>
 
+          <section className="portfolio-proyectos-mobile">
+            {proyectosFiltrados.slice(0, cantProductos).map(
+              (
+                proyecto,
+                index // Se usa el slice par amostrar solamente 6 productos
+              ) => (
+                <div key={index}>
+                  <div>
+                    <div
+                      className="portfolio-proyectos_recuadro"
+                      onClick={() => abrirPopUp(index)}
+                      style={{
+                        backgroundImage: `url(${proyecto.imagenRecuadro})`,
+                      }}
+                    >
+                      
+                    </div>
+                    <div className="portfolio-proyectos_recuadro-titulo">
+                      <h4>{proyecto.titulo} </h4>
+                    </div>
+                  </div>
+                </div>
+              )
+            )}
+          </section>
+
+
           {verMas && proyectosFiltrados.length > 6 && (
             <section className="portfolio-boton-ver-mas">
               <button onClick={verMasProyectos}>Ver más proyectos</button>
