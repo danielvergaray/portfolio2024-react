@@ -98,7 +98,7 @@
         grid-column: 2;
         margin: auto;
         color: $Textos-blancos;
-       
+
         h3 {
           padding-bottom: 0px;
           margin: 0;
@@ -213,8 +213,10 @@
         }
       }
     }
+    .portfolio-proyectos-mobile{
+      display: none;
+    }
 
-    
     .portfolio-boton-ver-mas {
       padding-top: 70px;
       button {
@@ -362,7 +364,6 @@
         background-repeat: no-repeat;
         height: 90vh;
         .home-info__hero-title {
-      
           z-index: 200;
           padding-left: 20px;
           .home-titulo {
@@ -372,7 +373,6 @@
             line-height: 20px;
             p {
               font-size: $Tamanio-texto-hero * 0.4;
-              
             }
             span {
               font-size: $Tamanio-texto-hero * 0.4;
@@ -408,8 +408,6 @@
             padding-top: 20px;
           }
         }
-
-        
       }
       .home-info__bio-mobile {
         display: flex;
@@ -441,7 +439,7 @@
           display: block;
           margin: auto;
           padding: 20px 30px 0;
-         
+
           h3 {
             padding-bottom: 0px;
             margin: 0;
@@ -503,21 +501,30 @@
               width: 90%;
               height: 150px;
               margin: auto;
+
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+
+              margin-bottom: 25px;
+              border: solid 1px black;
+              cursor: pointer;
             }
 
             .portfolio-proyectos_recuadro-titulo {
               h4 {
                 font-size: $Tamanio-texto-parrafos * 0.8;
+                color: $Textos-blancos;
               }
             }
           }
         }
       }
 
-      .portfolio-proyectos{
+      .portfolio-proyectos {
         display: none;
       }
-     
+
       .portfolio-boton-ver-mas {
         padding-top: 40px;
         button {
@@ -538,6 +545,7 @@
 
     .seccionClientes {
       padding: 40px 0 20px;
+      padding-top: 0;
 
       .clientes {
         display: none;
@@ -613,7 +621,6 @@
         margin: 0;
         padding: 20px;
         padding-top: 30px;
-        
 
         h2 {
           position: relative;
@@ -623,7 +630,7 @@
           padding-left: 30px;
           margin: 0;
         }
-        h3{
+        h3 {
           padding-left: 30px;
         }
 
@@ -642,11 +649,10 @@
           display: block;
           margin: auto;
           padding: 20px 8vw 0;
-       
+
           h3 {
             padding-bottom: 0px;
             margin: 0;
-            
           }
 
           p {
@@ -712,10 +718,8 @@
       .portfolio-proyectos_barraMenu {
         width: 80%;
       }
-      
     }
     .seccionClientes {
-
       .clientes {
         display: none;
       }
