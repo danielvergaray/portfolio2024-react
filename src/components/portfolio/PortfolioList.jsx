@@ -55,7 +55,7 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
     setVerMas(!verMas);
   };
 
-  console.log(informacion)
+
   return (
     <>
       {proyectoSeleccionado !== null ? (

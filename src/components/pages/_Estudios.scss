@@ -191,11 +191,12 @@
         padding: 20px 40px;
         max-width: 30%;
         width: 30%;
-        border: 1px solid rgb(66, 57, 73);
+        border: none;
         background-color: $Secundario-negro;
         color: white;
         min-height: 304px;
         margin: 10px;
+        border-radius: 0;
 
         .card-body {
           display: grid;
@@ -392,7 +393,8 @@
           padding: 40px;
           max-width: 100%;
           width: 90%;
-          border: 1px solid rgb(66, 57, 73);
+          border: none;
+          border-radius: 0;
           background-color: $Secundario-negro;
           color: white;
           min-height: 300px;
@@ -623,7 +625,7 @@
           padding: 40px;
           max-width: 100%;
           width: 90%;
-          border: 1px solid rgb(66, 57, 73);
+          border: none;
           background-color: $Secundario-negro;
           color: white;
           min-height: 300px;
@@ -724,7 +726,7 @@
         .carousel-control-prev,
         .carousel-control-next {
           position: absolute;
-          width: fit-content;
+          
 
           .carousel-control-prev-icon,
           .carousel-control-next-icon {

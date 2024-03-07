@@ -15,6 +15,8 @@ const Home = () => {
   const sectionRef2 = useRef(null);
   const sectionRef3 = useRef(null);
   const sectionRef4 = useRef(null);
+  const sectionRef5 = useRef(null);
+  const sectionRef6 = useRef(null);
 
   const scrollFunction = (ref) => {
     ref.current.scrollIntoView({
@@ -80,7 +82,7 @@ const Home = () => {
                 <div
                   data-aos-easing="linear"
                   data-aos="fade-down"
-                  data-aos-duration="1500"
+                  data-aos-duration="1000"
                   key={index}
                 >
                   {titulo.type === "p" && (
@@ -101,8 +103,8 @@ const Home = () => {
               {profesionArray.map((profesion, index) => (
                 <div
                   data-aos-easing="linear"
-                  data-aos="fade-down"
-                  data-aos-duration="2500"
+                  data-aos="fade-up"
+                  data-aos-duration="1500"
                   key={index}
                 >
                   {profesion.type === "p" && <p>{profesion.content}</p>}
@@ -116,7 +118,7 @@ const Home = () => {
             <div
               className="boton-contacto"
               data-aos-easing="linear"
-              data-aos="fade-right"
+              data-aos="fade-up"
               data-aos-duration="1500"
             >
               <Link target="_blank" to="https://wa.me/51950011434">
@@ -126,93 +128,90 @@ const Home = () => {
           </div>
         </article>
 
-        <article id="sectionRef1" ref={sectionRef1} className="home-info__bio">
-          <div className="home-info__bio-imagen">
-            <img
-              data-aos-easing="linear"
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              src={info[0].imagenBio}
-              alt="Imagen-Daniel-Vergaray"
-            />
-          </div>
-          <div
-            data-aos="fade-left"
-            data-aos-easing="linear"
-            data-aos-duration="2400"
-            className="home-info__bio-biografia"
-          >
-            <h3
+        <div id="sectionRef1" ref={sectionRef1} className="home-info__bio ">
+          <div className="info-container-desktop">
+            <div className="home-info__bio-imagen">
+              <img
+                data-aos-easing="linear"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                src={info[0].imagenBio}
+                alt="Imagen-Daniel-Vergaray"
+              />
+            </div>
+
+            <div
               data-aos="fade-left"
               data-aos-easing="linear"
-              data-aos-duration="800"
+              data-aos-duration="2400"
+              className="home-info__bio-biografia"
+            >
+              <h3
+                data-aos="fade-left"
+                data-aos-easing="linear"
+                data-aos-duration="800"
+              >
+                Sobre mí
+              </h3>
+              <h2
+                data-aos="fade-left"
+                data-aos-easing="linear"
+                data-aos-duration="1600"
+              >
+                ¿Quien soy?
+              </h2>
+              <p> {info[0].bio} </p> <br />
+              <p> {info[0].bio2} </p>
+            </div>
+          </div>
+
+          <article className="home-info__bio-mobile"
+            
+            id="sectionRef1"
+            ref={sectionRef1}
+          >
+            <h3
+              data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="1600"
             >
               Sobre mí
             </h3>
             <h2
-              data-aos="fade-left"
+              data-aos="fade-down"
               data-aos-easing="linear"
-              data-aos-duration="1600"
+              data-aos-duration="800"
             >
               ¿Quien soy?
             </h2>
-            <p> {info[0].bio} </p> <br />
-            <p> {info[0].bio2} </p>
-          </div>
-        </article>
-
-        <article
-          id="sectionRef1"
-          ref={sectionRef1}
-          className="home-info__bio-mobile"
-        >
-          <h3
-            data-aos="fade-down"
-            data-aos-easing="linear"
-            data-aos-duration="800"
-          >
-            Sobre mí
-          </h3>
-          <h2
-            data-aos="fade-down"
-            data-aos-easing="linear"
-            data-aos-duration="1600"
-          >
-            ¿Quien soy?
-          </h2>
-          <div className="home-info__bio-imagen">
-            <img
-              src={info[0].imagenBio}
-              data-aos-easing="linear"
+            <div className="home-info__bio-imagen">
+              <img
+                src={info[0].imagenBio}
+                data-aos-easing="linear"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                alt="Imagen-Daniel-Vergaray"
+              />
+            </div>
+            <div
+              className="home-info__bio-biografia"
               data-aos="fade-up"
-              data-aos-duration="1000"
-              alt="Imagen-Daniel-Vergaray"
-            />
-          </div>
-          <div
-            className="home-info__bio-biografia"
-            data-aos="fade-up"
-            data-aos-easing="linear"
-            data-aos-duration="2400"
-          >
-            <p> {info[0].bio} </p> <br />
-            <p> {info[0].bio2} </p>
-          </div>
-        </article>
+              data-aos-easing="linear"
+              data-aos-duration="2400"
+            >
+              <p> {info[0].bio} </p> <br />
+              <p> {info[0].bio2} </p>
+            </div>
+          </article>
+        </div>
       </section>
 
       {/* PORTAFOLIO */}
 
-      <section
-        id="sectionRef2"
-        ref={sectionRef2}
-        className="portfolio"
-      >
-        <h2
-        data-aos-easing="linear"
-        data-aos-duration="500"
-        data-aos="fade-up"
-        >portfolio</h2>
+      <section id="sectionRef2" ref={sectionRef2} className="portfolio">
+        <h2 data-aos-easing="linear" data-aos-duration="500" data-aos="fade-up">
+          portfolio
+        </h2>
         <PortfolioListContainer />
       </section>
 

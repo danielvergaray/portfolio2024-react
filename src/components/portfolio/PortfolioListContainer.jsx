@@ -179,7 +179,7 @@ const PortfolioListContainer = () => {
     },
     {
       id: "6",
-      titulo: "Blog de viajes/ecommerce",
+      titulo: "Blog de viajes",
       imagenRecuadro: ImagenViajesWp1,
       imagenesCarusel: [
         {

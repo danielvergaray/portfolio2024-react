@@ -41,35 +41,9 @@ const NavBarList = ({ menu }) => {
     };
   }, []);
 
-  /*  console.log(opcionActiva);
-  useEffect(() => {
-    const handleScroll2 = () => {
-      if (window.scrollY > 150) {
-        setOpcionActiva("ABOUT");
-      } 
-      else if (window.scrollY > 250) {
-        setOpcionActiva("PORTFOLIO");
-      } 
-      else if (window.scrollY > 350) {
-        setOpcionActiva("ESTUDIOS");
-      } 
-      else if (window.scrollY > 450) {
-        setOpcionActiva("CLIENTES");
-      } 
-      else if (window.scrollY > 550) {
-        setOpcionActiva("CONTACTOS");
-      }
-      opcionActivaRef.current = opcionActiva;
-    };
-   
-    window.addEventListener("scroll", handleScroll2);
-    return () => {
-      window.removeEventListener("scroll", handleScroll2);
-    };
-  }, []); */
-
   const scrollFunction = (refIndex) => {
     const ref = document.getElementById(`sectionRef${refIndex}`);
+
     setMenuActivo(refIndex);
     if (ref) {
       const scrollAmount = ref.offsetTop - 60;

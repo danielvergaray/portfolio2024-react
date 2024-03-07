@@ -4,6 +4,7 @@
 
 .home {
   .home-info {
+    overflow-x: hidden;
     .home-info__hero {
       background: linear-gradient(rgba(0, 0, 0, 0.6), transparent),
         url("../../assets/imagenes/FOTO-HOME.jpg");
@@ -78,41 +79,42 @@
     }
 
     .home-info__bio {
-      display: grid;
-      grid-template-columns: 50% 50%;
-      width: 100%;
-      background-color: $Secundario-negro;
-      padding: 50px 100px;
-      .home-info__bio-imagen {
-        grid-column: 1;
-        text-align: center;
-        margin: auto;
-        width: 75%;
-
-        img {
-          width: 100%;
+      .info-container-desktop {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 100%;
+        background-color: $Secundario-negro;
+        padding: 50px 100px;
+        .home-info__bio-imagen {
+          grid-column: 1;
+          text-align: center;
           margin: auto;
-        }
-      }
-      .home-info__bio-biografia {
-        grid-column: 2;
-        margin: auto;
-        color: $Textos-blancos;
+          width: 75%;
 
-        h3 {
-          padding-bottom: 0px;
-          margin: 0;
+          img {
+            width: 100%;
+            margin: auto;
+          }
         }
+        .home-info__bio-biografia {
+          grid-column: 2;
+          margin: auto;
+          color: $Textos-blancos;
 
-        p {
-          font-size: $Tamanio-texto-parrafos * 0.9;
-          margin: 0;
+          h3 {
+            padding-bottom: 0px;
+            margin: 0;
+          }
+
+          p {
+            font-size: $Tamanio-texto-parrafos * 0.9;
+            margin: 0;
+          }
         }
       }
     }
   }
   .portfolio {
-    /*  padding: 50px; */
     background-color: $Principal-Negro;
     text-align: center;
 
@@ -213,7 +215,7 @@
         }
       }
     }
-    .portfolio-proyectos-mobile{
+    .portfolio-proyectos-mobile {
       display: none;
     }
 
@@ -409,50 +411,53 @@
           }
         }
       }
-      .home-info__bio-mobile {
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        padding: 20px;
-        padding-top: 50px;
-
-        h2 {
-          position: relative;
-          top: 0px;
-          text-align: center;
-          padding: 0;
-          /*  padding-bottom: 20px; */
+      .home-info__bio {
+        .home-info__bio-mobile {
+          display: flex;
+          flex-direction: column;
           margin: 0;
-        }
+          padding: 20px;
+          padding-top: 50px;
 
-        .home-info__bio-imagen {
-          min-width: 200px;
-          margin: auto;
+          h2 {
+            position: relative;
+            top: 0px;
+            text-align: center;
+            padding: 0;
+            /*  padding-bottom: 20px; */
+            margin: 0;
+          }
 
-          img {
-            width: 100%;
+          .home-info__bio-imagen {
+            min-width: 200px;
             margin: auto;
-          }
-        }
 
-        .home-info__bio-biografia {
-          display: block;
-          margin: auto;
-          padding: 20px 30px 0;
-
-          h3 {
-            padding-bottom: 0px;
-            margin: 0;
+            img {
+              width: 100%;
+              margin: auto;
+            }
           }
 
-          p {
-            font-size: $Tamanio-texto-parrafos * 0.9;
-            margin: 0;
-            color: $Textos-blancos;
+          .home-info__bio-biografia {
+            display: block;
+            margin: auto;
+            padding: 20px 30px 0;
+
+            h3 {
+              padding-bottom: 0px;
+              margin: 0;
+            }
+
+            p {
+              font-size: $Tamanio-texto-parrafos * 0.9;
+              margin: 0;
+              color: $Textos-blancos;
+            }
           }
         }
       }
-      .home-info__bio {
+
+      .info-container-desktop {
         display: none;
       }
     }
@@ -555,7 +560,6 @@
       }
 
       h2 {
-        /* padding-bottom: 0px; */
         color: white;
       }
       .carousel {
@@ -609,57 +613,60 @@
 }
 
 @media (max-width: 846px) {
-  .home-info__bio {
-    display: none;
-  }
+  
 
   .home {
     .home-info {
-      .home-info__bio-mobile {
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        padding: 20px;
-        padding-top: 30px;
-
-        h2 {
-          position: relative;
-          top: 0px;
-          text-align: left;
-          padding: 20px 0 20px;
-          padding-left: 30px;
+      .hero-info_bio {
+        .home-info__bio-mobile {
+          display: flex;
+          flex-direction: column;
           margin: 0;
-        }
-        h3 {
-          padding-left: 30px;
-        }
+          padding: 20px;
+          padding-top: 30px;
 
-        .home-info__bio-imagen {
-          width: 80%;
-          margin: auto;
-          max-width: 365px;
-
-          img {
-            width: 100%;
-            margin: auto;
+          h2 {
+            position: relative;
+            top: 0px;
+            text-align: left;
+            padding: 20px 0 20px;
+            padding-left: 30px;
+            margin: 0;
           }
-        }
-
-        .home-info__bio-biografia {
-          display: block;
-          margin: auto;
-          padding: 20px 8vw 0;
-
           h3 {
-            padding-bottom: 0px;
-            margin: 0;
+            padding-left: 30px;
           }
 
-          p {
-            font-size: $Tamanio-texto-parrafos * 0.9;
-            margin: 0;
-            color: $Textos-blancos;
+          .home-info__bio-imagen {
+            width: 80%;
+            margin: auto;
+            max-width: 365px;
+
+            img {
+              width: 100%;
+              margin: auto;
+            }
           }
+
+          .home-info__bio-biografia {
+            display: block;
+            margin: auto;
+            padding: 20px 8vw 0;
+
+            h3 {
+              padding-bottom: 0px;
+              margin: 0;
+            }
+
+            p {
+              font-size: $Tamanio-texto-parrafos * 0.9;
+              margin: 0;
+              color: $Textos-blancos;
+            }
+          }
+        }
+        .info-container-desktop{
+          display: none;
         }
       }
 
@@ -710,10 +717,20 @@
           }
         }
       }
-      .home-info__bio {
-        display: none;
-      }
+      
+      
     }
+
+
+
+
+
+
+
+
+
+
+    
     .portfolio {
       .portfolio-proyectos_barraMenu {
         width: 80%;
@@ -746,7 +763,7 @@
                 padding: 20px;
                 margin-top: 0;
                 grid-template-rows: 15% 70% 8% 7%;
-                min-height: 345px;
+                min-height: 370px;
                 .card-frase {
                   h3 {
                     font-size: $Tamanio-texto-quote * 0.7;
