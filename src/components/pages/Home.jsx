@@ -9,6 +9,7 @@ import HerramientasListContainer from "../seccionHerramientas/HerramientasListCo
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
+import { IoIosArrowDropdown } from "react-icons/io";
 
 const Home = () => {
   const sectionRef1 = useRef(null);
@@ -127,7 +128,9 @@ const Home = () => {
             </div>
           </div>
         </article>
-
+        <div className="hero-flecha-mobile">
+          <IoIosArrowDropdown />
+        </div>
         <div id="sectionRef1" ref={sectionRef1} className="home-info__bio ">
           <div className="info-container-desktop">
             <div className="home-info__bio-imagen">
@@ -177,14 +180,14 @@ const Home = () => {
             data-aos="fade-up" */
           >
             <h3
-            data-aos="fade-left"
+              data-aos="fade-left"
               data-aos-easing="linear"
               data-aos-duration="1000"
             >
               Sobre mí
             </h3>
             <h2
-            data-aos="fade-left"
+              data-aos="fade-left"
               data-aos-easing="linear"
               data-aos-duration="1000"
               data-aos-delay="500"
@@ -203,9 +206,9 @@ const Home = () => {
             </div>
             <div className="home-info__bio-biografia">
               <div
-              data-aos-easing="linear"
-              data-aos="fade-left"
-              data-aos-duration="1000"
+                data-aos-easing="linear"
+                data-aos="fade-left"
+                data-aos-duration="1000"
               >
                 <p> {info[0].bio} </p> <br />
                 <p> {info[0].bio2} </p>
