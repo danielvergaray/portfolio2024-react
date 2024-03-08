@@ -59,9 +59,9 @@ const PortfolioListContainer = () => {
         },
       ],
       descripcionBreve:
-        "Este proyecto consiste en un juego donde se genera un numero al azar y el usuario debe adivinarlo...",
+        "Este proyecto es un emocionante juego donde se genera un número al azar, desafiando al usuario a ...",
       descripcion:
-        "Este proyecto consiste en un juego donde se genera un numero al azar y el usuario debe adivinarlo, contando con pistas que se muestran de acuerdo al valor introducido por el usuario. Fue realizado usando javaScript, html5 y css3.",
+        "Este proyecto es un emocionante juego donde se genera un número al azar, desafiando al usuario a adivinarlo. Se proporcionan pistas según las respuestas del usuario, lo que aumenta la emoción del juego. Utilizando JavaScript, HTML5 y CSS3, se ha creado una experiencia interactiva y atractiva para los jugadores, combinando habilidades de programación y diseño para ofrecer un entretenimiento memorable y educativo.",
       imagen: "",
       category: "javascript",
       tituloWeb: TituloWeb,
@@ -114,9 +114,9 @@ const PortfolioListContainer = () => {
         },
       ],
       descripcionBreve:
-        "Este proyecto consiste en un juego donde se le permite al usuario lanzar el dado y sumar los numeros...",
+        "El proyecto es un emocionante juego donde el usuario puede lanzar un dado y sumar los números obtenidos...",
       descripcion:
-        "Este proyecto consiste en un juego donde se le permite al usuario lanzar el dado y sumar los numeros obtenidos de manera aleatoria hasta llegar al objetivo. Fue realizado manejando el dom de manera dinamica usando javaScript.",
+        "El proyecto es un emocionante juego donde el usuario puede lanzar un dado y sumar los números obtenidos de forma aleatoria hasta alcanzar un objetivo específico. Se desarrolló utilizando JavaScript para manejar el DOM de manera dinámica, lo que garantiza una experiencia interactiva y divertida para los jugadores, mientras ejercitan sus habilidades matemáticas y estratégicas de una manera entretenida y educativa.",
       imagen: "",
       category: "javascript",
       tituloWeb: TituloWeb,
@@ -141,9 +141,9 @@ const PortfolioListContainer = () => {
       ],
 
       descripcionBreve:
-        "Este proyecto realizado para un emprendimiento de snacks. Fue llevado a cabo usando Html5 y Css3, ademas...",
+        "Este proyecto fue diseñado específicamente para un emprendimiento de snacks. Utilizando HTML5 y CSS3 como...",
       descripcion:
-        "Este proyecto realizado para un emprendimiento de snacks. Fue llevado a cabo usando Html5 y Css3, ademas se implementaron estategias SEO, Bootstrap y Sass, se realizaron versiones desktop y mobile.",
+        "Este proyecto fue diseñado específicamente para un emprendimiento de snacks. Utilizando HTML5 y CSS3 como base, se implementaron estrategias SEO, Bootstrap y Sass para mejorar la experiencia del usuario. Se crearon versiones tanto para escritorio como para dispositivos móviles, garantizando una navegación fluida y una presentación visualmente atractiva en todas las plataformas, lo que contribuyó al éxito y la accesibilidad del sitio web para los usuarios.",
       imagen: "",
       category: "desarrollo web",
       tituloWeb: TituloWeb,
@@ -193,9 +193,9 @@ const PortfolioListContainer = () => {
         },
       ],
       descripcionBreve:
-        "Este proyecto consiste en un blog de viajes, incluyendo tienda virtual, se ha realizado usando WordPress...",
+        "Este emocionante proyecto se trata de un blog de viajes con una tienda virtual incorporada. Utilizando...",
       descripcion:
-        "Este proyecto consiste en un blog de viajes, incluyendo tienda virtual, se ha realizado usando WordPress, plugings, elementor, se realizaron versiones desktop y mobile.",
+        "Este emocionante proyecto se trata de un blog de viajes con una tienda virtual incorporada. Utilizando WordPress como plataforma principal y complementado con plugins y Elementor, se han creado versiones adaptadas para escritorio y dispositivos móviles. Esto asegura que los visitantes puedan disfrutar de una experiencia de navegación fluida y optimizada, independientemente del dispositivo que utilicen para acceder al sitio web.",
 
       imagen: "",
       category: "wordpress",
@@ -219,8 +219,8 @@ const PortfolioListContainer = () => {
           imagenCarrusel: ImagenCentroMedicoWp3,
         },
       ],
-      descripcionBreve: "Este proyecto consiste en un centro odontologico, para esta web se ha implentado dinstintos plugins y elementor, mediante...",
-      descripcion: "Este proyecto consiste en un centro odontologico, para esta web se ha implentado dinstintos plugins y elementor, mediante la web se permite agendar citas medicas. Ha sido realizado con Wordpress",
+      descripcionBreve: "Este proyecto es la creación de un centro odontológico completamente funcional. Para su realización, se han empleado diversos...",
+      descripcion: "Este proyecto es la creación de un centro odontológico completamente funcional. Para su realización, se han empleado diversos plugins y la herramienta Elementor en la plataforma WordPress. Los usuarios tienen la facilidad de agendar citas médicas a través de la web, lo que mejora la accesibilidad y la experiencia del paciente. La implementación de estas características ha sido fundamental para ofrecer un servicio eficiente y moderno en el campo de la odontología.",
    
       category: "wordpress",
       tituloWeb: TituloWeb,
@@ -270,9 +270,9 @@ const PortfolioListContainer = () => {
         },
       ],
       descripcionBreve:
-        "Esta página web única combina funcionalidad y creatividad para ofrecer una experiencia de invitación interactiva...",
+        "Esta página web única combina funcionalidad y creatividad para ofrecer una experiencia de invitación...",
       descripcion:
-        "Esta página web única combina funcionalidad y creatividad para ofrecer una experiencia de invitación interactiva, el cliente buscaba una web fresca y animada para el cumpleaños de su hijo. Esta web se ha desarrollado usando javaScript, Html5, css3 y bootstrap",
+        "Esta página web única combina funcionalidad y creatividad para ofrecer una experiencia de invitación interactiva. El cliente buscaba un diseño fresco y animado para el cumpleaños de su hijo. El desarrollo se realizó utilizando JavaScript, HTML5, CSS3 y Bootstrap. Esta combinación de tecnologías permitió crear un sitio web dinámico y visualmente atractivo que cumplió con las expectativas del cliente y proporcionó una experiencia memorable para los invitados del evento.",
       imagen: "",
       category: "javascript",
       tituloWeb: TituloWeb,

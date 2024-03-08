@@ -15,7 +15,7 @@ const FooterList = ({ infoBotones, barraInferior }) => {
   return (
     <section data-aos-easing="linear" data-aos-duration="1000" data-aos="fade-up" id="sectionRef5" ref={sectionRef5} className="footer-section">
       <h3>CONTACTO</h3>
-      <h2>Hablemos acerca del próximo proyecto juntos.</h2>
+      <h2>Hablemos acerca de nuestro próximo proyecto juntos.</h2>
       <div className="footer-botones">
         {infoBotones.map((boton, index) => (
           <Link to={boton.link} target="_blank" key={index}>

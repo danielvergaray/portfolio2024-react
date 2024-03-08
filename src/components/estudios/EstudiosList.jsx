@@ -8,7 +8,7 @@ import IdiomasList from "./IdiomasList";
 
 const EstudiosList = ({ infoCursos, infoMenu }) => {
   const [categoriaSeleccionada, setCategoriaSeleccionada] =
-    useState("PROGRAMACION");
+    useState("PROGRAMACIÓN");
 
   const handleClick = (categoria) => {
     setCategoriaSeleccionada(categoria);
@@ -20,7 +20,7 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
     setIndex(selectedIndex);
   };
   const proyectosFiltrados =
-    categoriaSeleccionada === "PROGRAMACION"
+    categoriaSeleccionada === "PROGRAMACIÓN"
       ? infoCursos
       : infoCursos.filter(
           (proyecto) =>
@@ -73,7 +73,7 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
       </article>
 
       <article className="estudios-programacion">
-        {categoriaSeleccionada === "PROGRAMACION" ? (
+        {categoriaSeleccionada === "PROGRAMACIÓN" ? (
           <div className="timeLine-container">
             {proyectosFiltrados.map((proyecto, index) => (
               <div key={index}>
@@ -150,7 +150,7 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
       </article>
 
       <article className="estudios-programacion-mobile">
-        {categoriaSeleccionada === "PROGRAMACION" ? (
+        {categoriaSeleccionada === "PROGRAMACIÓN" ? (
           <>
             <div className="estudios-programacion-container">
               {proyectosFiltrados.map((proyecto, index) => (

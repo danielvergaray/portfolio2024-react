@@ -13,7 +13,7 @@ import banderaFrancia from "../../assets/imagenes/french-flag.png";
 const EstudiosListContainer = () => {
   const menuProyectos = [
     {
-      titulo: "PROGRAMACION",
+      titulo: "PROGRAMACIÓN",
     },
     {
       titulo: "IDIOMAS",
@@ -46,7 +46,7 @@ const EstudiosListContainer = () => {
       titulo: "Desarrollo web",
       instituto: "CoderHouse",
       duracion: "Marzo 2023 - Mayo 2023",
-      categoria: "PROGRAMACION",
+      categoria: "PROGRAMACIÓN",
       descripcion:
         "Curso de Desarrollo Web con enfoque en CSS, Bootstrap, Sass y Git, proporcionando habilidades para proyectos web colaborativos y contemporáneos.",
       id: 1,
@@ -56,7 +56,7 @@ const EstudiosListContainer = () => {
       titulo: "JavaScript",
       instituto: "CoderHouse",
       duracion: "Mayo 2023 - Julio 2023",
-      categoria: "PROGRAMACION",
+      categoria: "PROGRAMACIÓN",
       descripcion:
         "Curso de JavaScript, con énfasis en conceptos fundamentales y aplicaciones prácticas. Adquirí habilidades para desarrollar proyectos dinámicos y funcionales en la web",
       id: 2,
@@ -66,7 +66,7 @@ const EstudiosListContainer = () => {
       titulo: "React",
       instituto: "CoderHouse",
       duracion: "Agosto 2023 - Octubre 2023",
-      categoria: "PROGRAMACION",
+      categoria: "PROGRAMACIÓN",
       descripcion:
         "Exploración de fundamentos y aplicaciones de React, se enfocó en desarrollar habilidades para proyectos web dinámicos y aplicaciones interactivas eficientes.",
       id: 3,
@@ -76,7 +76,7 @@ const EstudiosListContainer = () => {
       titulo: "Wordpress",
       instituto: "CoderHouse",
       duracion: "Octubre 2023 - Noviembre 2023",
-      categoria: "PROGRAMACION",
+      categoria: "PROGRAMACIÓN",
       descripcion:
         "Exploración de fundamentos y aplicaciones de WordPress, adquiriendo habilidades para crear y gestionar eficientemente sitios web dinámicos y funcionales",
       id: 4,

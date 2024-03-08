@@ -7,13 +7,14 @@ import { MdOutlineMail } from "react-icons/md";
 const FooterListContainer = () => {
   const infoBotones = [
     {
-      titulo: "Ir a mi Linkedin",
-      link: "https://www.linkedin.com/in/daniel-vergaray/",
-    },
-    {
       titulo: "Enviar un mensaje",
       link: "https://wa.me/51950011434",
     },
+    {
+      titulo: "Ir a mi Linkedin",
+      link: "https://www.linkedin.com/in/daniel-vergaray/",
+    },
+    
   ];
 
   const barraInferior = [

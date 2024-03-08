@@ -9,7 +9,7 @@ const ClientesListContainer = () => {
         id: 1,
         empresa: "Bee Argentina",
         comentario:
-          "Nuestro programador Daniel, demostró un excelente nivel de profesionalismo en el desarrollo de la página web, entregando la misma de alta calidad que superó todas nuestras  expectativas. Cabe destacar que ha sido super amable y colaborativo,  con una comunicación clara y una atención super meticulosa ybdetallista, la verdad  que trabajar con él fuera una experiencia excepcional.Super recomendable.",
+          "Nuestro programador Daniel, demostró un excelente nivel de profesionalismo en el desarrollo de la página web, entregando la misma de alta calidad que superó todas nuestras expectativas. Cabe destacar que ha sido super amable y colaborativo, con una comunicación clara y una atención super meticulosa y detallista, la verdad que trabajar con él fuera una experiencia excepcional. Super recomendable.",
         frase:
           `"Excelente nivel de profesionalismo en el desarrollo de la página web."`,
       },
@@ -18,7 +18,7 @@ const ClientesListContainer = () => {
         id: 2,
         empresa: "",
         comentario:
-          "Es un placer para mí recomendar a Daniel por su excelente trabajo en la creación del sitio web del cumpleaños de mi hijo. Su dedicación y habilidades técnicas fueron evidentes desde el principio. No solo logró capturar perfectamente la esencia del tema del cumpleaños, sino que también incorporó características interactivas que hicieron que la experiencia fuera memorable para todos los invitados.",
+          "Es un placer para mí recomendar a Daniel por su excelente trabajo en la creación del sitio web del cumpleaños de mi hijo. Su dedicación y habilidades técnicas fueron evidentes desde el principio. No solo reflejó el espíritu del cumpleaños de forma increíble, sino que también agregó elementos visuales que hicieron mas dinámica la invitación",
         frase:
           `"Su dedicación y habilidades técnicas fueron evidentes desde el principio."`,
       },

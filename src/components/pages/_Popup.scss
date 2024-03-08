@@ -7,12 +7,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
+
   .popup {
     display: grid;
     height: 100%;
     padding: 20px 40px;
-    
+
     .popup-inner {
       display: grid;
       grid-template-columns: 55% 45%;
@@ -25,7 +25,6 @@
         margin: auto;
         height: 90%;
 
-        
         .carousel {
           height: 100%;
 
@@ -71,6 +70,7 @@
         display: grid;
         grid-template-rows: 10% 15% 55% 20%;
         padding: 20px 40px;
+
         .popup-botonCerrar {
           display: flex;
           justify-content: right;
@@ -81,7 +81,7 @@
             font-size: 40px;
             padding: 10px;
             cursor: pointer;
-            fill: $Textos-blancos;
+            fill: black;
             background-color: $Terciario-verde;
             font-weight: 100;
 
@@ -97,14 +97,13 @@
           height: 100%;
           padding: 0;
           display: flex;
-          align-items: start;
+          align-items: end;
           h2 {
             margin: 0;
             color: $Textos-blancos;
             padding: 0px;
             font-size: $Tamanio-texto-hero * 0.5;
             text-align: left;
-
           }
         }
         .popup-descripcion {
@@ -126,7 +125,8 @@
           padding-top: 0px;
           display: flex;
           justify-content: left;
-
+          align-items: start;
+          height: 100%;
           a:nth-child(1) {
             margin-right: 20px;
           }
@@ -298,7 +298,7 @@
       display: grid;
       height: 100%;
       padding: 40px 10vw;
-    
+
       .popup-inner {
         width: 100%;
         display: flex;
@@ -316,7 +316,7 @@
             font-size: 30px;
             padding: 5px;
             cursor: pointer;
-            fill: $Textos-blancos;
+            fill: black;
             background-color: $Terciario-verde;
             font-weight: 100;
             &:hover {
@@ -338,15 +338,13 @@
           grid-column: 1;
           width: 100%;
           margin: auto;
-          
+
           .carousel {
             height: 100%;
 
             .carousel-inner {
-             
               .carousel-item,
               .active {
-                
                 img {
                   width: 100%;
                 }
@@ -372,14 +370,11 @@
             width: fit-content;
             height: fit-content;
             margin: auto 0px;
-           
+
             .carousel-control-prev-icon,
             .carousel-control-next-icon {
               filter: none;
-          
             }
-
-         
           }
 
           /* .carousel-control-prev{
@@ -427,25 +422,23 @@
   }
 }
 
-
-@media screen and (min-width: 1400px){
-  .popup-container{
-    .popup{
-      .popup-inner{
-       
-        .popup-informacion{
-          .popup-titulo{
-            h2{
+@media screen and (min-width: 1400px) {
+  .popup-container {
+    .popup {
+      .popup-inner {
+        .popup-informacion {
+          .popup-titulo {
+            h2 {
               font-size: $Tamanio-texto-hero * 1;
             }
           }
-          .popup-descripcion{
-            p{
+          .popup-descripcion {
+            p {
               font-size: $Tamanio-texto-parrafos * 1.5;
             }
           }
-          .popup-botones{
-            button{
+          .popup-botones {
+            button {
               font-size: 20px;
             }
           }
