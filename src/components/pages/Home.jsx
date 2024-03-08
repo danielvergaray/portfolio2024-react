@@ -140,11 +140,11 @@ const Home = () => {
               />
             </div>
 
-            <div
+            <div className="home-info__bio-biografia"
               data-aos="fade-left"
               data-aos-easing="linear"
               data-aos-duration="2400"
-              className="home-info__bio-biografia"
+              
             >
               <h3
                 data-aos="fade-left"
@@ -165,8 +165,7 @@ const Home = () => {
             </div>
           </div>
 
-          <article className="home-info__bio-mobile"
-            
+          <article className="home-info__bio-mobile"     
             id="sectionRef1"
             ref={sectionRef1}
           >
@@ -189,7 +188,7 @@ const Home = () => {
                 src={info[0].imagenBio}
                 data-aos-easing="linear"
                 data-aos="fade-up"
-                data-aos-duration="1000"
+                data-aos-duration="500"
                 alt="Imagen-Daniel-Vergaray"
               />
             </div>
@@ -234,7 +233,7 @@ const Home = () => {
         data-aos-duration="500"
         data-aos="fade-up"
       >
-        <h2>CONOCIMIENTOS</h2>
+        <h2>SKILLS</h2>
         <HerramientasListContainer />
       </section>
 

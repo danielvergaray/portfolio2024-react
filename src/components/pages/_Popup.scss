@@ -7,11 +7,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  
   .popup {
     display: grid;
     height: 100%;
     padding: 20px 40px;
-
+    
     .popup-inner {
       display: grid;
       grid-template-columns: 55% 45%;
@@ -20,12 +21,11 @@
       .popup-imagenes {
         text-align: center;
         grid-column: 1;
-        /* width: 100%; */
-        width: 500px;
-        height: 600px;
+        width: 100%;
         margin: auto;
-        /* height: 90%; */
-        overflow: hidden;
+        height: 90%;
+
+        
         .carousel {
           height: 100%;
 
