@@ -671,6 +671,8 @@
       }
       .hero-flecha-mobile {
         display: flex;
+        position: relative;
+        top: -10vh;
         /* animation: pulse 1s infinite; */
         animation: fadeInUp  1s infinite;
        /*  @keyframes pulse {
@@ -701,7 +703,7 @@
         }
 
         svg {
-          font-size: 40px;
+          font-size: 60px;
           margin: auto;
           color: white;
         }
