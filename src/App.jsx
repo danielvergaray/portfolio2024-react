@@ -6,7 +6,7 @@ import ParticlesBackground from "./components/particles/ParticlesBackground";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavBarListContainer from "./components/navbar/NavBarListContainer";
 import FooterListContainer from "./components/footer/FooterListContainer";
-import { useRef } from "react";
+import GeneralContextProvider from "./components/context/GeneralContextProvider";
 
 function App() {
   
@@ -14,7 +14,7 @@ function App() {
     <>
      {/*  <ParticlesBackground /> */}
 
-      {/* <GeneralContextProvider> */}
+      <GeneralContextProvider>
         <BrowserRouter>
           <NavBarListContainer />
           <>
@@ -24,7 +24,7 @@ function App() {
           </>
           <FooterListContainer />
         </BrowserRouter>
-      {/* </GeneralContextProvider> */}
+      </GeneralContextProvider>
     </>
   );
 }

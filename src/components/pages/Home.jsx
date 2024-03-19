@@ -1,5 +1,4 @@
-import React from "react";
-import { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useContext } from "react";
 import imagenHero from "../../assets/imagenes/FOTO-HOME.jpg";
 import imagenBio from "../../assets/imagenes/FOTO-BIO1.jpeg";
 import PortfolioListContainer from "../portfolio/PortfolioListContainer";
@@ -10,6 +9,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 import { IoIosArrowDropdown } from "react-icons/io";
+import GeneralContext from "../context/GeneralContext";
 
 const Home = () => {
   const sectionRef1 = useRef(null);
@@ -25,6 +25,8 @@ const Home = () => {
       block: "start",
     });
   };
+
+  const { idioma } = useContext(GeneralContext);
 
   const info = [
     {
@@ -66,8 +68,55 @@ const Home = () => {
     },
   ];
 
-  const tituloArray = Object.values(info[0].title);
-  const profesionArray = Object.values(info[0].profesion);
+  const infoEng = [
+    {
+      imagenHero: imagenHero,
+      title: [
+        {
+          type: "p",
+          content: "Hello,",
+        },
+        {
+          type: "span",
+          content: "I'am Daniel",
+        },
+      ],
+      profesion: [
+        {
+          type: "p",
+          content: "Junior developer",
+        },
+        {
+          type: "span",
+          content: ".",
+        },
+      ],
+      /* junior: [
+        {
+          type: "p",
+          content: "Jr",
+        },
+        {
+          type: "span",
+          content: ".",
+        },
+      ], */
+
+      imagenBio: imagenBio,
+      bio: " My name is Daniel, I am a civil engineer by profession. This career has led me to know different aspects of life such as the fact that human beings are capable of many things whenever they believe it is possible, capable of adapting to any situation and reinventing themselves as many times as necessary. It is this last topic that led me to realize that I wanted to give my life a direction. That is why since 2022 I have found what I am passionate about. I started to enter the world of programming because it is never too late to start over.",
+      bio2: "At a professional level, as a civil engineer I have had experience in project coordination, personnel management and teamwork. Experiences that have helped me improve soft skills such as conflict management, stress management, communication skills, among others. Which are fundamental in the performance of daily activities within any company.",
+    },
+  ];
+
+  const tituloArray =
+    idioma === "ESP"
+      ? Object.values(info[0].title)
+      : Object.values(infoEng[0].title);
+
+  const profesionArray =
+    idioma === "ESP"
+      ? Object.values(info[0].profesion)
+      : Object.values(infoEng[0].profesion);
 
   useEffect(() => {
     Aos.init();
@@ -149,7 +198,7 @@ const Home = () => {
                 data-aos-easing="linear"
                 data-aos-duration="1000"
               >
-                Sobre mí
+                {idioma === "ESP" ? "Sobre mí" : "About"}
               </h3>
               <h2
                 data-aos="fade-left"
@@ -157,7 +206,7 @@ const Home = () => {
                 data-aos-duration="1000"
                 data-aos-delay="500"
               >
-                ¿Quien soy?
+                {idioma === "ESP" ? "¿Quien soy?" : "WHO AM I?"}
               </h2>
               <div
                 data-aos="fade-left"
@@ -165,8 +214,9 @@ const Home = () => {
                 data-aos-duration="1000"
                 data-aos-delay="1500"
               >
-                <p> {info[0].bio} </p> <br />
-                <p> {info[0].bio2} </p>
+                <p> {idioma === "ESP" ? info[0].bio : infoEng[0].bio} </p>{" "}
+                <br />
+                <p> {idioma === "ESP" ? info[0].bio2 : infoEng[0].bio2} </p>
               </div>
             </div>
           </div>
@@ -236,7 +286,7 @@ const Home = () => {
         ref={sectionRef3}
         className="seccion-estudios"
       >
-        <h2>estudios</h2>
+        <h2>{idioma === "ESP" ? "estudios" : "education" }</h2>
         <EstudiosListContainer />
       </section>
 

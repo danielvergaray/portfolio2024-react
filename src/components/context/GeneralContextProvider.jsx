@@ -1,26 +1,23 @@
-/* import React from "react";
+import React, { useState } from "react";
 import GeneralContext from "./GeneralContext";
-import { useEffect } from "react";
+
 
 const GeneralContextProvider = ({ children }) => {
+  const [idioma, setIdioma] = useState("ESP");
 
-
-  
-  const scrollFunction = (ref) => {
-    console.log(ref)
-      ref.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+  const seleccionarIdioma = (idioma) => {
    
+    if(idioma === "ESP"){
+      setIdioma("ESP");
+    } else {
+      setIdioma ("ENG")
+    }
   };
 
-  useEffect(() =>{
-
-  },[])
-
   const values = {
-    scrollFunction,
+    idioma,
+    setIdioma,
+    seleccionarIdioma
   };
 
   return (
@@ -28,4 +25,4 @@ const GeneralContextProvider = ({ children }) => {
   );
 };
 
-export default GeneralContextProvider; */
+export default GeneralContextProvider;

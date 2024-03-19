@@ -1,10 +1,10 @@
-import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { useEffect, useState } from "react";
+import React ,{ useEffect, useState, useContext } from "react";
+import GeneralContext from "../context/GeneralContext";
 import { IoMenu } from "react-icons/io5";
 import logo from "../../assets/imagenes/LOGO.png";
 import logoNegro from "../../assets/imagenes/LOGONEGRO.png";
@@ -54,6 +54,8 @@ const NavBarList = ({ menu }) => {
     }
   };
 
+
+  const { seleccionarIdioma } = useContext(GeneralContext);
   return (
     <>
       <Navbar
@@ -67,7 +69,12 @@ const NavBarList = ({ menu }) => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
+            
             <Nav className="me-auto">
+            <div className="navbar-idiomas">
+              <p onClick={()=>seleccionarIdioma("ESP")} >ESP</p>
+              <p onClick={()=>seleccionarIdioma("ENG")} >ENG</p>
+            </div>
               {menu.map((opcion, index) => (
                 <Nav.Link key={index}>
                   <NavLink

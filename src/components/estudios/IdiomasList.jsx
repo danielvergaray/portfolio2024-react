@@ -22,7 +22,7 @@ const IdiomasList = ({ infoCursos, categoriaSeleccionada }) => {
   return (
     < >
       <div className="idiomas-desktop">
-        {categoriaSeleccionada === "IDIOMAS" && (
+        {categoriaSeleccionada === "IDIOMAS" || categoriaSeleccionada === "IDIOMS" ? (
           <>
             {infoCursos.map((idioma, index) => (
               <>
@@ -70,11 +70,11 @@ const IdiomasList = ({ infoCursos, categoriaSeleccionada }) => {
               </>
             ))}
           </>
-        )}
+        ): null}
       </div>
 
       <div className="idiomas-mobile">
-        {categoriaSeleccionada === "IDIOMAS" && (
+        {categoriaSeleccionada === "IDIOMAS" || categoriaSeleccionada === "IDIOMS" ?(
           <>
             <Carousel>
               {infoCursos.map((idioma, index) => (
@@ -126,7 +126,7 @@ const IdiomasList = ({ infoCursos, categoriaSeleccionada }) => {
               ))}
             </Carousel>
           </>
-        )}
+        ): null}
       </div>
     </>
   );

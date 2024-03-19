@@ -1,6 +1,7 @@
 import React from "react";
 import NavBarList from "./NavBarList";
-import { useRef } from "react";
+import { useRef, useContext } from "react";
+import GeneralContext from "../context/GeneralContext";
 
 const NavBarListContainer = () => {
   const sectionRef1 = useRef(null);
@@ -28,17 +29,34 @@ const NavBarListContainer = () => {
       titulo: "CONTACTO",
       ref: "5",
     },
-    
   ];
 
-  /* const sectionRefs = {
-    sectionRef1: useRef(null),
-    sectionRef2: useRef(null),
-    sectionRef3: useRef(null),
-    sectionRef4: useRef(null),
-  }; */
+  const navBarMenu = [
+    {
+      titulo: "ABOUT",
+      ref: "1",
+    },
+    {
+      titulo: "PORTFOLIO",
+      ref: "2",
+    },
+    {
+      titulo: "EDUCATION",
+      ref: "3",
+    },
+    {
+      titulo: "CLIENTS",
+      ref: "4",
+    },
+    {
+      titulo: "CONTACT",
+      ref: "5",
+    },
+  ];
 
-  return <NavBarList menu={opcionesNavBar} /* sectionRefs={sectionRefs} */ />;
+  const { idioma } = useContext(GeneralContext);
+
+  return <NavBarList menu={idioma === "ESP" ? opcionesNavBar : navBarMenu} />;
 };
 
 export default NavBarListContainer;

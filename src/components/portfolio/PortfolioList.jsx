@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import PopUpList from "../popUpInfoProyectos/PopUpList";
+import GeneralContext from "../context/GeneralContext";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -12,19 +13,20 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
   const [verMas, setVerMas] = useState(true);
   const [cantProductos, setCantProductos] = useState(6); //Para mostrar solamente 6 productos
 
+  
+
   const handleClick = (categoria) => {
     setCategoriaSeleccionada(categoria);
   };
 
   // Filtrar los proyectos basados en la categoría seleccionada
   const proyectosFiltrados =
-    categoriaSeleccionada === "TODOS"
-      ? infoProyectos
-      : infoProyectos.filter(
-          (proyecto) =>
-            proyecto.category.toLowerCase() ===
-            categoriaSeleccionada.toLowerCase()
-        );
+  categoriaSeleccionada === "TODOS" || categoriaSeleccionada === "ALL"
+    ? infoProyectos
+    : infoProyectos.filter(
+        (proyecto) =>
+          proyecto.category.toLowerCase() === categoriaSeleccionada.toLowerCase()
+      );
 
   const mostrarInfo = (index) => {
     setInfoVisible({ ...infoVisible, [index]: true });
@@ -55,6 +57,7 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
     setVerMas(!verMas);
   };
 
+  const {idioma } = useContext(GeneralContext);
 
   return (
     <>
@@ -110,12 +113,12 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
                         backgroundImage: `url(${proyecto.imagenRecuadro})`,
                       }}
                     >
-                      {infoVisible[index] && informacion  && (
+                      {infoVisible[index] && informacion && (
                         <div className="portfolio-proyectos_recuadro-info">
                           <h3>{proyecto.titulo}</h3>
                           <p>{proyecto.descripcionBreve}</p>
                           <div>
-                            <button>Ver más</button>
+                            <button>{idioma ==="ESP" ? "Ver más" : "View more"}</button>
                           </div>
                         </div>
                       )}
@@ -143,9 +146,7 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
                       style={{
                         backgroundImage: `url(${proyecto.imagenRecuadro})`,
                       }}
-                    >
-                      
-                    </div>
+                    ></div>
                     <div className="portfolio-proyectos_recuadro-titulo">
                       <h4>{proyecto.titulo} </h4>
                     </div>
@@ -155,10 +156,9 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
             )}
           </section>
 
-
           {verMas && proyectosFiltrados.length > 6 && (
             <section className="portfolio-boton-ver-mas">
-              <button onClick={verMasProyectos}>Ver más proyectos</button>
+              <button onClick={verMasProyectos}>{idioma ==="ESP" ? "Ver más proyectos" : "See more projects"} </button>
             </section>
           )}
         </div>

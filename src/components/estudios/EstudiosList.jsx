@@ -1,14 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { TbPointFilled } from "react-icons/tb";
 import IdiomasList from "./IdiomasList";
+import GeneralContext from "../context/GeneralContext";
 
 const EstudiosList = ({ infoCursos, infoMenu }) => {
+
+  const { idioma } = useContext(GeneralContext)
+
   const [categoriaSeleccionada, setCategoriaSeleccionada] =
-    useState("PROGRAMACIÓN");
+    useState(idioma=== "ESP" ? "PROGRAMACIÓN" : "PROGRAMMING");
 
   const handleClick = (categoria) => {
     setCategoriaSeleccionada(categoria);
@@ -20,7 +24,7 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
     setIndex(selectedIndex);
   };
   const proyectosFiltrados =
-    categoriaSeleccionada === "PROGRAMACIÓN"
+    categoriaSeleccionada === "PROGRAMACIÓN" || categoriaSeleccionada === "PROGRAMMING"
       ? infoCursos
       : infoCursos.filter(
           (proyecto) =>
@@ -73,7 +77,7 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
       </article>
 
       <article className="estudios-programacion">
-        {categoriaSeleccionada === "PROGRAMACIÓN" ? (
+        {categoriaSeleccionada === "PROGRAMACIÓN" || categoriaSeleccionada === "PROGRAMMING" ? (
           <div className="timeLine-container">
             {proyectosFiltrados.map((proyecto, index) => (
               <div key={index}>
@@ -150,7 +154,7 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
       </article>
 
       <article className="estudios-programacion-mobile">
-        {categoriaSeleccionada === "PROGRAMACIÓN" ? (
+        {categoriaSeleccionada === "PROGRAMACIÓN" || categoriaSeleccionada === "PROGRAMMING"? (
           <>
             <div className="estudios-programacion-container">
               {proyectosFiltrados.map((proyecto, index) => (
@@ -197,3 +201,4 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
 };
 
 export default EstudiosList;
+
