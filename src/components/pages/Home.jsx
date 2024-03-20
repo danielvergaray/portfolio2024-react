@@ -86,10 +86,7 @@ const Home = () => {
           type: "p",
           content: "Junior developer",
         },
-        {
-          type: "span",
-          content: ".",
-        },
+        
       ],
       /* junior: [
         {
