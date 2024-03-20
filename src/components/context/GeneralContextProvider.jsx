@@ -5,19 +5,20 @@ import GeneralContext from "./GeneralContext";
 const GeneralContextProvider = ({ children }) => {
   const [idioma, setIdioma] = useState("ESP");
 
-  const seleccionarIdioma = (idioma) => {
+  /* const seleccionarIdioma = (idioma) => {
    
     if(idioma === "ESP"){
       setIdioma("ESP");
     } else {
-      setIdioma ("ENG")
+      setIdioma ("ENG");
+      
     }
-  };
+  }; */
 
   const values = {
     idioma,
     setIdioma,
-    seleccionarIdioma
+    /* seleccionarIdioma */
   };
 
   return (

@@ -3,11 +3,13 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import React ,{ useEffect, useState, useContext } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import GeneralContext from "../context/GeneralContext";
 import { IoMenu } from "react-icons/io5";
 import logo from "../../assets/imagenes/LOGO.png";
-import logoNegro from "../../assets/imagenes/LOGONEGRO.png";
+import banderaEspania from "../../assets/imagenes/spanish-flag.png";
+import banderaIngles from "../../assets/imagenes/usa-flag.png";
+import Dropdown from "react-bootstrap/Dropdown";
 
 const NavBarList = ({ menu }) => {
   const [show, setShow] = useState(false);
@@ -54,8 +56,7 @@ const NavBarList = ({ menu }) => {
     }
   };
 
-
-  const { seleccionarIdioma } = useContext(GeneralContext);
+  const { setIdioma, idioma } = useContext(GeneralContext);
   return (
     <>
       <Navbar
@@ -69,12 +70,7 @@ const NavBarList = ({ menu }) => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            
             <Nav className="me-auto">
-            <div className="navbar-idiomas">
-              <p onClick={()=>seleccionarIdioma("ESP")} >ESP</p>
-              <p onClick={()=>seleccionarIdioma("ENG")} >ENG</p>
-            </div>
               {menu.map((opcion, index) => (
                 <Nav.Link key={index}>
                   <NavLink
@@ -87,6 +83,25 @@ const NavBarList = ({ menu }) => {
               ))}
             </Nav>
           </Navbar.Collapse>
+          <div className="navbar-idiomas">
+            <Dropdown>
+              <Dropdown.Toggle variant="success" id="dropdown-basic">
+                <img
+                  src={idioma === "ESP" ? banderaEspania : banderaIngles}
+                  onClick={() => setIdioma("ESP")}
+                />
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Item href="">
+                  <img
+                    src={idioma === "ESP" ? banderaIngles : banderaEspania}
+                    onClick={() => setIdioma(idioma === "ESP" ? "ENG" : "ESP")}
+                  />
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </div>
         </Container>
       </Navbar>
 
@@ -120,6 +135,14 @@ const NavBarList = ({ menu }) => {
                 </NavLink>
               </Nav.Link>
             ))}
+            <div className="offcanvas-idiomas">
+              <div className="offcanvas-idiomas-pais">
+                <img src={banderaEspania} onClick={() => setIdioma("ESP")} />
+              </div>
+              <div className="offcanvas-idiomas-pais">
+                <img src={banderaIngles} onClick={() => setIdioma("ENG")} />
+              </div>
+            </div>
           </Offcanvas.Body>
         </Offcanvas>
       </section>

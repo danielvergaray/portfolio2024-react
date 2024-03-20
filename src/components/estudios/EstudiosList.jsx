@@ -11,11 +11,16 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
 
   const { idioma } = useContext(GeneralContext)
 
-  const [categoriaSeleccionada, setCategoriaSeleccionada] =
-    useState(idioma=== "ESP" ? "PROGRAMACIÓN" : "PROGRAMMING");
+  // Actualizar la categoría seleccionada cuando cambia el idioma
+  useEffect(() => {
+    setCategoriaSeleccionadaEstudios(idioma === "ESP" ? "PROGRAMACIÓN" : "PROGRAMMING");
+  }, [idioma]);
+
+  const [categoriaSeleccionadaEstudios, setCategoriaSeleccionadaEstudios] =
+    useState(idioma === "ESP" ? "PROGRAMACIÓN" : "PROGRAMMING");
 
   const handleClick = (categoria) => {
-    setCategoriaSeleccionada(categoria);
+    setCategoriaSeleccionadaEstudios(categoria);
   };
 
   const [index, setIndex] = useState(0);
@@ -24,12 +29,12 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
     setIndex(selectedIndex);
   };
   const proyectosFiltrados =
-    categoriaSeleccionada === "PROGRAMACIÓN" || categoriaSeleccionada === "PROGRAMMING"
+    categoriaSeleccionadaEstudios === "PROGRAMACIÓN" || categoriaSeleccionadaEstudios === "PROGRAMMING"
       ? infoCursos
       : infoCursos.filter(
           (proyecto) =>
             proyecto.categoria.toLowerCase() ===
-            categoriaSeleccionada.toLowerCase()
+            categoriaSeleccionadaEstudios.toLowerCase()
         );
 
   useEffect(() => {
@@ -63,7 +68,7 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
           <NavLink
             key={index}
             className={
-              categoriaSeleccionada === opcionMenu.titulo
+              categoriaSeleccionadaEstudios === opcionMenu.titulo
                 ? "portfolio-categoriaSeleccionada"
                 : "categoriaSinSeleccionar"
             }
@@ -77,7 +82,7 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
       </article>
 
       <article className="estudios-programacion">
-        {categoriaSeleccionada === "PROGRAMACIÓN" || categoriaSeleccionada === "PROGRAMMING" ? (
+        {categoriaSeleccionadaEstudios === "PROGRAMACIÓN" || categoriaSeleccionadaEstudios === "PROGRAMMING" ? (
           <div className="timeLine-container">
             {proyectosFiltrados.map((proyecto, index) => (
               <div key={index}>
@@ -147,14 +152,14 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
           >
             <IdiomasList
               infoCursos={proyectosFiltrados}
-              categoriaSeleccionada={categoriaSeleccionada}
+              categoriaSeleccionada={categoriaSeleccionadaEstudios}
             />
           </article>
         )}
       </article>
 
       <article className="estudios-programacion-mobile">
-        {categoriaSeleccionada === "PROGRAMACIÓN" || categoriaSeleccionada === "PROGRAMMING"? (
+        {categoriaSeleccionadaEstudios === "PROGRAMACIÓN" || categoriaSeleccionadaEstudios === "PROGRAMMING"? (
           <>
             <div className="estudios-programacion-container">
               {proyectosFiltrados.map((proyecto, index) => (
@@ -191,7 +196,7 @@ const EstudiosList = ({ infoCursos, infoMenu }) => {
           <article className="estudios-idiomas">
             <IdiomasList
               infoCursos={proyectosFiltrados}
-              categoriaSeleccionada={categoriaSeleccionada}
+              categoriaSeleccionada={categoriaSeleccionadaEstudios}
             />
           </article>
         )}

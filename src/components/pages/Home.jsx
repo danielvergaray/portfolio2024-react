@@ -172,7 +172,7 @@ const Home = () => {
               data-aos-duration="1500"
             >
               <Link target="_blank" to="https://wa.me/51950011434">
-                <button>Contáctame</button>
+                <button>{idioma === "ESP" ? "Contáctame" : "Contact me"}</button>
               </Link>
             </div>
           </div>
@@ -234,7 +234,7 @@ const Home = () => {
               data-aos-easing="linear"
               data-aos-duration="1000"
             >
-              Sobre mí
+              {idioma === "ESP" ? "Sobre mí" : "About"}
             </h3>
             <h2
               data-aos="fade-left"
@@ -242,7 +242,7 @@ const Home = () => {
               data-aos-duration="1000"
               data-aos-delay="500"
             >
-              ¿Quien soy?
+              {idioma === "ESP" ? "¿Quien soy?" : "WHO AM I?"}
             </h2>
             <div className="home-info__bio-imagen">
               <img
@@ -260,8 +260,8 @@ const Home = () => {
                 data-aos="fade-left"
                 data-aos-duration="1000"
               >
-                <p> {info[0].bio} </p> <br />
-                <p> {info[0].bio2} </p>
+                <p> {idioma === "ESP" ? info[0].bio : infoEng[0].bio} </p><br />
+                <p> {idioma === "ESP" ? info[0].bio2 : infoEng[0].bio2} </p>
               </div>
             </div>
           </article>
@@ -308,7 +308,7 @@ const Home = () => {
         ref={sectionRef4}
         className="seccionClientes"
       >
-        <h2>clientes</h2>
+        <h2>{idioma === "ESP" ? "clientes" : "clients"}</h2>
         <ClientesListContainer />
       </section>
     </div>

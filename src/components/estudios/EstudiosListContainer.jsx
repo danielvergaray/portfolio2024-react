@@ -10,6 +10,7 @@ import banderaEspania from "../../assets/imagenes/spanish-flag.png";
 import banderaIngles from "../../assets/imagenes/usa-flag.png";
 import banderaFrancia from "../../assets/imagenes/french-flag.png";
 import GeneralContext from "../context/GeneralContext";
+import IdiomasList from "./IdiomasList";
 
 const EstudiosListContainer = () => {
 
@@ -161,7 +162,24 @@ const EstudiosListContainer = () => {
     },
   ];
 
-  return <EstudiosList infoCursos={idioma === "ESP" ? cursos : courses} infoMenu={idioma === "ESP" ? menuProyectos: projectsMenu} />;
+ /*  return 
+  <EstudiosList infoCursos={idioma === "ESP" ? cursos : courses} infoMenu={idioma === "ESP" ? menuProyectos: projectsMenu} />; */
+
+  return (
+    <>
+      {idioma === "ESP" ? (
+        <EstudiosList infoCursos={cursos} infoMenu={menuProyectos} />
+      ) : (
+        <EstudiosList infoCursos={courses}  infoMenu={projectsMenu}/>
+      )}
+    </>
+  );
+
+
+
 };
+
+
+
 
 export default EstudiosListContainer;

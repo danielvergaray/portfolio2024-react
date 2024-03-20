@@ -43,8 +43,9 @@ const PortfolioListContainer = () => {
 
   const { idioma } = useContext(GeneralContext);
 
-  const TituloRepositorio = idioma === "ESP" ? "Ver repositorio" : "Go to Repository";
-  const TituloWeb =  idioma === "ESP" ? "Visitar web" : "Visit web";
+  const TituloRepositorio =
+    idioma === "ESP" ? "Ver repositorio" : "Go to Repository";
+  const TituloWeb = idioma === "ESP" ? "Visitar web" : "Visit web";
 
   const proyectos = [
     {
@@ -223,9 +224,11 @@ const PortfolioListContainer = () => {
           imagenCarrusel: ImagenCentroMedicoWp3,
         },
       ],
-      descripcionBreve: "Este proyecto es la creación de un centro odontológico completamente funcional. Para su realización, se han empleado diversos...",
-      descripcion: "Este proyecto es la creación de un centro odontológico completamente funcional. Para su realización, se han empleado diversos plugins y la herramienta Elementor en la plataforma WordPress. Los usuarios tienen la facilidad de agendar citas médicas a través de la web, lo que mejora la accesibilidad y la experiencia del paciente. La implementación de estas características ha sido fundamental para ofrecer un servicio eficiente y moderno en el campo de la odontología.",
-   
+      descripcionBreve:
+        "Este proyecto es la creación de un centro odontológico completamente funcional. Para su realización, se han empleado diversos...",
+      descripcion:
+        "Este proyecto es la creación de un centro odontológico completamente funcional. Para su realización, se han empleado diversos plugins y la herramienta Elementor en la plataforma WordPress. Los usuarios tienen la facilidad de agendar citas médicas a través de la web, lo que mejora la accesibilidad y la experiencia del paciente. La implementación de estas características ha sido fundamental para ofrecer un servicio eficiente y moderno en el campo de la odontología.",
+
       category: "wordpress",
       tituloWeb: TituloWeb,
       tituloRepositorio: TituloRepositorio,
@@ -283,10 +286,8 @@ const PortfolioListContainer = () => {
       tituloRepositorio: TituloRepositorio,
       linkWeb: "https://danielvergaray.github.io/SebasWars/",
       linkRepositorio: "https://github.com/danielvergaray/SebasWars",
-      
     },
   ];
-
 
   const projects = [
     {
@@ -465,9 +466,11 @@ const PortfolioListContainer = () => {
           imagenCarrusel: ImagenCentroMedicoWp3,
         },
       ],
-      descripcionBreve: "This project is the creation of a fully functional dental center. To carry it out, various plugins and the Elementor tool have been used on...",
-      descripcion: "This project is the creation of a fully functional dental center. To carry it out, various plugins and the Elementor tool have been used on the WordPress platform. Users have the ease of scheduling medical appointments through the web, which improves accessibility and the patient experience. The implementation of these features has been essential to offer an efficient and modern service in the field of dentistry.",
-   
+      descripcionBreve:
+        "This project is the creation of a fully functional dental center. To carry it out, various plugins and the Elementor tool have been used on...",
+      descripcion:
+        "This project is the creation of a fully functional dental center. To carry it out, various plugins and the Elementor tool have been used on the WordPress platform. Users have the ease of scheduling medical appointments through the web, which improves accessibility and the patient experience. The implementation of these features has been essential to offer an efficient and modern service in the field of dentistry.",
+
       category: "wordpress",
       tituloWeb: TituloWeb,
       tituloRepositorio: TituloRepositorio,
@@ -525,11 +528,8 @@ const PortfolioListContainer = () => {
       tituloRepositorio: TituloRepositorio,
       linkWeb: "https://danielvergaray.github.io/SebasWars/",
       linkRepositorio: "https://github.com/danielvergaray/SebasWars",
-      
     },
   ];
-
-
 
   const menuProyectos = [
     {
@@ -570,18 +570,26 @@ const PortfolioListContainer = () => {
   const abrirPopUp = (e) => {
     setAbrirInfo(true);
   };
-  
-
-  
 
   return (
     <>
-      <PortfolioList
-        infoProyectos={idioma === "ESP" ? proyectos : projects}
-        infoMenu={idioma === "ESP" ? menuProyectos : projectsMenu}
-        funcionAbrirPopUp={abrirPopUp}
-        abrirInfo={abrirInfo}
-      />
+      {idioma === "ESP" ? (
+        <PortfolioList
+          infoProyectos={proyectos}
+          infoMenu={menuProyectos}
+          /* funcionAbrirPopUp={abrirPopUp}
+          abrirInfo={abrirInfo} */
+          idioma = {idioma}
+        />
+      ) : (
+        <PortfolioList
+          infoProyectos={projects}
+          infoMenu={projectsMenu}
+         /*  funcionAbrirPopUp={abrirPopUp}
+          abrirInfo={abrirInfo} */
+          idioma = {idioma}
+        />
+      )}
     </>
   );
 };

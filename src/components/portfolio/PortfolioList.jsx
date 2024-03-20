@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import PopUpList from "../popUpInfoProyectos/PopUpList";
@@ -6,14 +6,23 @@ import GeneralContext from "../context/GeneralContext";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-const PortfolioList = ({ infoProyectos, infoMenu }) => {
-  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("TODOS");
+const PortfolioList = ({ infoProyectos, infoMenu, idioma }) => {
+
+
+  
   const [infoVisible, setInfoVisible] = useState({});
   const [proyectoSeleccionado, setProyectoSeleccionado] = useState(null);
   const [verMas, setVerMas] = useState(true);
   const [cantProductos, setCantProductos] = useState(6); //Para mostrar solamente 6 productos
 
-  
+
+// Actualizar la categoría seleccionada cuando cambia el idioma
+useEffect(() => {
+  setCategoriaSeleccionada(idioma==="ESP" ? "TODOS": "ALL");
+}, [idioma]);
+
+
+  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(idioma==="ESP" ? "TODOS": "ALL");
 
   const handleClick = (categoria) => {
     setCategoriaSeleccionada(categoria);
@@ -57,7 +66,7 @@ const PortfolioList = ({ infoProyectos, infoMenu }) => {
     setVerMas(!verMas);
   };
 
-  const {idioma } = useContext(GeneralContext);
+ 
 
   return (
     <>
