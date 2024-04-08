@@ -36,6 +36,11 @@ import ImagenSebas1 from "../../assets/imagenes/proyectos/SEBAS_01.jpg";
 import ImagenSebas2 from "../../assets/imagenes/proyectos/SEBAS_02.jpg";
 import ImagenSebas3 from "../../assets/imagenes/proyectos/SEBAS_03.jpg";
 
+import Imagenboda1 from "../../assets/imagenes/proyectos/bodaDanielPaola1.jpeg"
+import Imagenboda2 from "../../assets/imagenes/proyectos/bodaDanielPaola2.jpeg"
+import Imagenboda3 from "../../assets/imagenes/proyectos/bodaDanielPaola3.jpeg"
+
+
 import GeneralContext from "../context/GeneralContext";
 
 const PortfolioListContainer = () => {
@@ -287,6 +292,32 @@ const PortfolioListContainer = () => {
       linkWeb: "https://danielvergaray.github.io/SebasWars/",
       linkRepositorio: "https://github.com/danielvergaray/SebasWars",
     },
+    {
+      id: "10",
+      titulo: "Invitación de boda",
+      imagenRecuadro: Imagenboda1,
+      imagenesCarusel: [
+        {
+          imagenCarrusel: Imagenboda1,
+        },
+        {
+          imagenCarrusel: Imagenboda2,
+        },
+        {
+          imagenCarrusel: Imagenboda3,
+        },
+      ],
+      descripcionBreve:
+        "Este sitio web ofrece una experiencia de invitación digital excepcional que combina funcionalidad y...",
+      descripcion:
+        "Este sitio web ofrece una experiencia de invitación digital excepcional que combina funcionalidad y creatividad para celebrar el amor y la unión en una boda. Utilizando tecnologías como React, JavaScript, HTML5, SASS, Bootstrap, firebase, librerias, creamos una invitación interactiva y sofisticada que refleja el estilo de la pareja. cada detalle fue diseñado para destacar la esencia del evento. El sitio web cumplió con las expectativas de los clientes y ofreció una experiencia inolvidable para los invitados. Esta web cuenta con la funcionalidad de confirmacion de asistencia, en la cual los invitados ingresan su nombre y validan su asistencia, la informacion ingresada por el usuario se almacena en una base de datos en firebase.",
+      imagen: "",
+      category: "react",
+      tituloWeb: TituloWeb,
+      tituloRepositorio: TituloRepositorio,
+      linkWeb: "https://bodadaniypao.com",
+      linkRepositorio: "",
+    },
   ];
 
   const projects = [
@@ -528,6 +559,32 @@ const PortfolioListContainer = () => {
       tituloRepositorio: TituloRepositorio,
       linkWeb: "https://danielvergaray.github.io/SebasWars/",
       linkRepositorio: "https://github.com/danielvergaray/SebasWars",
+    },
+    {
+      id: "10",
+      titulo: "Wedding digital invitation",
+      imagenRecuadro: Imagenboda1,
+      imagenesCarusel: [
+        {
+          imagenCarrusel: Imagenboda1,
+        },
+        {
+          imagenCarrusel: Imagenboda2,
+        },
+        {
+          imagenCarrusel: Imagenboda3,
+        },
+      ],
+      descripcionBreve:
+        "This website offers an exceptional digital invitation experience that combines functionality and...",
+      descripcion:
+        "This website offers an exceptional digital invitation experience that combines functionality and creativity to celebrate love and togetherness at a wedding. Using technologies such as React, JavaScript, HTML5, SASS, Bootstrap, firebase, libraries, we created an interactive and sophisticated invitation that reflects the couple's style. Every detail was designed to highlight the essence of the event. The website met customer expectations and provided an unforgettable experience for guests. This website has the attendance confirmation functionality, in which guests enter their name and validate their attendance, the information entered by the user is stored in a database in Firebase.",
+      imagen: "",
+      category: "react",
+      tituloWeb: TituloWeb,
+      tituloRepositorio: TituloRepositorio,
+      linkWeb: "https://bodadaniypao.com",
+      linkRepositorio: "",
     },
   ];
 
