@@ -10,6 +10,8 @@ import banderaEspania from "../../assets/imagenes/spanish-flag.png";
 import banderaIngles from "../../assets/imagenes/usa-flag.png";
 import banderaFrancia from "../../assets/imagenes/french-flag.png";
 import GeneralContext from "../context/GeneralContext";
+import { FaVuejs } from "react-icons/fa";
+import { SiTailwindcss } from "react-icons/si";
 import IdiomasList from "./IdiomasList";
 
 const EstudiosListContainer = () => {
@@ -96,6 +98,26 @@ const EstudiosListContainer = () => {
       id: 4,
       iconos: [<FaWordpress />],
     },
+    {
+      titulo: "Vue js",
+      instituto: "Udemy",
+      duracion: "Abril 2024 - Actualmente",
+      categoria: "PROGRAMACIÓN",
+      descripcion:
+        "Exploración de fundamentos y aplicaciones de Vue js, adquiriendo habilidades tales como: Reactive, Ref, Computed properties, Watchers, Emits, Props, etc",
+      id: 5,
+      iconos: [<FaVuejs />],
+    },
+    {
+      titulo: "Tailwind",
+      instituto: "Udemy",
+      duracion: "Abril 2024 - Actualmente",
+      categoria: "PROGRAMACIÓN",
+      descripcion:
+        "Exploración de fundamentos y aplicaciones de Tailwind, adquiriendo habilidades para crear y gestionar la aplicación de estilos",
+      id: 6,
+      iconos: [<SiTailwindcss />],
+    },
   ];
 
   const courses = [
@@ -159,6 +181,26 @@ const EstudiosListContainer = () => {
         "Exploration of WordPress fundamentals and applications, acquiring skills to efficiently create and manage dynamic and functional websites.",
       id: 4,
       iconos: [<FaWordpress />],
+    },
+    {
+      titulo: "Vue js",
+      instituto: "Udemy",
+      duracion: "April 2024 - Present",
+      categoria: "PROGRAMMING",
+      descripcion:
+        "Exploration of Vue js fundamentals and applications, acquiring skills such as: Reactive, Ref, Computed properties, Watchers, Emits, Props, etc.",
+      id: 5,
+      iconos: [<FaVuejs />],
+    },
+    {
+      titulo: "Tailwind",
+      instituto: "Udemy",
+      duracion: "April 2024 - Actualmente",
+      categoria: "PROGRAMMING",
+      descripcion:
+        "Exploration of Tailwind fundamentals and applications, gaining skills in creating and managing the application of styles",
+      id: 6,
+      iconos: [<SiTailwindcss />],
     },
   ];
 

@@ -10,13 +10,28 @@ import { FaGitAlt } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaReact } from "react-icons/fa";
+import { FaVuejs } from "react-icons/fa";
+import { SiTailwindcss } from "react-icons/si";
 
 const HerramientasListContainer = () => {
   const infoHerramientas = {
     herramientas: [
       {
+        nombre: "react",
+        icono: <FaReact />,
+      },
+      {
+        nombre: "vue js",
+        icono: <FaVuejs />,
+      },
+      {
         nombre: "wordpress",
         icono: <FaWordpress />,
+      },
+
+      {
+        nombre: "tailwind",
+        icono: <SiTailwindcss />,
       },
 
       {
@@ -47,14 +62,8 @@ const HerramientasListContainer = () => {
         nombre: "javascript",
         icono: <IoLogoJavascript />,
       },
-      {
-        nombre: "react",
-        icono: <FaReact />,
-      },
-      
     ],
   };
-
 
   return <HerramientasList herramientas={infoHerramientas.herramientas} />;
 };

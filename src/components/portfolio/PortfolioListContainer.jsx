@@ -40,6 +40,9 @@ import Imagenboda1 from "../../assets/imagenes/proyectos/bodaDanielPaola1.jpeg"
 import Imagenboda2 from "../../assets/imagenes/proyectos/bodaDanielPaola2.jpeg"
 import Imagenboda3 from "../../assets/imagenes/proyectos/bodaDanielPaola3.jpeg"
 
+import ImagenTiendaMusical1 from "../../assets/imagenes/proyectos/tiendaMusical1.jpeg"
+import ImagenTiendaMusical2 from "../../assets/imagenes/proyectos/tiendaMusical2.jpeg"
+import ImagenTiendaMusical3 from "../../assets/imagenes/proyectos/tiendaMusical3.jpeg"
 
 import GeneralContext from "../context/GeneralContext";
 
@@ -318,6 +321,32 @@ const PortfolioListContainer = () => {
       linkWeb: "https://bodadaniypao.com",
       linkRepositorio: "",
     },
+    {
+      id: "11",
+      titulo: "Tienda Musical",
+      imagenRecuadro: ImagenTiendaMusical1,
+      imagenesCarusel: [
+        {
+          imagenCarrusel: ImagenTiendaMusical1,
+        },
+        {
+          imagenCarrusel: ImagenTiendaMusical2,
+        },
+        {
+          imagenCarrusel: ImagenTiendaMusical3,
+        },
+      ],
+      descripcionBreve:
+        "Esta es una web que se ha hecho para poner a prueba las habilidades adquiridas en Vue js y Tailwind. Es una web...",
+      descripcion:
+        "Esta es una web que se ha hecho para poner a prueba las habilidades adquiridas en Vue js y Tailwind. Es una web sencilla cuyo rubro es la venta de guitarras, se ha usado Composition API, REF, Watch, localStorage, etc. En la web se puede agregar productos al carrito asi como editarlos, eliminarlos y realizar la compra final.",
+      imagen: "",
+      category: "vue js",
+      tituloWeb: TituloWeb,
+      tituloRepositorio: TituloRepositorio,
+      linkWeb: "https://tienda-musical.vercel.app/",
+      linkRepositorio: "https://github.com/danielvergaray/tiendaMusical-VueJs",
+    },
   ];
 
   const projects = [
@@ -586,6 +615,32 @@ const PortfolioListContainer = () => {
       linkWeb: "https://bodadaniypao.com",
       linkRepositorio: "",
     },
+    {
+      id: "11",
+      titulo: "Music Store",
+      imagenRecuadro: ImagenTiendaMusical1,
+      imagenesCarusel: [
+        {
+          imagenCarrusel: ImagenTiendaMusical1,
+        },
+        {
+          imagenCarrusel: ImagenTiendaMusical2,
+        },
+        {
+          imagenCarrusel: ImagenTiendaMusical3,
+        },
+      ],
+      descripcionBreve:
+        "This is a website that has been made to test the skills acquired in Vue js and Tailwind. It is a simple website whose...",
+      descripcion:
+        "This is a website that has been made to test the skills acquired in Vue js and Tailwind. It is a simple website whose business is the sale of guitars, Composition API, REF, Watch, localStorage, etc. have been used. On the website you can add products to the cart as well as edit them, delete them and make the final purchase.",
+      imagen: "",
+      category: "vue js",
+      tituloWeb: TituloWeb,
+      tituloRepositorio: TituloRepositorio,
+      linkWeb: "https://tienda-musical.vercel.app/",
+      linkRepositorio: "https://github.com/danielvergaray/tiendaMusical-VueJs",
+    },
   ];
 
   const menuProyectos = [
@@ -597,6 +652,9 @@ const PortfolioListContainer = () => {
     },
     {
       titulo: "JAVASCRIPT",
+    },
+    {
+      titulo: "VUE JS",
     },
     {
       titulo: "DESARROLLO WEB",
@@ -615,6 +673,9 @@ const PortfolioListContainer = () => {
     },
     {
       titulo: "JAVASCRIPT",
+    },
+    {
+      titulo: "VUE JS",
     },
     {
       titulo: "WEB DEVELOPMENT",
