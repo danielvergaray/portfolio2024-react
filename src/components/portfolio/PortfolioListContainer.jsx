@@ -36,13 +36,17 @@ import ImagenSebas1 from "../../assets/imagenes/proyectos/SEBAS_01.jpg";
 import ImagenSebas2 from "../../assets/imagenes/proyectos/SEBAS_02.jpg";
 import ImagenSebas3 from "../../assets/imagenes/proyectos/SEBAS_03.jpg";
 
-import Imagenboda1 from "../../assets/imagenes/proyectos/bodaDanielPaola1.jpeg"
-import Imagenboda2 from "../../assets/imagenes/proyectos/bodaDanielPaola2.jpeg"
-import Imagenboda3 from "../../assets/imagenes/proyectos/bodaDanielPaola3.jpeg"
+import Imagenboda1 from "../../assets/imagenes/proyectos/bodaDanielPaola1.jpeg";
+import Imagenboda2 from "../../assets/imagenes/proyectos/bodaDanielPaola2.jpeg";
+import Imagenboda3 from "../../assets/imagenes/proyectos/bodaDanielPaola3.jpeg";
 
-import ImagenTiendaMusical1 from "../../assets/imagenes/proyectos/tiendaMusical1.jpeg"
-import ImagenTiendaMusical2 from "../../assets/imagenes/proyectos/tiendaMusical2.jpeg"
-import ImagenTiendaMusical3 from "../../assets/imagenes/proyectos/tiendaMusical3.jpeg"
+import ImagenTiendaMusical1 from "../../assets/imagenes/proyectos/tiendaMusical1.jpeg";
+import ImagenTiendaMusical2 from "../../assets/imagenes/proyectos/tiendaMusical2.jpeg";
+import ImagenTiendaMusical3 from "../../assets/imagenes/proyectos/tiendaMusical3.jpeg";
+
+import ImagenAdminPacientes1 from "../../assets/imagenes/proyectos/adminPacientes01.jpeg";
+import ImagenAdminPacientes2 from "../../assets/imagenes/proyectos/adminPacientes02.jpeg";
+import ImagenAdminPacientes3 from "../../assets/imagenes/proyectos/adminPacientes03.jpeg";
 
 import GeneralContext from "../context/GeneralContext";
 
@@ -347,6 +351,33 @@ const PortfolioListContainer = () => {
       linkWeb: "https://tienda-musical.vercel.app/",
       linkRepositorio: "https://github.com/danielvergaray/tiendaMusical-VueJs",
     },
+    {
+      id: "12",
+      titulo: "Administrador de Pacientes",
+      imagenRecuadro: ImagenAdminPacientes1,
+      imagenesCarusel: [
+        {
+          imagenCarrusel: ImagenAdminPacientes1,
+        },
+        {
+          imagenCarrusel: ImagenAdminPacientes2,
+        },
+        {
+          imagenCarrusel: ImagenAdminPacientes3,
+        },
+      ],
+      descripcionBreve:
+        "Esta es una web que se ha hecho para poner a prueba las habilidades adquiridas en Vue js. Es una web...",
+      descripcion:
+        "Esta es una web que se ha hecho para poner a prueba las habilidades adquiridas en Vue js. Es una web sencilla cuya finalidad es el registro de pacientes de una veterinaria, se permite agregar nuevos pacientes, asi como modificar o eliminar pacientes exsitentes almacenados en localStorage, se ha usado Composition API, REF, Watch, localStorage, onMounted, etc.",
+      imagen: "",
+      category: "vue js",
+      tituloWeb: TituloWeb,
+      tituloRepositorio: TituloRepositorio,
+      linkWeb: "https://admision-pacientes-vuejs.vercel.app/",
+      linkRepositorio:
+        "https://github.com/danielvergaray/admision-paciente-vuejs",
+    },
   ];
 
   const projects = [
@@ -641,6 +672,33 @@ const PortfolioListContainer = () => {
       linkWeb: "https://tienda-musical.vercel.app/",
       linkRepositorio: "https://github.com/danielvergaray/tiendaMusical-VueJs",
     },
+    {
+      id: "12",
+      titulo: "Patient Admission",
+      imagenRecuadro: ImagenAdminPacientes1,
+      imagenesCarusel: [
+        {
+          imagenCarrusel: ImagenAdminPacientes1,
+        },
+        {
+          imagenCarrusel: ImagenAdminPacientes2,
+        },
+        {
+          imagenCarrusel: ImagenAdminPacientes3,
+        },
+      ],
+      descripcionBreve:
+        "This is a website that has been made to test the skills acquired in Vue js. It is a simple website whose...",
+      descripcion:
+        "This is a website that has been made to test the skills acquired in Vue js. It is a simple website whose purpose is the registration of veterinary patients, it allows adding new patients, as well as modifying or deleting existing patients stored in localStorage, Composition API, REF, Watch, localStorage, onMounted, etc. have been used.",
+      imagen: "",
+      category: "vue js",
+      tituloWeb: TituloWeb,
+      tituloRepositorio: TituloRepositorio,
+      linkWeb: "https://admision-pacientes-vuejs.vercel.app/",
+      linkRepositorio:
+        "https://github.com/danielvergaray/admision-paciente-vuejs",
+    },
   ];
 
   const menuProyectos = [
@@ -697,15 +755,15 @@ const PortfolioListContainer = () => {
           infoMenu={menuProyectos}
           /* funcionAbrirPopUp={abrirPopUp}
           abrirInfo={abrirInfo} */
-          idioma = {idioma}
+          idioma={idioma}
         />
       ) : (
         <PortfolioList
           infoProyectos={projects}
           infoMenu={projectsMenu}
-         /*  funcionAbrirPopUp={abrirPopUp}
+          /*  funcionAbrirPopUp={abrirPopUp}
           abrirInfo={abrirInfo} */
-          idioma = {idioma}
+          idioma={idioma}
         />
       )}
     </>
