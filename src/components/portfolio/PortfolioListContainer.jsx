@@ -48,6 +48,10 @@ import ImagenAdminPacientes1 from "../../assets/imagenes/proyectos/adminPaciente
 import ImagenAdminPacientes2 from "../../assets/imagenes/proyectos/adminPacientes02.jpeg";
 import ImagenAdminPacientes3 from "../../assets/imagenes/proyectos/adminPacientes03.jpeg";
 
+import ImagenAdminGastos1 from "../../assets/imagenes/proyectos/adminGastos01.jpeg";
+import ImagenAdminGastos2 from "../../assets/imagenes/proyectos/adminGastos02.jpeg";
+import ImagenAdminGastos3 from "../../assets/imagenes/proyectos/adminGastos03.jpeg";
+
 import GeneralContext from "../context/GeneralContext";
 
 const PortfolioListContainer = () => {
@@ -369,7 +373,7 @@ const PortfolioListContainer = () => {
       descripcionBreve:
         "Esta es una web que se ha hecho para poner a prueba las habilidades adquiridas en Vue js. Es una web...",
       descripcion:
-        "Esta es una web que se ha hecho para poner a prueba las habilidades adquiridas en Vue js. Es una web sencilla cuya finalidad es el registro de pacientes de una veterinaria, se permite agregar nuevos pacientes, asi como modificar o eliminar pacientes exsitentes almacenados en localStorage, se ha usado Composition API, REF, Watch, localStorage, onMounted, etc.",
+        "Esta es una web que se ha hecho para poner a prueba las habilidades adquiridas en Vue js. Es una web sencilla cuya finalidad es el registro de pacientes de una veterinaria, se permite agregar nuevos pacientes, asi como modificar o eliminar pacientes existentes almacenados en localStorage, se ha usado Composition API, REF, Watch, localStorage, onMounted, etc.",
       imagen: "",
       category: "vue js",
       tituloWeb: TituloWeb,
@@ -377,6 +381,33 @@ const PortfolioListContainer = () => {
       linkWeb: "https://admision-pacientes-vuejs.vercel.app/",
       linkRepositorio:
         "https://github.com/danielvergaray/admision-paciente-vuejs",
+    },
+    {
+      id: "13",
+      titulo: "Administrador de Gastos",
+      imagenRecuadro: ImagenAdminGastos1,
+      imagenesCarusel: [
+        {
+          imagenCarrusel: ImagenAdminGastos1,
+        },
+        {
+          imagenCarrusel: ImagenAdminGastos2,
+        },
+        {
+          imagenCarrusel: ImagenAdminGastos3,
+        },
+      ],
+      descripcionBreve:
+        "Esta es una web que se ha hecho para poner a prueba las habilidades adquiridas en Vue js. Es una web...",
+      descripcion:
+        "Esta es una web que se ha hecho para poner a prueba las habilidades adquiridas en Vue js. Es una web sencilla cuya finalidad es que los usuarios puedan llevar un control de sus gastos, se permite agregar, modificar, eliminar y filtrar gastos entre distintas categorias, los gastos son almacenados en localStorage, se ha usado Composition API, REF, Watch, localStorage, onMounted, etc.",
+      imagen: "",
+      category: "vue js",
+      tituloWeb: TituloWeb,
+      tituloRepositorio: TituloRepositorio,
+      linkWeb: "https://administrador-gastos-vuejs.vercel.app/",
+      linkRepositorio:
+        "https://github.com/danielvergaray/administrador-gastos-vuejs",
     },
   ];
 
@@ -698,6 +729,33 @@ const PortfolioListContainer = () => {
       linkWeb: "https://admision-pacientes-vuejs.vercel.app/",
       linkRepositorio:
         "https://github.com/danielvergaray/admision-paciente-vuejs",
+    },
+    {
+      id: "13",
+      titulo: "Expense Management Application",
+      imagenRecuadro: ImagenAdminGastos1,
+      imagenesCarusel: [
+        {
+          imagenCarrusel: ImagenAdminGastos1,
+        },
+        {
+          imagenCarrusel: ImagenAdminGastos2,
+        },
+        {
+          imagenCarrusel: ImagenAdminGastos3,
+        },
+      ],
+      descripcionBreve:
+        "This is a website that has been made to test the skills acquired in Vue js and Tailwind. It is a simple website whose...",
+      descripcion:
+        "This is a website that has been made to test the skills acquired in Vue js. It is a simple website whose purpose is for users to keep track of their expenses, it is possible to add, modify, delete and filter expenses between different categories, expenses are stored in localStorage, Composition API, REF, Watch, localStorage has been used , onMounted, etc.",
+      imagen: "",
+      category: "vue js",
+      tituloWeb: TituloWeb,
+      tituloRepositorio: TituloRepositorio,
+      linkWeb: "https://administrador-gastos-vuejs.vercel.app/",
+      linkRepositorio:
+        "https://github.com/danielvergaray/administrador-gastos-vuejs",
     },
   ];
 
