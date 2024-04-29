@@ -52,6 +52,10 @@ import ImagenAdminGastos1 from "../../assets/imagenes/proyectos/adminGastos01.jp
 import ImagenAdminGastos2 from "../../assets/imagenes/proyectos/adminGastos02.jpeg";
 import ImagenAdminGastos3 from "../../assets/imagenes/proyectos/adminGastos03.jpeg";
 
+import ImagenCotizadorCriptomoneda1 from "../../assets/imagenes/proyectos/cotizacionCripto01.jpeg";
+import ImagenCotizadorCriptomoneda2 from "../../assets/imagenes/proyectos/cotizacionCripto01.jpeg";
+import ImagenCotizadorCriptomoneda3 from "../../assets/imagenes/proyectos/cotizacionCripto03.jpeg";
+
 import GeneralContext from "../context/GeneralContext";
 
 const PortfolioListContainer = () => {
@@ -409,6 +413,33 @@ const PortfolioListContainer = () => {
       linkRepositorio:
         "https://github.com/danielvergaray/administrador-gastos-vuejs",
     },
+    {
+      id: "14",
+      titulo: "Cotizador Criptomonedas",
+      imagenRecuadro: ImagenCotizadorCriptomoneda1,
+      imagenesCarusel: [
+        {
+          imagenCarrusel: ImagenCotizadorCriptomoneda1,
+        },
+        {
+          imagenCarrusel: ImagenCotizadorCriptomoneda2,
+        },
+        {
+          imagenCarrusel: ImagenCotizadorCriptomoneda3,
+        },
+      ],
+      descripcionBreve:
+        "Esta es una web que se ha hecho para poner a prueba las habilidades adquiridas en Vue js. Es una web...",
+      descripcion:
+        "Esta es una web que se ha hecho para poner a prueba las habilidades adquiridas en Vue js. Es una aplicacion que se encuentra conectada a una API que permite poder cotizar el precio de las criptomonedas mas importantes con las monedas más importantes del mundo, se ha usado Composition API, REF, Watch, localStorage, onMounted, Composable etc.",
+      imagen: "",
+      category: "vue js",
+      tituloWeb: TituloWeb,
+      tituloRepositorio: TituloRepositorio,
+      linkWeb: "https://cotizador-cripto-vuejs.vercel.app/",
+      linkRepositorio:
+        "https://github.com/danielvergaray/cotizadorCripto-vuejs",
+    },
   ];
 
   const projects = [
@@ -757,6 +788,34 @@ const PortfolioListContainer = () => {
       linkRepositorio:
         "https://github.com/danielvergaray/administrador-gastos-vuejs",
     },
+    {
+      id: "14",
+      titulo: "Cryptocurrency Quoter",
+      imagenRecuadro: ImagenCotizadorCriptomoneda1,
+      imagenesCarusel: [
+        {
+          imagenCarrusel: ImagenCotizadorCriptomoneda1,
+        },
+        {
+          imagenCarrusel: ImagenCotizadorCriptomoneda2,
+        },
+        {
+          imagenCarrusel: ImagenCotizadorCriptomoneda3,
+        },
+      ],
+      descripcionBreve:
+        "This is a website that has been made to test the skills acquired in Vue js. It is an application that...",
+      descripcion:
+        "This is a website that has been made to test the skills acquired in Vue js. It is an application that is connected to an API that allows you to quote the price of the most important cryptocurrencies with the most important currencies in the world. Composition API, REF, Watch, localStorage, onMounted, Composable, etc. have been used.",
+      imagen: "",
+      category: "vue js",
+      tituloWeb: TituloWeb,
+      tituloRepositorio: TituloRepositorio,
+      linkWeb: "https://cotizador-cripto-vuejs.vercel.app/",
+      linkRepositorio:
+        "https://github.com/danielvergaray/cotizadorCripto-vuejs",
+    },
+    
   ];
 
   const menuProyectos = [
