@@ -7,22 +7,19 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 const PortfolioList = ({ infoProyectos, infoMenu, idioma }) => {
-
-
-  
   const [infoVisible, setInfoVisible] = useState({});
   const [proyectoSeleccionado, setProyectoSeleccionado] = useState(null);
   const [verMas, setVerMas] = useState(true);
   const [cantProductos, setCantProductos] = useState(6); //Para mostrar solamente 6 productos
 
+  // Actualizar la categoría seleccionada cuando cambia el idioma
+  useEffect(() => {
+    setCategoriaSeleccionada(idioma === "ESP" ? "TODOS" : "ALL");
+  }, [idioma]);
 
-// Actualizar la categoría seleccionada cuando cambia el idioma
-useEffect(() => {
-  setCategoriaSeleccionada(idioma==="ESP" ? "TODOS": "ALL");
-}, [idioma]);
-
-
-  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(idioma==="ESP" ? "TODOS": "ALL");
+  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(
+    idioma === "ESP" ? "TODOS" : "ALL"
+  );
 
   const handleClick = (categoria) => {
     setCategoriaSeleccionada(categoria);
@@ -30,12 +27,13 @@ useEffect(() => {
 
   // Filtrar los proyectos basados en la categoría seleccionada
   const proyectosFiltrados =
-  categoriaSeleccionada === "TODOS" || categoriaSeleccionada === "ALL"
-    ? infoProyectos
-    : infoProyectos.filter(
-        (proyecto) =>
-          proyecto.category.toLowerCase() === categoriaSeleccionada.toLowerCase()
-      );
+    categoriaSeleccionada === "TODOS" || categoriaSeleccionada === "ALL"
+      ? infoProyectos
+      : infoProyectos.filter(
+          (proyecto) =>
+            proyecto.category.toLowerCase() ===
+            categoriaSeleccionada.toLowerCase()
+        );
 
   const mostrarInfo = (index) => {
     setInfoVisible({ ...infoVisible, [index]: true });
@@ -62,11 +60,17 @@ useEffect(() => {
     setInformacion(false);
   };
   const verMasProyectos = () => {
-    setCantProductos(cantProductos + 6);
-    setVerMas(!verMas);
+    if (cantProductos <= 10) {
+      setCantProductos(cantProductos + 3);
+      setVerMas(true);
+      return;
+    }
+    if (cantProductos >= 12) {
+      setCantProductos(cantProductos + 3);
+      setVerMas(false);
+      return;
+    }
   };
-
- 
 
   return (
     <>
@@ -127,7 +131,9 @@ useEffect(() => {
                           <h3>{proyecto.titulo}</h3>
                           <p>{proyecto.descripcionBreve}</p>
                           <div>
-                            <button>{idioma ==="ESP" ? "Ver más" : "View more"}</button>
+                            <button>
+                              {idioma === "ESP" ? "Ver más" : "View more"}
+                            </button>
                           </div>
                         </div>
                       )}
@@ -165,9 +171,11 @@ useEffect(() => {
             )}
           </section>
 
-          {verMas && proyectosFiltrados.length > 6 && (
+          {verMas && (
             <section className="portfolio-boton-ver-mas">
-              <button onClick={verMasProyectos}>{idioma ==="ESP" ? "Ver más proyectos" : "See more projects"} </button>
+              <button onClick={verMasProyectos}>
+                {idioma === "ESP" ? "Ver más proyectos" : "See more projects"}{" "}
+              </button>
             </section>
           )}
         </div>

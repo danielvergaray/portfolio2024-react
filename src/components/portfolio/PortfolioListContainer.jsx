@@ -56,6 +56,10 @@ import ImagenCotizadorCriptomoneda1 from "../../assets/imagenes/proyectos/cotiza
 import ImagenCotizadorCriptomoneda2 from "../../assets/imagenes/proyectos/cotizacionCripto01.jpeg";
 import ImagenCotizadorCriptomoneda3 from "../../assets/imagenes/proyectos/cotizacionCripto03.jpeg";
 
+import ImagenBuscadorClima1 from "../../assets/imagenes/proyectos/buscadorClima01.jpeg";
+import ImagenBuscadorClima2 from "../../assets/imagenes/proyectos/buscadorClima02.jpeg";
+import ImagenBuscadorClima3 from "../../assets/imagenes/proyectos/buscadorClima03.jpeg";
+
 import GeneralContext from "../context/GeneralContext";
 
 const PortfolioListContainer = () => {
@@ -440,6 +444,33 @@ const PortfolioListContainer = () => {
       linkRepositorio:
         "https://github.com/danielvergaray/cotizadorCripto-vuejs",
     },
+    {
+      id: "15",
+      titulo: "Aplicación del Clima",
+      imagenRecuadro: ImagenBuscadorClima1,
+      imagenesCarusel: [
+        {
+          imagenCarrusel: ImagenBuscadorClima1,
+        },
+        {
+          imagenCarrusel: ImagenBuscadorClima2,
+        },
+        {
+          imagenCarrusel: ImagenBuscadorClima3,
+        },
+      ],
+      descripcionBreve:
+        "Esta es una web que se ha hecho para poner a prueba las habilidades adquiridas en Vue js. Es una web...",
+      descripcion:
+        "Esta es una web que se ha hecho para poner a prueba las habilidades adquiridas en Vue js. Es una aplicacion que se encuentra conectada a una API que permite consultar el clima en distintos países, se ha usado Composition API, REF, variables de entorno, onMounted, Composable etc.",
+      imagen: "",
+      category: "vue js",
+      tituloWeb: TituloWeb,
+      tituloRepositorio: TituloRepositorio,
+      linkWeb: "https://vercel.com/danielvergarays-projects/consulta-clima-vuejs",
+      linkRepositorio:
+        "https://github.com/danielvergaray/consulta-clima-vuejs",
+    },
   ];
 
   const projects = [
@@ -814,6 +845,33 @@ const PortfolioListContainer = () => {
       linkWeb: "https://cotizador-cripto-vuejs.vercel.app/",
       linkRepositorio:
         "https://github.com/danielvergaray/cotizadorCripto-vuejs",
+    },
+    {
+      id: "15",
+      titulo: "Weather app",
+      imagenRecuadro: ImagenBuscadorClima1,
+      imagenesCarusel: [
+        {
+          imagenCarrusel: ImagenBuscadorClima1,
+        },
+        {
+          imagenCarrusel: ImagenBuscadorClima2,
+        },
+        {
+          imagenCarrusel: ImagenBuscadorClima3,
+        },
+      ],
+      descripcionBreve:
+        "This is a website that has been made to test the skills acquired in Vue js. It is an application that...",
+      descripcion:
+        "This is a website that has been made to test the skills acquired in Vue js. It is an application that is connected to an API that allows you to check the weather in different countries, Composition API, REF, environment variables, onMounted, Composable, etc. have been used.",
+      imagen: "",
+      category: "vue js",
+      tituloWeb: TituloWeb,
+      tituloRepositorio: TituloRepositorio,
+      linkWeb: "https://vercel.com/danielvergarays-projects/consulta-clima-vuejs",
+      linkRepositorio:
+        "https://github.com/danielvergaray/consulta-clima-vuejs",
     },
     
   ];
