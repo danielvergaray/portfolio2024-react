@@ -36,13 +36,13 @@ import ImagenSebas1 from "../../assets/imagenes/proyectos/SEBAS_01.jpg";
 import ImagenSebas2 from "../../assets/imagenes/proyectos/SEBAS_02.jpg";
 import ImagenSebas3 from "../../assets/imagenes/proyectos/SEBAS_03.jpg";
 
-import Imagenboda1 from "../../assets/imagenes/proyectos/bodaDanielPaola1.jpeg";
-import Imagenboda2 from "../../assets/imagenes/proyectos/bodaDanielPaola2.jpeg";
-import Imagenboda3 from "../../assets/imagenes/proyectos/bodaDanielPaola3.jpeg";
+import Imagenboda1 from "../../assets/imagenes/proyectos/bodaDanielPaola1.jpg";
+import Imagenboda2 from "../../assets/imagenes/proyectos/bodaDanielPaola2.jpg";
+import Imagenboda3 from "../../assets/imagenes/proyectos/bodaDanielPaola3.jpg";
 
-import ImagenTiendaMusical1 from "../../assets/imagenes/proyectos/tiendaMusical1.jpeg";
-import ImagenTiendaMusical2 from "../../assets/imagenes/proyectos/tiendaMusical2.jpeg";
-import ImagenTiendaMusical3 from "../../assets/imagenes/proyectos/tiendaMusical3.jpeg";
+import ImagenTiendaMusical1 from "../../assets/imagenes/proyectos/tiendaMusical1.jpg";
+import ImagenTiendaMusical2 from "../../assets/imagenes/proyectos/tiendaMusical2.jpg";
+import ImagenTiendaMusical3 from "../../assets/imagenes/proyectos/tiendaMusical3.jpg";
 
 import ImagenAdminPacientes1 from "../../assets/imagenes/proyectos/adminPacientes01.jpeg";
 import ImagenAdminPacientes2 from "../../assets/imagenes/proyectos/adminPacientes02.jpeg";
